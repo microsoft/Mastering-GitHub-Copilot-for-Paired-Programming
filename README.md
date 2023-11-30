@@ -1,3 +1,5 @@
+![Mastering GitHub Copilot for AI Paired Programming](./images/GitHub%20101%20-%20Curriculum.png)
+
 # Mastering GitHub Copilot for AI Paired Programming
 A 6 Lesson course teaching everything you need to know about harnessing GitHub Copilot and an AI Paired Programing resource.
 
