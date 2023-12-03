@@ -33,6 +33,7 @@ By the end of this module, you'll aquire the skills to be able to:
 1. Open [this repository with Codespaces](https://codespaces.new/MicrosoftDocs/mslearn-copilot-codespaces-python)
 
 ## 💪🏽 Exercise
+Right click the button and open in a new tab.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/MicrosoftDocs/mslearn-copilot-codespaces-python)
 
@@ -44,8 +45,7 @@ Go to the `main.py` file, and add a comment so that GitHub Copilot can generate 
 
 ```python
 class Text(BaseModel): 
-
-text: str
+    text: str
 ```
 
 ### 🔎 Step 2: Generate a new endpoint
