@@ -38,6 +38,7 @@ By the end of this module, you'll aquire the skills to be able to:
 
 
 ## 💪🏽 Exercise
+Right click on the button and open in another tab.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=526682619)
 
