@@ -13,7 +13,7 @@ Our focus in this module is to harness the power of GitHub Copilot to create a c
 - **Prerequisites**: To use GitHub Copilot you must have an active GitHub Copilot subscription. Sign up for 30 days free [Copilot](https://github.com/settings/copilot).
 - **Timing**: This course can be completed in under an hour.
 
-By the end of this module, you'll aquire the skills to be able to:
+By the end of this module, you'll acquire the skills to be able to:
 
 - Experience GitHub Codespaces as a development environment.
 - Develop input and output routines in a Python console application.
