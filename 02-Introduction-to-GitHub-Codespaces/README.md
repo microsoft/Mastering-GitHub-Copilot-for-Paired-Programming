@@ -4,7 +4,7 @@
 
 Welcome to the exciting world of GitHub Codespaces, your cloud based coding resource. In this module, we'll delve into the realm of instant, cloud-based development environments, revolutionizing the way you approach coding. GitHub Codespaces provides a seamlessly integrated experience, offering a container equipped with the essential languages, tools, and utilities for development.
 
-Throughout this learning journey, we will embark on a discovery of the Codespaces lifecycle and processes. Uncover the power to tailor your Codespace setup to suit your unique preferences and requirements. Engage in a comparative analysis of GitHub Codespaces and GitHub.dev, gaining insights into the distinctions between these innovative platforms. To solidify your understanding, we'll cap off the module with a hands-on exercise, allowing you to flex your coding muscles within the GitHub Codespaces environment.
+Throughout this learning journey, we will embark on a discovery of the Codespaces lifecycle and processes. Uncover the power to tailor your Codespace setup to suit your unique preferences and requirements. To solidify your understanding, we'll cap off the module with a hands-on exercise, allowing you to flex your coding muscles within the GitHub Codespaces environment.
 
 Imagine a fully configured development environment at your fingertips, accessible from any computer with an internet connection. GitHub Codespaces opens the door to a new era of collaborative and flexible coding. Let's dive in and unlock the full potential of cloud-based development with GitHub Codespaces!
 
@@ -24,7 +24,6 @@ By the end of this module, you'll be able to:
 1. Describe GitHub Codespaces.
 2. Explain the GitHub Codespace lifecycle and how to perform each step.
 3. Define the different customizations you can personalize with GitHub Codespaces.
-4. Discern the differences between GitHub.dev and GitHub Codespaces.
 
 
 ## Prerequisite reading: 
