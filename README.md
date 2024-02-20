@@ -47,10 +47,11 @@ Here are ways you can contribute to this course:
 
 Our team produces other courses! Check out:
 
-- [ML for Beginners](https://aka.ms/ml-beginners?WT.mc_id=academic-113596-abartolo)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-113596-abartolo)
 - [Generative AI for Beginners](https://aka.ms/genai-beginners)
 - [AI for Beginners](https://aka.ms/ai-beginners?WT.mc_id=academic-113596-abartolo)
+- [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-113596-abartolo)
+- [ML for Beginners](https://aka.ms/ml-beginners?WT.mc_id=academic-113596-abartolo)
+- [**NEW** Cybersecurity for Beginners](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung) 
 - [Web Dev for Beginners](https://aka.ms/webdev-beginners?WT.mc_id=academic-113596-abartolo)
 - [IoT for Beginners](https://aka.ms/iot-beginners?WT.mc_id=academic-113596-abartolo)
 - [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-113596-abartolo)
