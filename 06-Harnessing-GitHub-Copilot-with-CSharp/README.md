@@ -43,7 +43,11 @@ This app has already has a single endpoint to get a weather forecast. Let's upda
 
 ### 🗒️ Step 1: Generate a new Record that includes the City name
 
-Go to the `Program.cs`file, navigate to the end of the file and ask Copilot to generate a new record that includes the name of the city.
+Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
+
+![open program.cs in the BackEnd project](010OpenBackEndProject.png)
+
+Navigate to the end of the file and ask Copilot to generate a new record that includes the name of the city.
 
 ```csharp
 // internal record WeatherForecastByCity that request the following parameters:
@@ -62,7 +66,7 @@ internal record WeatherForecastByCity(string City, DateOnly Date, int Temperatur
 ```
 ### 🔎 Step 2: Generate a new endpoint to get the weather forecast for a city
 
-Now let's generate a new API endpoint for the "/weatherforecast" that also includes the city name.
+Now let's generate a new API endpoint for the "/weatherforecast" that also includes the city name. The new API endpoint name will be **"/weatherforecastbycity"**.
 
 Next, generate a new endpoint with GitHub Copilot by adding the comment: 
 
