@@ -28,6 +28,7 @@ By the end of this module, you'll acquire the skills to be able to:
 
 ### ⚠️⚠️ LEARN MODULE DOES NOT EXIST ⚠️⚠️ ###
 - [Using GitHub Copilot with C#](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-csharp/?WT.mc_id=academic-113596-abartolo)
+### ⚠️⚠️ LEARN MODULE DOES NOT EXIST ⚠️⚠️ ###
 
 ## Requirements
 
