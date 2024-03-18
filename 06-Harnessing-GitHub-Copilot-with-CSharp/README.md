@@ -40,7 +40,8 @@ By the end of this module, you'll acquire the skills to be able to:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/dotnet-codespaces)
 
-This app has already has a single endpoint to get a weather forecast. Let's update the web app by adding a new endpoint that request a specific location and return the forecast for that location.
+This repo builds a Weather API using Minimal APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET 8.
+We will review the steps to update the Weather BackEnd App by adding a new endpoint that request a specific location and return the weather forecast for that location.
 
 ### 🗒️ Step 1: Generate a new Record that includes the City name
 
