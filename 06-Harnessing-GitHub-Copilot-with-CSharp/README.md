@@ -26,9 +26,7 @@ By the end of this module, you'll acquire the skills to be able to:
 ## Prerequisite reading:
 - [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot//?WT.mc_id=academic-113596-abartolo)
 
-### ⚠️⚠️ LEARN MODULE DOES NOT EXIST ⚠️⚠️ ###
-- [Using GitHub Copilot with C#](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-csharp/?WT.mc_id=academic-113596-abartolo)
-### ⚠️⚠️ LEARN MODULE DOES NOT EXIST ⚠️⚠️ ###
+- [What is the GitHub Copilot extension for Visual Studio?](https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-extension?view=vs-2022&WT.mc_id=academic-113596-abartolo)
 
 ## Requirements
 
@@ -40,7 +38,7 @@ By the end of this module, you'll acquire the skills to be able to:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/dotnet-codespaces)
 
-This repo builds a Weather API using Minimal APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET 8.
+This repository builds a Weather API using Minimal APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET 8.
 We will review the steps to update the Weather BackEnd App by adding a new endpoint that request a specific location and return the weather forecast for that location.
 
 ### 🗒️ Step 1: Generate a new Record that includes the City name
