@@ -74,7 +74,7 @@ Next, generate a new endpoint with GitHub Copilot by adding the comment:
 // Create a new endpoint named /WeatherForecastByCity that accepts a city name and generates a random forecast for that city
 ```
 
-![Copilot ghost suggestion for the new endpoint](./02GeneratedCode.png)
+![Copilot ghost suggestion for the new endpoint](./020GeneratedCode.png)
 
 ***Important:** You must place the code in line 36, after the '.WithOpenApi();' line. Also remember to press TAB in each new suggested line until the whole endpoint is defined.*
 
