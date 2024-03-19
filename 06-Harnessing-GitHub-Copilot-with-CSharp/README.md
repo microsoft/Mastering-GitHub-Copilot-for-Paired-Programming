@@ -24,7 +24,7 @@ By the end of this module, you'll acquire the skills to be able to:
 - Applied GitHub Copilot to improve your projects.
 
 ## Prerequisite reading:
-- [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot//?WT.mc_id=academic-113596-abartolo)
+- [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot?WT.mc_id=academic-113596-abartolo)
 
 - [What is the GitHub Copilot extension for Visual Studio?](https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-extension?view=vs-2022&WT.mc_id=academic-113596-abartolo)
 
@@ -45,7 +45,7 @@ We will review the steps to update the Weather BackEnd App by adding a new endpo
 
 Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
 
-![open program.cs in the BackEnd project](010OpenBackEndProject.png)
+[![open program.cs in the BackEnd project](010OpenBackEndProject.png)]
 
 Navigate to the end of the file and ask Copilot to generate a new record that includes the name of the city.
 
