@@ -64,7 +64,7 @@ const siteProps = {
 
 ### 🔎 Step 2: Animate the social media icons with a prompt
 
-An animation can make the social media section more eye-catching. Next, lets ask Copilot’s help to animate the icons. Write the following prompt in the `src/styles.css` file:
+An animation can make the social media section more eye-catching. Ask Copilot’s help to animate the icons. Write the following prompt in the `src/styles.css` file:
 
 ```css
 /* add an amazing animation to the social icons */
@@ -91,11 +91,16 @@ img.socialIcon:hover {
 }
 ```
 
-### 🚀 Step 3: Work with the suggestion
+### 🚀 Step 3: Find out how to run the app
+Open GitHub Copilot chat by clicking on the chat icon on the left side bar and use the input section to ask the following:
 
-Accept the suggestion by pressing the tab key. If you don't receive the exact same suggestion, then you can either experiment with the suggestion provided or keep typing the CSS code until it matches.
+```
+@workspace I want to understand how can I run this React application
+```
 
+The prompts uses `@workspace` which is a special feature of GitHub Copilot chat that allows you to include more context for a more complete answer. Try out other queries using the chat panel for a more interactive workflow.
+
+### Conclusion
 Your site should already be running in your Codespace, and the change will reload onto the page automatically. To see them, hover over one of your social media icons in the footer to see the magic!
 
-
-Congratulations, through the exercise, you haven't only used copilot to generate code but also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
+Congratulations, through the exercise, you have use GitHub Copilot to generate code and also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
