@@ -32,20 +32,59 @@ By the end of this module, you'll acquire the skills to be able to:
 
 1. Enable your [GitHub Copilot service](https://github.com/github-copilot/signup)
 
-1. Open [this repository with Codespaces](https://github.com/github/dotnet-codespaces)
+1. Get familiar with [this repository with Codespaces](https://github.com/github/dotnet-codespaces)
 
 ## 💪🏽 Exercise
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/dotnet-codespaces)
 
-This repository builds a Weather API using Minimal APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET 8.
+The "**GitHub Codespaces ♥️ .NET 8**" repository builds a Weather API using Minimal APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET 8.
+
+
 We will review the steps to update the Weather BackEnd App by adding a new endpoint that request a specific location and return the weather forecast for that location.
+
+
+### 🗒️ (Optional Step) : Get familiarized with the "GitHub Codespaces ♥️ .NET 8" repository
+
+Once you open the repository in Codespaces, you will find a new browser window with a fully functional codespace. Everything in this repository contained within this one codespace. In example, in the explorer panel, we can see the main code for the BackEnd and the FrontEnd project.
+
+![new codespace with all the repository running](./005OpenRepoInCodeSpaces.png)
+
+In order to run the BackEnd project, go to the "Run and Debug" panel, and select the "BackEnd" Project.
+
+![open program.cs in the BackEnd project](./006RunBackEndProject.png)
+
+Start Debugging the selected project. The Weather API project, our BackEnd project will now be running in port 8080. We can copy the published url from the *Ports* panel
+
+![Copy app url from the ports panel](./007ProjectRunningOpenInNewTab.png)
+
+The BackEnd application published an endpoint named `weatherforecast` that generates random forecast data. In order to test the current running application, you can add `/weatherforecast` to the published url. The final url should be similar to this one
+
+```bash
+https://< your url>.app.github.dev/weatherforecast
+```
+The running application in a browser, should be similar to this one.
+
+![test the running application.](./008TestRunningApi.png)
+
+Now let's add a breaking point into our application, to debug each call to the API. Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
+
+Add a breakpoint in the line 24 (press F9), and refresh the browser with the url to test the endpoint. The browser should not show the weather forecast, and in the Visual Studio Editor we can see how the program execution was paused at line 24.
+
+![debug the running application.](./009DebugBackEndDemo.png)
+
+Pressing F10 we can debug step-by-step until line 32, where we can see the generated values. The application should have been generated samples Weather values for the next 5 days. The variable `forecast` have an array with these values.
+
+![debug the running application.](./010DebugForecastValue.png)
+
+
+Congratulations! Now you are ready to add more features into the app using GitHub Copilot.
 
 ### 🗒️ Step 1: Generate a new Record that includes the City name
 
 Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
 
-[![open program.cs in the BackEnd project](010OpenBackEndProject.png)]
+![open program.cs in the BackEnd project](./011OpenBackEndProject.png)
 
 Navigate to the end of the file and ask Copilot to generate a new record that includes the name of the city.
 
@@ -66,7 +105,7 @@ internal record WeatherForecastByCity(string City, DateOnly Date, int Temperatur
 ```
 ### 🔎 Step 2: Generate a new endpoint to get the weather forecast for a city
 
-Now let's generate a new API endpoint for the "/weatherforecast" that also includes the city name. The new API endpoint name will be **"/weatherforecastbycity"**.
+Now let's generate a new API endpoint similar to `/weatherforecast` that also includes the city name. The new API endpoint name will be **`/weatherforecastbycity`**.
 
 Next, generate a new endpoint with GitHub Copilot by adding the comment: 
 
@@ -74,13 +113,11 @@ Next, generate a new endpoint with GitHub Copilot by adding the comment:
 // Create a new endpoint named /WeatherForecastByCity that accepts a city name and generates a random forecast for that city
 ```
 
-![Copilot ghost suggestion for the new endpoint](./020GeneratedCode.png)
-
 ***Important:** You must place the code in line 36, after the '.WithOpenApi();' line. Also remember to press TAB in each new suggested line until the whole endpoint is defined.*
 
+![Copilot ghost suggestion for the new endpoint](./020GeneratedCode.png)
 
 The generated code should look similar to this one:
-
 
 ```csharp
 // Create a new endpoint named /weatherforecastbycity/{city}
@@ -113,17 +150,21 @@ Now press Run and the project should build and run. Once the project is running 
 https://< your code space url >.app.github.dev/WeatherForecast
 ```
 
-And the new endpoint will be also ready to test
+And the new endpoint will be also ready to test. Here are some samples urls with different cities:
 ```bash
 https://< your code space url >.app.github.dev/WeatherForecastByCity/Toronto
+
+https://< your code space url >.app.github.dev/WeatherForecastByCity/Madrid
+
+https://< your code space url >.app.github.dev/WeatherForecastByCity/<AnyCityName>
 ```
 
 Both tests running should be similar to these ones:
 
-![Open Run and Debug panel and select BackEnd project](032TestAndDebugUsingUrls.png)
+![Open Run and Debug panel and select BackEnd project](./032TestAndDebugUsingUrls.png)
 
 
-🚀 Congratulations, through the exercise, you haven't only used copilot to generate code but also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
+🚀 Congratulations, through the exercise, you haven't only used GitHub Copilot  to generate code but also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
 
 
 ## Legal Notices
