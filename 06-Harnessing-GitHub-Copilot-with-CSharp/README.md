@@ -4,7 +4,7 @@
 
 GitHub Copilot is the world's first at-scale AI developer tool that significantly accelerates code writing by providing autocomplete-style suggestions as you work. In this module, we will focus on harnessing the power of GitHub Copilot to enhance your C# coding efficiency.
 
-As a developer, your goal is to boost productivity and speed up coding processes. GitHub Copilot acts as your AI pair programmer, offering suggestions based on context and code patterns. By the end of this module, you'll not only know how to configure GitHub Copilot in Codespaces but also how to generate and implement code suggestions effectively.
+As a developer, your goal is to boost productivity and speed up coding processes. GitHub Copilot acts as your AI pair programmer, offering suggestions based on context and code patterns. By the end of this module, you'll not only know how to configure GitHub Copilot in Codespaces, but also how to generate and implement code suggestions effectively.
 
 Get ready to dive into a real-world scenario! You'll be modifying a C# repository using GitHub Copilot to create an interactive HTML form and an API endpoint. This project will give you valuable experience in developing a C# web app that serves an HTTP API, generating pseudo-random tokens for identification purposes.
 
@@ -41,14 +41,14 @@ By the end of this module, you'll acquire the skills to be able to:
 The "**GitHub Codespaces ♥️ .NET 8**" repository builds a Weather API using Minimal APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET 8.
 
 
-We will review the steps to update the Weather BackEnd App by adding a new endpoint that request a specific location and return the weather forecast for that location.
+We will review the steps to update the Weather BackEnd App by adding a new endpoint that requests a specific location and returns the weather forecast for that location.
 
 
 ### 🗒️ (Optional Step) : Get familiarized with the "GitHub Codespaces ♥️ .NET 8" repository
 
-Once you open the repository in Codespaces, you will find a new browser window with a fully functional codespace. Everything in this repository contained within this one codespace. In example, in the explorer panel, we can see the main code for the BackEnd and the FrontEnd project.
+Once you open the repository in Codespaces, you will find a new browser window with a fully functional Codespace. Everything in this repository is contained within this one Codespace. In example, in the explorer panel, we can see the main code for the BackEnd and the FrontEnd project.
 
-![new codespace with all the repository running](./005OpenRepoInCodeSpaces.png)
+![new Codespace with all the repository running](./005OpenRepoInCodeSpaces.png)
 
 In order to run the BackEnd project, go to the "Run and Debug" panel, and select the "BackEnd" Project.
 
@@ -58,29 +58,29 @@ Start Debugging the selected project. The Weather API project, our BackEnd proje
 
 ![Copy app url from the ports panel](./007ProjectRunningOpenInNewTab.png)
 
-The BackEnd application published an endpoint named `weatherforecast` that generates random forecast data. In order to test the current running application, you can add `/weatherforecast` to the published url. The final url should be similar to this one
+The BackEnd application published an endpoint named `weatherforecast` that generates random forecast data. To test the current running application, you can add `/weatherforecast` to the published url. The final url should be similar to this one
 
 ```bash
 https://< your url>.app.github.dev/weatherforecast
 ```
-The running application in a browser, should be similar to this one.
+The running application in a browser should be like this one.
 
 ![test the running application.](./008TestRunningApi.png)
 
 Now let's add a breaking point into our application, to debug each call to the API. Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
 
-Add a breakpoint in the line 24 (press F9), and refresh the browser with the url to test the endpoint. The browser should not show the weather forecast, and in the Visual Studio Editor we can see how the program execution was paused at line 24.
+Add a breakpoint in line 24 (press F9) and refresh the browser with the Url to test the endpoint. The browser should not show the weather forecast, and in the Visual Studio Editor we can see how the program execution was paused at line 24.
 
 ![debug the running application.](./009DebugBackEndDemo.png)
 
-Pressing F10 we can debug step-by-step until line 32, where we can see the generated values. The application should have been generated samples Weather values for the next 5 days. The variable `forecast` have an array with these values.
+Pressing F10 we can debug step-by-step until line 32, where we can see the generated values. The application should have been generated samples Weather values for the next 5 days. The variable `forecast` has an array containing these values.
 
 ![debug the running application.](./010DebugForecastValue.png)
 
 
 Congratulations! Now you are ready to add more features into the app using GitHub Copilot.
 
-### 🗒️ Step 1: Generate a new Record that includes the City name
+### 🗒️ Step 1: Generate a new Record that includes the city name
 
 Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
 
@@ -144,7 +144,7 @@ Select Run and Debug, and then select the BackEnd project.
 
 ![Open Run and Debug panel and select BackEnd project](./030RunAndDebugTheBackEndProject.png)
 
-Now press Run and the project should build and run. Once the project is running we can test the original url using your codespace url and the original endpoint:
+Now press Run and the project should build and run. Once the project is running, we can test the original Url using your Codespace url and the original endpoint:
 
 ```bash
 https://< your code space url >.app.github.dev/WeatherForecast
@@ -159,7 +159,7 @@ https://< your code space url >.app.github.dev/WeatherForecastByCity/Madrid
 https://< your code space url >.app.github.dev/WeatherForecastByCity/<AnyCityName>
 ```
 
-Both tests running should be similar to these ones:
+Both tests running should be like these ones:
 
 ![Open Run and Debug panel and select BackEnd project](./032TestAndDebugUsingUrls.png)
 
