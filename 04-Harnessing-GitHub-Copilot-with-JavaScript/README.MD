@@ -1,6 +1,6 @@
 <header>
 
-# Harnessing GitHub Copilot with JavaScript
+# Using GitHub Copilot with JavaScript
 
 In this module, we'll continue to dive into GitHub Copilot capabilities as an AI developer tool designed to enhance your coding experience. Imagine writing code faster and with less effort—GitHub Copilot makes this a reality by seamlessly generating suggestions based on the context of your comments and code.
 
