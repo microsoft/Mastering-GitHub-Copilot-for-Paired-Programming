@@ -64,9 +64,7 @@ const siteProps = {
 
 ### 🔎 Step 2: Animate the social media icons with a prompt
 
-Next, generate a new endpoint with GitHub Copilot by adding the comment: 
-
-An animation can make the social media section more eye-catching. Ask Copilot’s help to animate the icons. Write the following prompt in the `src/styles.css` file:
+An animation can make the social media section more eye-catching. Next, lets ask Copilot’s help to animate the icons. Write the following prompt in the `src/styles.css` file:
 
 ```css
 /* add an amazing animation to the social icons */
