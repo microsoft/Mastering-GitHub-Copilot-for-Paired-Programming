@@ -56,20 +56,13 @@ Next, generate a new endpoint with GitHub Copilot by adding the comment:
 # Create a FastAPI endpoint that accepts a POST request with a JSON body containing a single field called "text" and returns a checksum of the text 
 ```
 
-### 🐍 Step 3: Add necessary imports
+### 🐍 Step 3: Explain code
 
-The generated code causes the application to crash. The crash happens because the `base64` and `os` modules aren't imported. Add the following lines to the top of the file:
-
-```python
-import base64 
-import os
-```
+The `generate()` route creates a pseudo-random token ID using a single line that might be difficult to fully understand. Select the whole function, and then right click on the selection, then select the Copilot menu item, and then the _"Explain This"_ option. The GitHub Copilot chat interface will open to the left and provide you a useful explanation which you can use to interactively ask more questions.
 
 Finally, verify the new endpoint is working by trying it out by going to the `/docs` endpoint and confirming that the endpoint shows up.
 
-
 🚀 Congratulations, through the exercise, you haven't only used copilot to generate code but also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
-
 
 ## Legal Notices
 
