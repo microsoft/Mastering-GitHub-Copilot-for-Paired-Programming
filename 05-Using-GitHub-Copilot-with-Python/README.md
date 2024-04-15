@@ -71,7 +71,7 @@ Finally, verify the new endpoint is working by trying it out by going to the `/d
 
 🚀 Congratulations, through the exercise, you haven't only used Copilot to generate code but also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
 
-### 💡 Extra challenges
+### 💡 Step 4: Using Slash Commands
 
 Now that you've used GitHub Copilot to generate and explain code, you can also explore some other alternative approaches to perform developer tasks. These extra challenges will help you dive deeper into other GitHub Copilot features in addition to the ones you already know. For these extra challenges, you will use the Chat interface. Click on the GitHub Copilot Chat icon on the left sidebar if you don't have it open yet.
 
