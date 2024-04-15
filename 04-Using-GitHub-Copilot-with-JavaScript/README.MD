@@ -61,8 +61,55 @@ const siteProps = {
   youTube: "Code",
 };
 ```
+### 📖 Step 2: Explain the code
 
-### 🔎 Step 2: Animate the social media icons with a prompt
+Now lets use the slash command to explain what a portion of the code does.  Highlight the following code:
+
+```javascript
+};
+
+const primaryColor = "#4E567E";
+const secondaryColor = "#D2F1E4";
+
+const App = () => {
+  return (
+    <div id="main">
+      <Header />
+      <Home name={siteProps.name} title={siteProps.title} />
+      <About />
+      <Portfolio />
+      <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
+    </div>
+  );
+};
+```
+Once highlighted, hit Ctrl + I (Windows) or Cmd + I (Mac) and enter /explain.  You should receive a response in the Copilot Chat windows similar to this:
+
+```
+This JavaScript code is written in React, a popular library for building user interfaces. The code defines a functional component named App. The App component is the root component of your application. It's where all other components (Header, Home, About, Portfolio, Footer) are being called and rendered. The App component returns a JSX (JavaScript XML) structure, which looks similar to HTML. This JSX structure defines what the App component should render on the screen. In the JSX, there is a div with an id of "main". Inside this div, several components are being rendered: Header, Home, About, Portfolio, and Footer. The Home component is being passed two props: name and title, both of which are properties of the siteProps object. The Footer component is being passed several props. The ...siteProps syntax is using the JavaScript spread operator to pass all properties of siteProps as separate props. In addition to the siteProps, two more props are being passed: primaryColor and secondaryColor. These are defined as constants at the top of the file. Remember, props (short for properties) in React are how components talk to each other. If you think of components as functions, then props are the arguments to these functions. They are passed from the parent component (in this case, App) to the child components (Header, Home, About, Portfolio, Footer).
+```
+
+Lets dive a little deeper.  Notice how Copilot Chat now provides a follow up question suggestion for you to ask. Click on the question "What is the purpose of using props in React components?" and you should get an answer similar to this:
+
+```
+Props (short for properties) in React are used for passing data from one component to another, just like function arguments. They are read-only and help to make components reusable and dynamic. In your code, for example, the Home component is passed name and title as props. This means that the Home component can use these values to display dynamic content. The Footer component is also passed several props, including all properties of siteProps and the primaryColor and secondaryColor constants. Here's an analogy: think of a component as a custom HTML element and props as the attributes of that element. Just like you can pass different attributes to an HTML element (like <img src="image.jpg" alt="An image">), you can pass different props to a React component (like <Home name="John" title="Developer" />). This makes your components more flexible and reusable. For instance, you could use the same Home component with different props to display different content.
+```
+
+Did you notice after you clicked the suggested question in the Copilot Chat windows, it used the following command to ask the question:
+
+```
+@workspace /explain What is the purpose of using props in React components?
+```
+
+The @workspace agent, like Copilot, fills in missing details, helping when humans overlook or don't fully describe everything they see. When prompted, Copilot takes a different approach. Instead of immediately responding, it first examines the files and folders in the workspace in steps:
+
+1. It checks the names of files/folders to see which could be relevant.
+2. It reads the contents of files, sometimes in full, sometimes partially due to memory limits.
+3. It creates context from the collected information.
+4. It responds, using both the prompt's context and the information it gathered.
+
+
+### 🔎 Step 3: Animate the social media icons with a prompt
 
 An animation can make the social media section more eye-catching. Ask Copilot’s help to animate the icons. Write the following prompt in the `src/styles.css` file:
 
@@ -91,7 +138,7 @@ img.socialIcon:hover {
 }
 ```
 
-### 🚀 Step 3: Find out how to run the app
+### 🚀 Step 4: Find out how to run the app
 Open GitHub Copilot chat by clicking on the chat icon on the left side bar and use the input section to ask the following:
 
 ```
