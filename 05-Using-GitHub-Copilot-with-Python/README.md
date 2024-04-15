@@ -71,11 +71,12 @@ Finally, verify the new endpoint is working by trying it out by going to the `/d
 
 🚀 Congratulations, through the exercise, you haven't only used Copilot to generate code but also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
 
-### Extra challenges
+### 💡 Extra challenges
 
 Now that you've used GitHub Copilot to generate and explain code, you can also explore some other alternative approaches to perform developer tasks. These extra challenges will help you dive deeper into other GitHub Copilot features in addition to the ones you already know. For these extra challenges, you will use the Chat interface. Click on the GitHub Copilot Chat icon on the left sidebar if you don't have it open yet.
 
 **Generate documentation**
+ 
 With `main.py` open, use the chat interface with the following text:
 
 ```
@@ -86,6 +87,7 @@ The `/docs` part of the prompt is called a _"slash command"_ and it is a specifi
 
 
 **Generate tests**
+ 
 The current code doesn't have any tests. For this challenge, you will use the `/tests` slash command. With `main.py` open, use the chat interace with the following prompt:
 
 ```
@@ -94,7 +96,8 @@ The current code doesn't have any tests. For this challenge, you will use the `/
 
 The `/tests` slash command will guide you through on writing a new test for your route and give you everything you need so that you can verify your work.
 
-**Final challenge**
+**Workspace challenge**
+ 
 Finally, you will get a chance to use an _agent_. Agents are a special feature of GitHub Copilot in Visual Studio Code that allow specific context to be shared with GitHub Copilot. For this final challenge, you will use the `@workspace` agent which includes files from the current worspace to provide more context. You will solve a problem which is related to how to run the whole application. In this case, you will enhance the README.md for more specifics that span multiple files. Using `@workspace` helps provide more context without having to open many files.
 
 For this final challenge, you aren't required to have any open files. Use the following prompt in the GitHub Copilot Chat window:
