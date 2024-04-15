@@ -6,7 +6,7 @@ GitHub Copilot is the world's first at-scale AI developer tool that significantl
 
 As a developer, your goal is to boost productivity and speed up coding processes. GitHub Copilot acts as your AI pair programmer, offering suggestions based on context and code patterns. By the end of this module, you'll not only know how to configure GitHub Copilot in Codespaces, but also how to generate and implement code suggestions effectively.
 
-Get ready to dive into a real-world scenario! You'll be modifying a C# repository using GitHub Copilot to create an interactive HTML form and an API endpoint. This project will give you valuable experience in developing a C# web app that serves an HTTP API, generating pseudo-random tokens for identification purposes.
+Get ready to dive into a real-world scenario! You'll be modifying a C# repository using GitHub Copilot to create an API endpoint. This project will give you valuable experience in developing a C# web app that serves an HTTP API, generating pseudo-random weather forecast information.
 
 </header>
 
@@ -44,7 +44,7 @@ The "**GitHub Codespaces ♥️ .NET 8**" repository builds a Weather API using 
 We will review the steps to update the Weather BackEnd App by adding a new endpoint that requests a specific location and returns the weather forecast for that location.
 
 
-### 🗒️ (Optional Step) : Get familiarized with the "GitHub Codespaces ♥️ .NET 8" repository
+### 🗒️ (Optional Step 1) : Get familiarized with the "GitHub Codespaces ♥️ .NET 8" repository
 
 Once you open the repository in Codespaces, you will find a new browser window with a fully functional Codespace. Everything in this repository is contained within this one Codespace. In example, in the explorer panel, we can see the main code for the BackEnd and the FrontEnd project.
 
@@ -79,6 +79,41 @@ Pressing F10 we can debug step-by-step until line 32, where we can see the gener
 
 
 Congratulations! Now you are ready to add more features into the app using GitHub Copilot.
+
+### 🗒️ (Optional Step 2) : Get familiarized with GitHub Copilot Slash Commands
+
+As we start working in our codebase, we usually need to refactor some code, or get more context or explanations about it. Using GitHub Copilot Chat, we can have AI-driven conversations to perform these tasks. 
+
+Open the file `Program.cs` in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
+
+Now let's use a slash command, in GitHub Copilot to understand a piece of code. Select lines 22-35, press `CTRL + I` to open the inline chat, and type `/explain`.
+
+![Use slash command to explain a piece of code](./011SlashCommandExplain.gif)
+
+In the Chat Panel, GitHub Copilot will create a detailed explanation of the selected code. A summarized version will be like this one:
+
+```
+The selected C# code is part of an ASP.NET Core application using the minimal API feature. It defines a GET endpoint at "/weatherforecast" that generates an array of WeatherForecast objects. Each object is created with a date, a random temperature, and a random summary. The endpoint is named "GetWeatherForecast" and has OpenAPI support for standardized API structure documentation.
+```
+
+**Slash commands** are special commands that you can use in chat to perform specific actions on your code. For example, you can use: 
+- `/doc` to add a documentation comment 
+- `/explain` to explain the code 
+- `/fix` to propose a fix for the problems in the selected code 
+- `/generate` to generate code to answer your question
+
+Let's use the `/tests` command to generate tests to the code. Select lines 39-42, press `CTRL + I` to open the inline chat, and type `/tests` (or select the /tests slash command) to generate a new set of tests for this record.
+
+![Use slash command to generate tests for the selected piece of code](./012SlashCmdTests.gif)
+
+A new class `ProgramTests.cs` was created and added to the project. This tests are using XUnit, however, you can ask to generate tests using another Unit Test library with a command like this one `/tests use MSTests for unit testing`.
+
+Finally, let's use the `/doc` to generate automatic documentation to the code. Select lines 39-42, press `CTRL + I` to open the inline chat, and type `/doc` (or select the command) to generate the documentation for this record.
+
+![Use slash command to generate the documentation for a piece of code](./013SlashCmdDoc.gif)
+
+Inline chat, the Chat Panel, and slash commands are part of the amazing tools that support our development experience with GitHub Copilot. Now we are ready to add new features to this App.
+
 
 ### 🗒️ Step 1: Generate a new Record that includes the city name
 
