@@ -20,7 +20,6 @@ By mastering GitHub Copilot, you'll not only configure repositories in Codespace
 
 By the end of this module, you'll aquire the skills to be able to:
 
-- Configure a GitHub repository in Codespaces and install GitHub Copilot extension.
 - Craft prompts to generate suggestions from GitHub Copilot
 - Apply GitHub Copilot to improve your projects.
 
