@@ -19,7 +19,6 @@ Get ready to dive into a real-world scenario! You'll be modifying a C# repositor
 
 By the end of this module, you'll acquire the skills to be able to:
 
-- Configure a GitHub repository in Codespaces and install GitHub Copilot extension.
 - Crafted prompts to generate suggestions from GitHub Copilot
 - Applied GitHub Copilot to improve your projects.
 
