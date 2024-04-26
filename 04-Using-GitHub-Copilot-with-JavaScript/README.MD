@@ -4,7 +4,7 @@
 
 In this module, we'll continue to dive into GitHub Copilot capabilities and learn how to use to enhance your coding experience. Imagine writing code faster and with less effort—GitHub Copilot makes this a reality by seamlessly generating suggestions based on the context of your comments and code.
 
-As a developer seeking increased productivity, you'll embark on a journey to master GitHub Copilot's capabilities, focusing on its application in JavaScript. By the module's end, you will not only enable the GitHub Copilot extension in Visual Studio Code but also become adept at crafting prompts that yield valuable suggestions. Elevate your coding skills as you use GitHub Copilot to enhance a JavaScript project, experiencing firsthand how this AI pair programmer offers autocomplete-style suggestions, transforming your development workflow.
+As a developer seeking increased productivity, you'll embark on a journey to master GitHub Copilot's capabilities, focusing on its application in JavaScript. By the module's end, you will become adept at crafting prompts that yield valuable suggestions using the GitHub Copilot extension in Visual Studio Code. Elevate your coding skills as you use GitHub Copilot to enhance a JavaScript project, experiencing firsthand how this AI pair programmer offers autocomplete-style suggestions, transforming your development workflow.
 
 By mastering GitHub Copilot, you'll not only configure repositories in Codespaces but also efficiently utilize this AI tool to improve your coding projects. Prepare to revolutionize your coding experience and boost your productivity in this dynamic learning adventure!
 
