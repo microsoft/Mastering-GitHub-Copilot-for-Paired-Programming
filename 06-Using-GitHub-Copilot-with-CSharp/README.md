@@ -67,7 +67,7 @@ The running application in a browser should be like this one.
 
 ![test the running application.](./008TestRunningApi.png)
 
-Now let's add a breaking point into our application, to debug each call to the API. Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
+Now let's add a break point into our application, to debug each call to the API. Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
 
 Add a breakpoint in line 24 (press F9) and refresh the browser with the Url to test the endpoint. The browser should not show the weather forecast, and in the Visual Studio Editor we can see how the program execution was paused at line 24.
 
@@ -76,6 +76,8 @@ Add a breakpoint in line 24 (press F9) and refresh the browser with the Url to t
 Pressing F10 we can debug step-by-step until line 32, where we can see the generated values. The application should have been generated samples Weather values for the next 5 days. The variable `forecast` has an array containing these values.
 
 ![debug the running application.](./010DebugForecastValue.png)
+
+You can stop debugging now.
 
 
 Congratulations! Now you are ready to add more features into the app using GitHub Copilot.
@@ -106,7 +108,11 @@ Let's use the `/tests` command to generate tests to the code. Select lines 39-42
 
 ![Use slash command to generate tests for the selected piece of code](./012SlashCmdTests.gif)
 
+At this point, GitHub Copilot will suggest a new class. You need to first press [Create] to create the new file. 
+
 A new class `ProgramTests.cs` was created and added to the project. This tests are using XUnit, however, you can ask to generate tests using another Unit Test library with a command like this one `/tests use MSTests for unit testing`.
+
+***Important:** We are not going to use the test file in this project. You must delete the generated test file to continue.*
 
 Finally, let's use the `/doc` to generate automatic documentation to the code. Select lines 39-42, press `CTRL + I` to open the inline chat, and type `/doc` (or select the command) to generate the documentation for this record.
 
@@ -124,40 +130,43 @@ Go to the `Program.cs` file in the BackEnd project. The file is in the following
 Navigate to the end of the file and ask Copilot to generate a new record that includes the name of the city.
 
 ```csharp
-// internal record WeatherForecastByCity that request the following parameters:
-// City, Date, TemperatureC, Summary
+// create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
 ```
 
 The generated code sould be similar to this one:
 
 ```csharp
-// internal record WeatherForecastByCity that request the following parameters:
-// City, Date, TemperatureC, Summary
+// create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
 internal record WeatherForecastByCity(string City, DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
 ```
+
+You can take a look at the prompt working in the next animation:
+
+![open program.cs in the BackEnd project](./014AddNewRecord.gif)
+
 ### 🔎 Step 2: Generate a new endpoint to get the weather forecast for a city
 
 Now let's generate a new API endpoint similar to `/weatherforecast` that also includes the city name. The new API endpoint name will be **`/weatherforecastbycity`**.
 
+***Important:** You must place the code after the '.WithOpenApi();' line, this starts in line 36. Also remember to press TAB in each new suggested line until the whole endpoint is defined.*
+
 Next, generate a new endpoint with GitHub Copilot by adding the comment: 
 
 ```csharp
-// Create a new endpoint named /WeatherForecastByCity that accepts a city name and generates a random forecast for that city
+// Create a new endpoint named /WeatherForecastByCity/{city}, that accepts a city name in the urls as a paremeter and generates a random forecast for that city
 ```
+In the following example, we added some extra blank lines after the previous endpoint and then GitHub Copilot generated the new endpoint.
 
-***Important:** You must place the code in line 36, after the '.WithOpenApi();' line. Also remember to press TAB in each new suggested line until the whole endpoint is defined.*
-
-![Copilot ghost suggestion for the new endpoint](./020GeneratedCode.png)
+![Copilot ghost suggestion for the new endpoint](./020GeneratedCode.gif)
 
 The generated code should look similar to this one:
 
 ```csharp
-// Create a new endpoint named /weatherforecastbycity/{city}
-// the endpoing  accepts a city name and generates a random forecast for that city
-app.MapGet("/weatherforecastbycity/{city}", (string city) =>
+// Create a new endpoint named /WeatherForecastByCity/{city}, that accepts a city name in the urls as a paremeter and generates a random forecast for that city
+app.MapGet("/WeatherForecastByCity/{city}", (string city) =>
 {
     var forecast = new WeatherForecastByCity
     (
