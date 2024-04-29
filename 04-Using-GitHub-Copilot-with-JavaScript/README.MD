@@ -4,7 +4,7 @@
 
 In this module, we'll continue to dive into GitHub Copilot capabilities and learn how to use to enhance your coding experience. Imagine writing code faster and with less effort—GitHub Copilot makes this a reality by seamlessly generating suggestions based on the context of your comments and code.
 
-As a developer seeking increased productivity, you'll embark on a journey to master GitHub Copilot's capabilities, focusing on its application in JavaScript. By the module's end, you will not only enable the GitHub Copilot extension in Visual Studio Code but also become adept at crafting prompts that yield valuable suggestions. Elevate your coding skills as you use GitHub Copilot to enhance a JavaScript project, experiencing firsthand how this AI pair programmer offers autocomplete-style suggestions, transforming your development workflow.
+As a developer seeking increased productivity, you'll embark on a journey to master GitHub Copilot's capabilities, focusing on its application in JavaScript. By the module's end, you will gain experiance at crafting prompts that yield valuable suggestions using the GitHub Copilot extension in Visual Studio Code. Elevate your coding skills as you use GitHub Copilot to enhance a JavaScript project, experiencing firsthand how this AI pair programmer offers autocomplete-style suggestions, transforming your development workflow.
 
 By mastering GitHub Copilot, you'll not only configure repositories in Codespaces but also efficiently utilize this AI tool to improve your coding projects. Prepare to revolutionize your coding experience and boost your productivity in this dynamic learning adventure!
 
@@ -20,7 +20,6 @@ By mastering GitHub Copilot, you'll not only configure repositories in Codespace
 
 By the end of this module, you'll aquire the skills to be able to:
 
-- Configure a GitHub repository in Codespaces and install GitHub Copilot extension.
 - Craft prompts to generate suggestions from GitHub Copilot
 - Apply GitHub Copilot to improve your projects.
 
@@ -43,6 +42,8 @@ By the end of this module, you'll aquire the skills to be able to:
 
 In this template portfolio, we have a React based web application ready for you to easily customize and deploy using only your web browser.
 
+**Note:** Please disreguard the instructions given within the GitHub Codespace. For theis labs, be sure to follow the intructions found here.
+
 
 ### 🛠 Step 1: Customize the web app
 
@@ -61,10 +62,61 @@ const siteProps = {
   youTube: "Code",
 };
 ```
+### 📖 Step 2: Explain the code
 
-### 🔎 Step 2: Animate the social media icons with a prompt
+Now lets use the slash command to explain what a portion of the code does.  Highlight the following code:
 
-An animation can make the social media section more eye-catching. Ask Copilot’s help to animate the icons. Write the following prompt in the `src/styles.css` file:
+```javascript
+};
+
+const primaryColor = "#4E567E";
+const secondaryColor = "#D2F1E4";
+
+const App = () => {
+  return (
+    <div id="main">
+      <Header />
+      <Home name={siteProps.name} title={siteProps.title} />
+      <About />
+      <Portfolio />
+      <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
+    </div>
+  );
+};
+```
+Once highlighted, hit Ctrl + I (Windows) or Cmd + I (Mac) and enter **/explain**.  You should receive a response in the Copilot Chat window similar to this:
+
+```
+This JavaScript code is written in React, a popular library for building user interfaces. The code defines a functional component named App. The App component is the root component of your application. It's where all other components (Header, Home, About, Portfolio, Footer) are being called and rendered. The App component returns a JSX (JavaScript XML) structure, which looks similar to HTML. This JSX structure defines what the App component should render on the screen. In the JSX, there is a div with an id of "main". Inside this div, several components are being rendered: Header, Home, About, Portfolio, and Footer. The Home component is being passed two props: name and title, both of which are properties of the siteProps object. The Footer component is being passed several props. The ...siteProps syntax is using the JavaScript spread operator to pass all properties of siteProps as separate props. In addition to the siteProps, two more props are being passed: primaryColor and secondaryColor. These are defined as constants at the top of the file. Remember, props (short for properties) in React are how components talk to each other. If you think of components as functions, then props are the arguments to these functions. They are passed from the parent component (in this case, App) to the child components (Header, Home, About, Portfolio, Footer).
+```
+
+Lets dive a little deeper.  Notice how Copilot Chat now provides a follow up question suggestion for you to ask. Click on the question suggested by GitHub Copilot found at the bottom of the window usually starting with "What is the purpose..." and review the answer provided. As an example, should the question GitHub Copilot provide be the following:
+
+What is the purpose of using props in React components? 
+
+You should get an answer similar to this:
+
+```
+Props (short for properties) in React are used for passing data from one component to another, just like function arguments. They are read-only and help to make components reusable and dynamic. In your code, for example, the Home component is passed name and title as props. This means that the Home component can use these values to display dynamic content. The Footer component is also passed several props, including all properties of siteProps and the primaryColor and secondaryColor constants. Here's an analogy: think of a component as a custom HTML element and props as the attributes of that element. Just like you can pass different attributes to an HTML element (like <img src="image.jpg" alt="An image">), you can pass different props to a React component (like <Home name="John" title="Developer" />). This makes your components more flexible and reusable. For instance, you could use the same Home component with different props to display different content.
+```
+
+Did you notice after you clicked the suggested question in the Copilot Chat windows, it used a command similar to the following to ask the question:
+
+```
+@workspace /explain What is the purpose of using props in React components?
+```
+
+The @workspace agent, like Copilot, fills in missing details, helping when humans overlook or don't fully describe everything they see. When prompted, Copilot takes a different approach. Instead of immediately responding, it first examines the files and folders in the workspace in steps:
+
+1. It checks the names of files/folders to see which could be relevant.
+2. It reads the contents of files, sometimes in full, sometimes partially due to memory limits.
+3. It creates context from the collected information.
+4. It responds, using both the prompt's context and the information it gathered.
+
+
+### 🔎 Step 3: Animate the social media icons with a prompt
+
+An animation can make the social media section more eye-catching. Ask Copilot’s help to animate the icons. Jump to the end of the file and write the following prompt in the `src/styles.css` file:
 
 ```css
 /* add an amazing animation to the social icons */
@@ -91,7 +143,7 @@ img.socialIcon:hover {
 }
 ```
 
-### 🚀 Step 3: Find out how to run the app
+### 🚀 Step 4: Find out how to run the app
 Open GitHub Copilot chat by clicking on the chat icon on the left side bar and use the input section to ask the following:
 
 ```
@@ -102,5 +154,7 @@ The prompts uses `@workspace` which is a special feature of GitHub Copilot chat 
 
 ### Conclusion
 Your site should already be running in your Codespace, and the change will reload onto the page automatically. To see them, hover over one of your social media icons in the footer to see the magic!
+
+**Note:** Refresh the Codespace browser window if the hover effects do not work. 
 
 Congratulations, through the exercise, you have use GitHub Copilot to generate code and also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
