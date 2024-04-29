@@ -54,6 +54,9 @@ class Text(BaseModel):
 text: str
 ```
 
+> [!NOTE]
+> You might see some linter warnings in the editor (identifiable with red dotted underlines) which can be ignored. These include long lines or even new lines that aren't needed. Feel free to address them, although these shouldn't affect your application from running correctly.
+
 ### 🔎 Step 2: Generate a new endpoint
 
 Next, generate a new endpoint with GitHub Copilot by adding the comment at the very bottom of the `main.py` file under the last route.
