@@ -62,6 +62,8 @@ Next, generate a new endpoint with GitHub Copilot by adding the comment at the v
 # Create a FastAPI endpoint that accepts a POST request with a JSON body containing a single field called "text" and returns a checksum of the text 
 ```
 
+You might get a suggestion that uses a module or library that wasn't imported. If you do, you can ask GitHub Copilot to help you import the right module by selecting the generated code and using Command+I (Apple) or Control+I (Windows) and add a prompt to add the missing imports. This small pop-out is called inline chat and is another way to interact with GitHub Copilot.
+
 ### 🐍 Step 3: Explain code
 
 The `generate()` route creates a pseudo-random token ID using a single line that might be difficult to fully understand. Select the whole function, and then right click on the selection, then select the Copilot menu item, and then the _"Explain This"_ option. The GitHub Copilot chat interface will open to the left and provide you a useful explanation which you can use to interactively ask more questions.
