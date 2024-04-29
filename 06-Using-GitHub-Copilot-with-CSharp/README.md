@@ -157,9 +157,11 @@ Next, generate a new endpoint with GitHub Copilot by adding the comment:
 ```csharp
 // Create a new endpoint named /WeatherForecastByCity/{city}, that accepts a city name in the urls as a paremeter and generates a random forecast for that city
 ```
-In the following example, we added some extra blank lines after the previous endpoint and then GitHub Copilot generated the new endpoint.
+In the following example, we added some extra blank lines after the previous endpoint and then GitHub Copilot generated the new endpoint. Once the Endpoint core code was generated, GitHub Copilot also suggested code for the name of the endpoint (line 49) and the OpenAPI specification (line 50). Remember to accept each one of these suggestions pressing [TAB].
 
 ![Copilot ghost suggestion for the new endpoint](./020GeneratedCode.gif)
+
+***Important**: This prompt generates several lines of C# code. It's strongly adviced to check and review the generated code to verify that it works in the desired way.*
 
 The generated code should look similar to this one:
 
@@ -179,6 +181,8 @@ app.MapGet("/WeatherForecastByCity/{city}", (string city) =>
 .WithName("GetWeatherForecastByCity")
 .WithOpenApi();
 ```
+
+
 
 ### 🐍 Step 3: Test the new endpoint.
 
