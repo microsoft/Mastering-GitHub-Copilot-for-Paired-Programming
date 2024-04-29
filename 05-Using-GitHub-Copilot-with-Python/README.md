@@ -4,7 +4,7 @@
 
 GitHub Copilot is the world's first at-scale AI developer tool that significantly accelerates code writing by providing autocomplete-style suggestions as you work. In this module, we will focus on using the power of GitHub Copilot to enhance your Python coding efficiency.
 
-As a developer, your goal is to boost productivity and speed up coding processes. GitHub Copilot acts as your AI pair programmer, offering suggestions based on context and code patterns. By the end of this module, you'll not only know how to configure GitHub Copilot in Codespaces but also how to generate and implement code suggestions effectively.
+As a developer, your goal is to boost productivity and speed up coding processes. GitHub Copilot acts as your AI pair programmer, offering suggestions based on context and code patterns. In this module, you'll use GitHub Copilot with Codespaces to generate and implement code suggestions effectively.
 
 Get ready to dive into a real-world scenario! You'll be modifying a Python repository using GitHub Copilot to create an interactive HTML form and an API endpoint. This project will give you valuable experience in developing a Python web app that serves an HTTP API, generating pseudo-random tokens for identification purposes.
 
