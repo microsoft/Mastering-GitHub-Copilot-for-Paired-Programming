@@ -39,19 +39,17 @@ The API already has a single endpoint to generate a token. Let's update the API 
 
 ### 🛠 Step 1: Add a Pydantic model
 
-Go to the `main.py` file, and add a comment anywhere in the file so that GitHub Copilot can generate a `Pydantic` model for you. For example you could add a comment like: 
+Go to the `main.py` file, navigate to the bottom of the provided code, select **Ctrl + I (PC)** or **Cmd + I (Mac)** and copy the following into the provided GitHub Copilot Chat box so that it can generate a `Pydantic` model for you: 
 
 ```
-# Create a Pydantic model so that I can use it in a new route that will accept JSON
-# with text as a key which accepts a string
+Create a Pydantic model so that I can use it in a new route that will accept JSON with text as a key which accepts a string.
 ```
 
 The generated model should look like this:
 
 ```python
-class Text(BaseModel): 
-
-text: str
+    class TextData(BaseModel):
+        text: str
 ```
 
 > [!NOTE]
