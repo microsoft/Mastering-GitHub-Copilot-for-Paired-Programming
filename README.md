@@ -1,7 +1,7 @@
 ![Mastering GitHub Copilot for AI Paired Programming](./images/GitHub%20101%20-%20Curriculum%20v2.png)
 
 # Mastering GitHub Copilot for AI Paired Programming
-A 7 Lesson course teaching everything you need to know about harnessing GitHub Copilot and an AI Paired Programing resource.
+An 8 Lesson course teaching everything you need to know about harnessing GitHub Copilot and an AI Paired Programing resource.
 
 Unlock the power of collaborative coding with our comprehensive curriculum on Mastering GitHub Copilot for Paired Programming. This cutting-edge program seamlessly integrates AI-driven coding assistance through GitHub Copilot, empowering students to accelerate their coding skills in tandem with a partner. Over the course of 10 engaging hours, participants will navigate through essential setup procedures, leveraging Visual Studio Code and GitHub Copilot Chat for real-time collaboration. Dive deep into GitHub Copilot's autocompletion, customizable features, and advanced programming techniques, all while embracing AI-driven algorithms. From error handling to unit testing, this curriculum is tailored to instill best practices and enhance code quality. Immerse yourself in a transformative learning experience that fuses the latest AI technology with paired programming strategies, equipping you with the tools needed for success in today's dynamic software development landscape.
 
@@ -40,7 +40,7 @@ Here are ways you can contribute to this course:
 | 04 | [Using GitHub Copilot with JavaScript](./04-Using-GitHub-Copilot-with-JavaScript) | Use GitHub Copilot, an AI pair programmer that offers autocomplete-style suggestions as you code, to work with JavaScript. | Enable the GitHub Copilot extension in Visual Studio Code. Craft prompts that can generate useful suggestions from GitHub Copilot. Use GitHub Copilot to improve a JavaScript project. |
 | 05 | [Using GitHub Copilot with Python](./05-Using-GitHub-Copilot-with-Python) | Use GitHub Copilot, an AI pair programmer that offers autocomplete-style suggestions as you code, to work with Python. | Enable the GitHub Copilot extension in Visual Studio Code. Craft prompts that can generate useful suggestions from GitHub Copilot. Use GitHub Copilot to improve a Python project. |
 | 06 | [Using GitHub Copilot with C#](./06-Using-GitHub-Copilot-with-CSharp) | Use GitHub Copilot, an AI pair programmer that offers autocomplete-style suggestions as you code, to work with C#. | Enable the GitHub Copilot extension in Visual Studio Code. Craft prompts that can generate useful suggestions from GitHub Copilot. Use GitHub Copilot to improve a C# Minimal API project. |
-| 07 | [Creating a Mini Game with GitHub Copilot](./06-Creating-Mini-Game-with-GitHub-Copilot) | Use GitHub Copilot to assist you in building a Python based mini game. | Craft prompts that can generate useful suggestions from GitHub Copilot to incorporate gaming logic and improve your Python based game. |
+| 07 | [Creating a Mini Game with GitHub Copilot](./07-Creating-Mini-Game-with-GitHub-Copilot) | Use GitHub Copilot to assist you in building a Python based mini game. | Craft prompts that can generate useful suggestions from GitHub Copilot to incorporate gaming logic and improve your Python based game. |
 | 08 | [Using Advanced GitHub Copilot Features](./08-Using-Advanced-GitHub-Copilot-Features) | Use advanced GitHub Copilot features like inline chat, slash commands, and agents. | Interact with GitHub Copilot with deeper context on your project and ask questions about it. |
 
 
