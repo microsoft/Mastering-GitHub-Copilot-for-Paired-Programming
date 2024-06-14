@@ -4,12 +4,14 @@
 
 In this learning module, we'll dive into the revolutionary landscape of AI-pair programming with GitHub Copilot, the first-ever at-scale AI developer tool designed to enhance your coding experience.
 
-GitHub Copilot, powered by OpenAI Codex, analyzes context from comments and code to provide autocomplete-style suggestions, enabling you to write code faster and with less effort. As you delve into this module, you'll unravel the intricacies of GitHub Copilot, exploring its capabilities within VS Code and Codespaces.
+GitHub Copilot analyzes context from files and comments and input from its interactive chat to provide autocomplete-style suggestions, enabling you to write code faster and with less effort. As you delve into this module, you'll unravel the intricacies of GitHub Copilot, exploring its capabilities within VS Code and Codespaces.
 
-Our learning objectives are ambitious yet achievable. By the module's conclusion, you will not only be able to articulate what GitHub Copilot is and its advantages but also comprehend its availability for individuals and businesses. Gain insights into the future of GitHub Copilot with Copilot X, and dive into hands-on exercises to master its utilization with Visual Studio Code.
+Our learning objectives are ambitious yet achievable. By the module's conclusion, you will not only be able to articulate what GitHub Copilot is and its advantages but also comprehend its availability for individuals and businesses. Gain insights into the future of GitHub Copilot, and dive into hands-on exercises to master its utilization with Visual Studio Code.
 
 As research has shown, GitHub Copilot empowers developers to code faster, focus on solving substantial problems, maintain longer periods of productivity, and experience greater fulfillment in their work.
 
+
+Note: Although this module uses [Codespaces](https://github.com/codespaces), you can use GitHub Copilot in a variety of other environments, including locally with Visual Studio Code.
 </header>
 
 
@@ -24,7 +26,7 @@ By the end of this module, you'll be able to:
 
 - Explain what GitHub Copilot is and the advantages it provides.
 - Understand the availability of GitHub Copilot for individuals and Businesses.
-- Discuss the future of GitHub Copilot with Copilot X.
+- Discuss the future of GitHub Copilot.
 - Learn how to get started using GitHub Copilot and some common configurations.
 - Develop using GitHub Copilot with Visual Studio Code using hands-on exercises.
 
