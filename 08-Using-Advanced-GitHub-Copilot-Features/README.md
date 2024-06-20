@@ -32,6 +32,8 @@ By the end of this module, you'll aquire the skills to be able to:
 
 ## 💪🏽 Exercise
 
+**Right click the following Codespaces button to open your Codespace in a new tab**
+ 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/MicrosoftDocs/mslearn-copilot-codespaces-python)
 
 The current API is not exposing country/{country} which needs to be implemented to list cities. The route should allow only GET HTTP requests with a JSON response providing information from the historical high and low for that country, city, and given month.
