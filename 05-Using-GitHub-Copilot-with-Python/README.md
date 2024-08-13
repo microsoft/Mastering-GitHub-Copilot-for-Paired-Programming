@@ -33,6 +33,8 @@ By the end of this module, you'll aquire the skills to be able to:
 
 ## 💪🏽 Exercise
 
+**Right click the following Codespaces button to open your Codespace in a new tab**
+ 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/MicrosoftDocs/mslearn-copilot-codespaces-python)
 
 The API already has a single endpoint to generate a token. Let's update the API by adding a new endpoint that accepts text and returns a list of tokens.

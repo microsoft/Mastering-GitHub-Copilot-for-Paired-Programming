@@ -38,6 +38,8 @@ By the end of this module, you'll aquire the skills to be able to:
 
 ## 💪🏽 Exercise
 
+**Right click the following Codespaces button to open your Codespace in a new tab**
+
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=526682619)
 
 In this template portfolio, we have a React based web application ready for you to easily customize and deploy using only your web browser.

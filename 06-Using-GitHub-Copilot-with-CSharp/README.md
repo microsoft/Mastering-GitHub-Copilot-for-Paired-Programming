@@ -35,6 +35,8 @@ By the end of this module, you'll acquire the skills to be able to:
 
 ## 💪🏽 Exercise
 
+**Right click the following Codespaces button to open your Codespace in a new tab**
+ 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/dotnet-codespaces)
 
 The "**GitHub Codespaces ♥️ .NET 8**" repository builds a Weather API using Minimal APIs, opens Swagger so you can call and test the API, and displays the data in a web application using Blazor with .NET 8.
