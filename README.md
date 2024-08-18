@@ -47,7 +47,7 @@ Here are ways you can contribute to this course:
 ## 🎒  Other Courses 
 
 Our team produces other courses! Check out:
-
+want to increase coding speed with help of copilot.
 - [Generative AI for Beginners](https://aka.ms/genai-beginners)
 - [AI for Beginners](https://aka.ms/ai-beginners?WT.mc_id=academic-113596-abartolo)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-113596-abartolo)
