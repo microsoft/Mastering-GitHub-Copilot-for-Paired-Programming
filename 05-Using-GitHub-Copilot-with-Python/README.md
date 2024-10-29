@@ -1,6 +1,6 @@
 <header>
 
-# Using GitHub Copilot with Python
+# Using GitHub Copilot with Python -xw
 
 GitHub Copilot is the world's first at-scale AI developer tool that significantly accelerates code writing by providing autocomplete-style suggestions as you work. In this module, we will focus on using the power of GitHub Copilot to enhance your Python coding efficiency.
 
