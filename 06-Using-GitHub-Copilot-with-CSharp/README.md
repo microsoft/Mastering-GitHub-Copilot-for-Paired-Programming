@@ -33,7 +33,7 @@ By the end of this module, you'll acquire the skills to be able to:
 
 1. Get familiar with [this repository with Codespaces](https://github.com/github/dotnet-codespaces)
 
-## 💪🏽 Exercise
+## 💪 Exercise
 
 **Right click the following Codespaces button to open your Codespace in a new tab**
  

@@ -36,7 +36,7 @@ By the end of this module, you'll aquire the skills to be able to:
 
 
 
-## 💪🏽 Exercise
+## 💪 Exercise
 
 **Right click the following Codespaces button to open your Codespace in a new tab**
 

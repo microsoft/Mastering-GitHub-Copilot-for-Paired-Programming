@@ -30,7 +30,7 @@ By the end of this module, you'll aquire the skills to be able to:
 1. Enable your [GitHub Copilot service](https://github.com/github-copilot/signup)
 1. Open [this repository with Codespaces](https://codespaces.new/MicrosoftDocs/mslearn-advanced-copilot)
 
-## 💪🏽 Exercise
+## 💪 Exercise
 
 **Right click the following Codespaces button to open your Codespace in a new tab**
  

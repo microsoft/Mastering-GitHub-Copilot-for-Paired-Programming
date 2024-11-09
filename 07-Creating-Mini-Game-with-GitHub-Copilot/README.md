@@ -30,7 +30,7 @@ By the end of this module, you'll acquire the skills to be able to:
 
 - Enable your [GitHub Copilot service](https://github.com/github-copilot/signup)
 
-## 💪🏽 Exercise
+## 💪 Exercise
 
 **Right click the "Start Course" button to open your Codespace in a new tab**
  
