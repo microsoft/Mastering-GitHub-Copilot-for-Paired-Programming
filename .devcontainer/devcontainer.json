@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+  "name": "GitHub Copilot for Azure",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/powershell:1": {}
+  },
+  "hostRequirements": {
+      "cpus": 2
+  },
+  "postCreateCommand": "sudo cp --force ./.devcontainer/welcome.txt",
+  "customizations": {
+      "vscode": {
+      "extensions": [
+        "github.copilot",
+        "ms-vscode.azure-account",
+        "ms-azuretools.vscode-azure-github-copilot"
+      ]}
+  }
+}
