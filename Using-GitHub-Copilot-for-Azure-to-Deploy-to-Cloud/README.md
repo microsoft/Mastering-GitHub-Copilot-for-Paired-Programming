@@ -1,6 +1,6 @@
 [Learning Objectives](#Learn) • [Prerequisites](#pre-req) • [Resources](#book)
 
-> Learn cloud deployment with GitHub Copilot for Azure, your go-to guide for simplified cloud success. Start by building essential knowledge to enhance coding efficiency, then move to seamless application deployment, maximizing Azure’s scalability. Finally, tackle troubleshooting with advanced tools, ensuring reliable, high-performance applications. With Copilot by your side, you’ll confidently build, deploy, and maintain top-tier applications—elevating your cloud capabilities every step of the way.
+Learn cloud deployment with GitHub Copilot for Azure—your ultimate guide to streamlined cloud success. Begin by building a strong foundation to boost coding efficiency, then transition to effortless application deployment, leveraging Azure’s powerful scalability. Conclude with advanced troubleshooting techniques to ensure your applications are reliable and high-performing. With Copilot as your trusted assistant, you’ll confidently create, deploy, and manage top-tier applications, enhancing your cloud expertise at every stage.
 
 - **Who is this for**: Developers and Operations (ITPRO)
 - **What you'll learn**: Gain a comprehensive understanding of GitHub Copilot for Azure through three key phases: learning, deployment, and troubleshooting.
@@ -22,7 +22,8 @@ In this workshop, you will:
 
 - [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot): GitHub Copilot is an AI pair programmer tool that helps you write code faster and smarter.
 - [.NET Install Tool](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime): This extension provides a unified way for other extensions like the C# and C# Dev Kit extensions to install local versions of the .NET Runtime, and machine-wide versions of the .NET SDK. Those extensions tell the .NET Install Tool when they would like a .NET SDK to be on the machine, and we install one for them if there's not already one that matches the SDK they need to run properly. Users can also install the .NET SDK themselves by reading belo
-- [GitHub Copilot for Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-github-copilot) : GitHub Copilot for Azure is the @azure extension. It’s designed to help streamline the process of developing for Azure. You can ask @azure questions about Azure services or get help with tasks related to Azure and developing for Azure, all from within Visual Studio Code.
+- [GitHub Copilot for Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-github-copilot): GitHub Copilot for Azure is the @azure extension. It’s designed to help streamline the process of developing for Azure. You can ask @azure questions about Azure services or get help with tasks related to Azure and developing for Azure, all from within Visual Studio Code.
+- [Microsoft Azure Account](https://azure.microsoft.com/pricing/purchase-options/azure-account): Start building, deploying, and managing applications seamlessly across the cloud, on-premises, and edge environments with Azure's scalable and cost-efficient services. Try Azure free for up to 30 days with no upfront commitment—cancel anytime.
 
 <a name="book"/>
 
