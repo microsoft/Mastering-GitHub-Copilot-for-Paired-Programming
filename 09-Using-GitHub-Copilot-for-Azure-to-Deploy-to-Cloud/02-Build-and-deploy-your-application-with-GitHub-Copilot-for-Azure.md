@@ -23,7 +23,7 @@ Completion of [Module 1 - Getting Started to use GitHub Copilot for Azure](https
 
 1. Start a new chat session by selecting the plus icon (**+**) on the pane's title bar.
 
-   ![Screenshot that shows the GitHub Copilot chat pane](./images/mod2-CopilotChat.png "Start a new chat session")
+   ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat.png "Start a new chat session")
 
 > If you closed the GitHub Copilot Chat after the last Module, click the GitHub icon in the status bar.  Bottom-right of your VS Code screen. And select **"GitHub Copilot Chat"** in the option menu.
 >
