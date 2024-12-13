@@ -1,4 +1,4 @@
-# Getting Started to use GitHub Copilot for Azure
+# Getting Started with GitHub Copilot for Azure
 
 Unlock a more efficient workflow and boost your productivity with GitHub Copilot for Azure Preview. This quick-start guide takes you through everything you need to know, from preparing the prerequisites to installing the GitHub Copilot for Azure extension in Visual Studio Code. By the end, you’ll be equipped to craft your first prompt and fully leverage the Azure platform’s potential.
 
