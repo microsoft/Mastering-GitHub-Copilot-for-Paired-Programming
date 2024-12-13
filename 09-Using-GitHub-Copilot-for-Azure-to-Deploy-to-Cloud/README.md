@@ -1,4 +1,4 @@
-#Getting Started with Copilot for Azure to Deploy to Cloud
+# Getting Started with Copilot for Azure to Deploy to Cloud
 
 [Learning Objectives](#Learn) • [Prerequisites](#pre-req) • [Resources](#book)
 
