@@ -4,7 +4,7 @@
 
 This learning module dives into the fundamental aspects of GitHub, a premier AI-powered developer platform that facilitates collaborative software development. Aimed at new developers, GitHub novices, and students, the module provides a hands-on experience within a GitHub repository, offering a comprehensive overview of essential features.
 
-People use GitHub everyday to build some of the most advanced technologies in the world. Whether you’re visualizing data or building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better. 
+People use GitHub everyday to build some of the most advanced technologies on the planet. Whether you’re visualizing data or building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better. 
 
 </header>
 
