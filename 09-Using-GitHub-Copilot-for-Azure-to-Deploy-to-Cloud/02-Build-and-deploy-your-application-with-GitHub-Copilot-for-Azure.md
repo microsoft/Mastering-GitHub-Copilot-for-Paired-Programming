@@ -6,7 +6,7 @@ It highlights an approach to seamlessly integrating GitHub Copilot for Azure int
 
 ## Prerequisites
 
-Completion of [Module 1 - Getting Started to use GitHub Copilot for Azure](01-pre-req-setup-VSCode.md)
+Completion of [Module 1 - Getting Started to use GitHub Copilot for Azure](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/09-Using-GitHub-Copilot-for-Azure-to-Deploy-to-Cloud/01-Getting-Started-with-GitHub-Copilot-for-Azure.md)
 
 ## Create and deploy a website by using GitHub Copilot for Azure Preview
 
