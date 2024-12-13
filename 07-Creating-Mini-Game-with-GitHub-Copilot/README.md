@@ -2,7 +2,7 @@
 
 # Creating a Mini Game with GitHub Copilot
 
-Our focus in this module is to harness the power of GitHub Copilot to create a classic rock, paper, scissors minigame. This hands-on experience will not only sharpen your programming skills but also enhance your ability to develop console applications in Python. The best part? We'll be leveraging GitHub Codespaces, eliminating the hassle of configuring your development environment. With GitHub Copilot as your AI pair programmer, you can concentrate on application development while seamlessly collaborating with your code assistant.
+In this module, we’ll explore how to use GitHub Copilot to build a classic rock, paper, scissors minigame. This hands-on project is designed to sharpen your programming skills and enhance your ability to develop console applications in Python. Best of all, we’ll use GitHub Codespaces, so there’s no need to worry about setting up a development environment. With GitHub Copilot as your AI pair programmer, you can focus on creating your application while effortlessly collaborating with your intelligent coding assistant. Lets begin.
 
 </header>
 
