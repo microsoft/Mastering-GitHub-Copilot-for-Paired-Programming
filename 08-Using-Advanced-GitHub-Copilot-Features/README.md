@@ -2,11 +2,11 @@
 
 # Using Advanced GitHub Copilot Features
 
-There is more to GitHub Copilot than code suggestions. As a Software Engineer, you will often find yourself trying to understand existing code, and enhance it with documentation, tests, and automation. 
+GitHub Copilot offers much more than just code suggestions. As a Software Engineer, you often need to understand existing code and improve it with documentation, tests, and automation.
 
-In this module, you'll use GitHub Copilot advanced features that will allow you to interactively work with your code and apply suggestions and knowledge efficiently.
+In this module, you’ll explore the advanced features of GitHub Copilot, enabling you to interactively work with your code while applying suggestions and insights more effectively.
 
-You'll use an existing HTTP API based on Python to make changes, bug fixes, documentation, and tests for a new endpoint that you will implement.
+Using a Python-based HTTP API, you’ll make modifications, fix bugs, create documentation, and write tests for a new endpoint that you’ll implement.
 </header>
 
 
