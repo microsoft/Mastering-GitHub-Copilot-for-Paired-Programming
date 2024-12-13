@@ -27,6 +27,13 @@ In this workshop, you will:
 
 <a name="book"/>
 
+## 🗃️ Lessons
+|       |              Lesson Link              |                       Concepts Taught                       |                     Learning Goal                 |                             
+| :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
+| 01 | [Getting Started to use GitHub Copilot for Azure](./01-Introduction-to-GitHub/README.md) | Unlock seamless coding and boost productivity with GitHub Copilot for Azure Preview.|  This guide covers setup, installation in Visual Studio Code, and crafting your first prompt to harness Azure’s full potential effortlessly.                    |
+| 02 | [Build and deploy your application with GitHub Copilot for Azure Preview](./02-Introduction-to-GitHub-Codespaces) | Integrate GitHub Copilot for Azure into your development and deployment workflow | Learn how to use GitHub Copilot for Azure Preview to create and deploy a website, showcasing its integration into your development and deployment workflow. | 
+| 03 | [Get answers to your questions about Azure services and resources](./03-Introduction-to-GitHub-Copilot) | Begin with open-ended questions about your Azure services or resources, then refine with specifics like technologies or features for better answers. | In this exercise, explore Azure’s potential for your application using example prompts to guide your queries effectively. | 
+
 ## :books: Resources
 
 - [Blog: Introducing GitHub Copilot for Azure: Your Cloud Coding Companion in VS Code!](https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-github-copilot-for-azure-your-cloud-coding-companion/ba-p/4127644)
