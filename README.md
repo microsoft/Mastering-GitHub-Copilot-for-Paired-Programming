@@ -42,7 +42,7 @@ Here are ways you can contribute to this course:
 | 06 | [Using GitHub Copilot with C#](./06-Using-GitHub-Copilot-with-CSharp) | Use GitHub Copilot, an AI pair programmer that offers autocomplete-style suggestions as you code, to work with C#. | Enable the GitHub Copilot extension in Visual Studio Code. Craft prompts that can generate useful suggestions from GitHub Copilot. Use GitHub Copilot to improve a C# Minimal API project. |
 | 07 | [Creating a Mini Game with GitHub Copilot](./07-Creating-Mini-Game-with-GitHub-Copilot) | Use GitHub Copilot to assist you in building a Python based mini game. | Craft prompts that can generate useful suggestions from GitHub Copilot to incorporate gaming logic and improve your Python based game. |
 | 08 | [Using Advanced GitHub Copilot Features](./08-Using-Advanced-GitHub-Copilot-Features) | Use advanced GitHub Copilot features like inline chat, slash commands, and agents. | Interact with GitHub Copilot with deeper context on your project and ask questions about it. |
-| 09 | [**NEW** Getting Started with Copilot for Azure to Deploy to the Cloud](./09-Getting-Started-with-Copilot-for-Azure-to-Deploy-to-Cloud) | Learn cloud deployment with GitHub Copilot for Azure—your ultimate guide to streamlined cloud success. | Effortless application deployment leveraging Azure’s powerful scalability. |
+| 09 | [**NEW** Getting Started with Copilot for Azure to Deploy to the Cloud](./09-Using-GitHub-Copilot-for-Azure-to-Deploy-to-Cloud) | Learn cloud deployment with GitHub Copilot for Azure—your ultimate guide to streamlined cloud success. | Effortless application deployment leveraging Azure’s powerful scalability. |
 
 
 ## 🎒  Other Courses 
