@@ -45,7 +45,7 @@ The "**GitHub Codespaces ♥️ .NET 8**" repository builds a Weather API using 
 We will review the steps to update the Weather BackEnd App by adding a new endpoint that requests a specific location and returns the weather forecast for that location.
 
 
-### 🗒️ (Optional Step 1) : Get familiarized with the "GitHub Codespaces ♥️ .NET 8" repository
+### 🗒️ Step 1: Get familiarized with the "GitHub Codespaces ♥️ .NET 8" repository
 
 Once you open the repository in Codespaces, you will find a new browser window with a fully functional Codespace. Everything in this repository is contained within this one Codespace. In example, in the explorer panel, we can see the main code for the BackEnd and the FrontEnd project.
 
@@ -83,7 +83,7 @@ You can stop debugging now.
 
 Congratulations! Now you are ready to add more features into the app using GitHub Copilot.
 
-### 🗒️ (Optional Step 2) : Get familiarized with GitHub Copilot Slash Commands
+### 🗒️ Step 2: Get familiarized with GitHub Copilot Slash Commands
 
 As we start working in our codebase, we usually need to refactor some code, or get more context or explanations about it. Using GitHub Copilot Chat, we can have AI-driven conversations to perform these tasks. 
 
@@ -122,7 +122,7 @@ Finally, let's use the `/doc` to generate automatic documentation to the code. S
 Inline chat, the Chat Panel, and slash commands are part of the amazing tools that support our development experience with GitHub Copilot. Now we are ready to add new features to this App.
 
 
-### 🗒️ Step 1: Generate a new Record that includes the city name
+### 🗒️ Step 3: Generate a new Record that includes the city name
 
 Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
 
@@ -148,7 +148,7 @@ You can take a look at the prompt working in the next animation:
 
 ![open program.cs in the BackEnd project](./014AddNewRecord.gif)
 
-### 🔎 Step 2: Generate a new endpoint to get the weather forecast for a city
+### 🔎 Step 4: Generate a new endpoint to get the weather forecast for a city
 
 Now let's generate a new API endpoint similar to `/weatherforecast` that also includes the city name. The new API endpoint name will be **`/weatherforecastbycity`**.
 
@@ -186,7 +186,7 @@ app.MapGet("/WeatherForecastByCity/{city}", (string city) =>
 
 
 
-### 🐍 Step 3: Test the new endpoint.
+### 🐍 Step 5: Test the new endpoint.
 
 Finally, verify the new endpoint is working by starting the project from the Run and Debug panel. 
 Select Run and Debug, and then select the BackEnd project.
