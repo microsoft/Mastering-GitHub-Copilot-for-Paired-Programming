@@ -27,7 +27,7 @@ Completion of [Module 1 - Getting Started to use GitHub Copilot for Azure](https
 
 > If you closed the GitHub Copilot Chat after the last Module, click the GitHub icon in the status bar.  Bottom-right of your VS Code screen. And select **"GitHub Copilot Chat"** in the option menu.
 >
-> ![Screenshot that shows the GitHub Copilot chat pane](./images/mod2-CopilotChat-2.png "Start a new chat session")
+> ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-2.png "Start a new chat session")
 
 6. In the chat text box, type the following prompt. Then select **Send** (paper airplane icon) or select Enter on your keyboard.
 
@@ -40,17 +40,17 @@ The exact wording of the response is different each time GitHub Copilot for Azur
 
    After a moment, GitHub Copilot for Azure likely suggests an `azd` template to use.  Or in some cases will provide an answer like the following:
 
-    ![Screenshot that shows the GitHub Copilot chat pane](./images/mod2-CopilotChat-3.png "Screenshot that shows a response from GitHub Copilot for Azure with instructions for using a template to create a website in Azure.")
+    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-3.png "Screenshot that shows a response from GitHub Copilot for Azure with instructions for using a template to create a website in Azure.")
 
     Just Remember that the Large Language Model will understand what you tell it.  Therefore, just have the conversation with it.
 
 1. If the answer provides a command that begins with `azd init` in a code fence, hover over the code fence to reveal a small pop-up action menu.
 
-    ![Screenshot that shows the GitHub Copilot chat pane](./images/mod2-CopilotChat-4.png "Screenshot that shows a pop-up menu with an option to insert a code-fenced command into the Visual Studio Code terminal.")
+    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-4.png "Screenshot that shows a pop-up menu with an option to insert a code-fenced command into the Visual Studio Code terminal.")
 
     Select **Insert into Terminal** to insert the command into the terminal.
 
-    ![Screenshot that shows the GitHub Copilot chat pane](./images/mod2-CopilotChat-5.png "Screenshot that shows the Visual Studio Code terminal after insertion of a code-fenced command.")
+    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-5.png "Screenshot that shows the Visual Studio Code terminal after insertion of a code-fenced command.")
 
 1. Before you run the `azd init` command, you might have questions about how it affects your local computer and your Azure subscription.
 
@@ -62,7 +62,7 @@ The exact wording of the response is different each time GitHub Copilot for Azur
 
    You might see a response that resembles the following screenshot.
 
-   ![Screenshot that shows the GitHub Copilot chat pane](./images/mod2-CopilotChat-6.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of what the initialization command does.")
+   ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-6.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of what the initialization command does.")
 
 1. Use the following prompt to learn more about the `azd` template:
 
@@ -72,7 +72,7 @@ The exact wording of the response is different each time GitHub Copilot for Azur
 
    You might see a response that resembles the following screenshot.
 
-    ![Screenshot that shows the GitHub Copilot chat pane](./images/mod2-CopilotChat-7.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of the resources created by the suggested template.")
+    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-7.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of the resources created by the suggested template.")
 
 1. Ask questions about the services that the template uses with a prompt like:
 
@@ -82,7 +82,7 @@ The exact wording of the response is different each time GitHub Copilot for Azur
 
    You might see a response that resembles the following screenshot.
 
-    ![Screenshot that shows the GitHub Copilot chat pane](./images/mod2-CopilotChat-8.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of what a virtual network is.")
+    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-8.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of what a virtual network is.")
 
 1. When you're satisfied, run the `azd init` command in the terminal. Answer its prompts. If you're unsure what to answer for a prompt, ask GitHub Copilot for Azure for help.
 
@@ -110,7 +110,7 @@ The exact wording of the response is different each time GitHub Copilot for Azur
 
     You might see a response that resembles the following screenshot.
 
-    ![Screenshot that shows the GitHub Copilot chat pane](./images/mod2-CopilotChat-9.png "Screenshot that shows a response from GitHub Copilot for Azure with an answer that describes what the Azure locations are and how to choose one.")
+    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-9.png "Screenshot that shows a response from GitHub Copilot for Azure with an answer that describes what the Azure locations are and how to choose one.")
 
 5. Continue to answer prompts from `azd up`. Ask GitHub Copilot for Azure questions as needed.
 
