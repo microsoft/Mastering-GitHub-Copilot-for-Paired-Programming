@@ -84,10 +84,10 @@ Now that you've used GitHub Copilot to generate and explain code, you can also e
 With `main.py` open, use the chat interface with the following text:
 
 ```
-/docs I need to document the routes for these API Routes. Help me produce documentation I can put in the README.md file of this project
+/doc I need to document the routes for these API Routes. Help me produce documentation I can put in the README.md file of this project
 ```
 
-The `/docs` part of the prompt is called a _"slash command"_ and it is a specific feature of GitHub Copilot that allows you to write documentation. If the results look good, add them to a new section of your README.md file.
+The `/doc` part of the prompt is called a _"slash command"_ and it is a specific feature of GitHub Copilot that allows you to write documentation. If the results look good, add them to a new section of your README.md file.
 
 
 **Generate tests**
