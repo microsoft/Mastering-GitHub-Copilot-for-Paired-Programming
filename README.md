@@ -7,7 +7,11 @@ Unlock the power of collaborative coding with our comprehensive curriculum on Ma
 
 ## 🌱 Getting Started
 
-To get started, be sure to follow instructions on how to fork lessons to your own GitHub account to be able to change any code and complete the challenges. To use GitHub Copilot, you must have an active GitHub Copilot subscription. Sign up for free here: [GitHub Copilot](https://gh.io/copilot). You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-113596-abartolo) to find it easier later.
+To get started, be sure to follow instructions on how to fork lessons to your own GitHub account to be able to change any code and complete the challenges. 
+
+To use GitHub Copilot, you must have an active GitHub Copilot subscription. **Sign up for free here: [GitHub Copilot](https://gh.io/copilot).** 
+
+You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-113596-abartolo) to find it easier later.
 
 Below are the links to each lesson. Feel free to explore and start at any lesson that interests you the most! 
 
