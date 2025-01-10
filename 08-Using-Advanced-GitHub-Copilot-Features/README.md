@@ -13,7 +13,7 @@ Using a Python-based HTTP API, you’ll make modifications, fix bugs, create doc
 - **Who this is for**: Developers, DevOps Engineers, Software development managers, Testers.
 - **What you'll learn**: Using Advanced GitHub Copilot features to test, document, and work with code.
 - **What you'll build**: A new HTTP API route, along with documentation and tests to verify its correctness.
-- **Prerequisites**: To use GitHub Copilot you must have an active GitHub Copilot subscription. Sign up for 30 days free [Copilot](https://github.com/settings/copilot).
+- **Prerequisites**: GitHub Copilot is available to use for free, sign up for [GitHub Copilot](https://gh.io/copilot).
 - **Timing**: This module can be completed in under an hour.
 
 By the end of this module, you'll aquire the skills to be able to:
