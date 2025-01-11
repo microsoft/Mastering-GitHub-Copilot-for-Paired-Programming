@@ -44,7 +44,7 @@ By the end of this module, you'll aquire the skills to be able to:
 
 In this template portfolio, we have a React based web application ready for you to easily customize and deploy using only your web browser.
 
-**Note:** Please disreguard the instructions given within the GitHub Codespace. For theis labs, be sure to follow the intructions found here.
+**Note:** Please disregard the instructions given within the GitHub Codespace. For this exercise, be sure to follow the instructions found here.
 
 
 ### 🛠 Step 1: Customize the web app
