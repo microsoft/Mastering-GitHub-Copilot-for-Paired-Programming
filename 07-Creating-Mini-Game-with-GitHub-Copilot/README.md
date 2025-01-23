@@ -23,7 +23,7 @@ By the end of this module, you'll acquire the skills to be able to:
 - [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot//?WT.mc_id=academic-113596-abartolo)
 - [Challenge project - Build a minigame with GitHub Copilot and Python](https://learn.microsoft.com/training/modules/challenge-project-create-mini-game-with-copilot/?WT.mc_id=academic-113596-abartolo)
 - Learn Live: Build a minigame console app with GitHub Copilot (Video below)
-- [![Learn Live: Build a minigame console app with GitHub Copilot](https://mediusimg.event.microsoft.com/video-53275/b508053c0b/thumbnail.jpg?sv=2018-03-28&sr=c&sig=k6NthrPwnvBfDPNAEBQaYaVzlJavZ8pnWuP6OcKm4Bs%3D&se=2028-11-18T05%3A23%3A52Z&sp=r)](https://youtu.be/Fi_jl3G7i8Y?si=v56VPYfTHYBBEX11)
+- [![Learn Live: Build a minigame console app with GitHub Copilot](https://i.ytimg.com/vi/Fi_jl3G7i8Y/maxresdefault.jpg)](https://youtu.be/Fi_jl3G7i8Y?si=v56VPYfTHYBBEX11)
   
 
 ## Requirements
