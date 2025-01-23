@@ -33,9 +33,9 @@ By the end of this module, you'll acquire the skills to be able to:
 
 ## 💪🏽 Exercise
 
-**Right click the "Start Course" button to open your Codespace in a new tab**
+**Right click the "Open in GitHub Codespaces" button to open your Codespace in a new tab**
  
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=copilot-codespaces-vscode&owner=%40me&name=skills-copilot-codespaces-vscode&description=My+clone+repository&visibility=public)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)
 
 You have already learned a bit about GitHub Codespaces and GitHub Copilot and how they work. In this challenge exercise, your goal is to develop a minigame in Python using GitHub Copilot. 
 
