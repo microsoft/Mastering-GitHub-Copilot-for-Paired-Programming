@@ -24,6 +24,7 @@ By the end of this module, you'll acquire the skills to be able to:
 - [Challenge project - Build a minigame with GitHub Copilot and Python](https://learn.microsoft.com/training/modules/challenge-project-create-mini-game-with-copilot/?WT.mc_id=academic-113596-abartolo)
 - Learn Live: Build a minigame console app with GitHub Copilot (Video below)
 - [![Learn Live: Build a minigame console app with GitHub Copilot](https://i.ytimg.com/vi/Fi_jl3G7i8Y/maxresdefault.jpg)](https://youtu.be/Fi_jl3G7i8Y?si=v56VPYfTHYBBEX11)
+  (Click the image above to view video of this lesson)
   
 
 ## Requirements
