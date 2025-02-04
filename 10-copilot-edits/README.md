@@ -9,7 +9,6 @@ Hello everyone! Today, the focus is on Azure API Management policies and Copilot
 
 Struggling with Azure API Management policies? 🤯
 
-In the latest YouTube video, the world of Copilot Edits is explored to show how they can supercharge API development. A real-world scenario is presented, demonstrating how Copilot assists in writing, testing, and refining API policies faster than ever.  
 Click the link below to watch the full demo and check out Copilot Edits and APIM policies! 👇
 
 🌐 [![Watch the video](https://img.youtube.com/vi/lpTso8pAPwc/0.jpg)](https://www.youtube.com/watch?v=lpTso8pAPwc)
@@ -51,7 +50,7 @@ Explore how to use Copilot Edits in Visual Studio Code to accelerate the journey
 - Install the Azure API Management extension.
 - Open the APIM service within the IDE.
 
-### Understanding Azure API Management Policies
+### -1- Understanding Azure API Management Policies
 
 Azure API Management policies allow changes to API behaviour through configuration using policies. These policies are a collection of statements, described in an XML document, that are run sequentially and can apply to API requests and responses.
 
@@ -59,7 +58,7 @@ Azure API Management policies allow changes to API behaviour through configurati
 - Understand the structure and purpose of policies.
 - Use the APIM VS Code extension to write policies.
 
-### Starting the Demo
+### -2- Starting the Demo
 
 Begin the demo in the Azure Portal to find the deployed Echo-API and see all operations, such as a POST operation to create resources.
 
@@ -67,7 +66,7 @@ Begin the demo in the Azure Portal to find the deployed Echo-API and see all ope
 - Locate the deployed Echo-API.
 - Review the available operations.
 
-### Scenario
+### -3- Scenario
 
 Create a container called "logs-jukasper" in an Azure Storage Account to securely upload blob files using an API call through Azure API Management.
 
@@ -75,7 +74,7 @@ Create a container called "logs-jukasper" in an Azure Storage Account to securel
 - Create a container named "logs-jukasper".
 - Prepare to upload blob files securely.
 
-### Using GitHub Copilot Edits
+### -4- Using GitHub Copilot Edits
 
 As a newcomer to Azure Policies, use GitHub Copilot to write the API policy and Copilot Edits to modify the policy in the current working file.
 
@@ -83,7 +82,7 @@ As a newcomer to Azure Policies, use GitHub Copilot to write the API policy and 
 - Use GitHub Copilot to write the API policy.
 - Apply Copilot Edits to modify the policy.
 
-### Testing and Iterating
+### -5- Testing and Iterating
 
 Test and experiment with Copilot Edits, as outcomes may vary based on the prompts provided.
 
@@ -91,7 +90,7 @@ Test and experiment with Copilot Edits, as outcomes may vary based on the prompt
 - Accept or discard the suggested edits.
 - Continue refining the policy using Copilot's input.
 
-### Modifying the Policy
+### -6- Modifying the Policy
 
 Provide the URL to the endpoint, which in this case is the Azure Storage Account and container.
 
@@ -99,7 +98,7 @@ Provide the URL to the endpoint, which in this case is the Azure Storage Account
 - Modify the policy to include the endpoint URL.
 - Ensure the policy meets the requirements.
 
-### Handling Errors
+### -7- Handling Errors
 
 If the prompt does not provide the authentication via managed identity as requested, provide new instructions.
 
@@ -107,7 +106,7 @@ If the prompt does not provide the authentication via managed identity as reques
 - Provide new instructions to Copilot.
 - Accept the suggested changes if satisfactory.
 
-### Deploying and Testing
+### -8- Deploying and Testing
 
 Save the changes and upload them to the APIM service in the cloud.
 
@@ -115,7 +114,7 @@ Save the changes and upload them to the APIM service in the cloud.
 - Upload the changes to the APIM service.
 - Check the output window for errors and insights.
 
-### Adding Header Parameters
+### -9- Adding Header Parameters
 
 Request Copilot to include a header parameter in the policy.
 
@@ -123,7 +122,7 @@ Request Copilot to include a header parameter in the policy.
 - Accept the suggested changes.
 - Upload the updated policy.
 
-### Testing the API Call
+### -10- Testing the API Call
 
 Use the VS Code extension to select the operation to test, which will open an HTTP file for testing the API call.
 
@@ -132,7 +131,7 @@ Use the VS Code extension to select the operation to test, which will open an HT
 - Provide the APIM subscription key.
 - Send the request and verify the response.
 
-### Verifying the Results
+### -11- Verifying the Results
 
 Check the storage account to confirm the creation of a blob file.
 
@@ -140,7 +139,7 @@ Check the storage account to confirm the creation of a blob file.
 - Verify the creation of the blob file.
 - Modify the policy if the naming convention is not as expected.
 
-### Final Testing
+### -12- Final Testing
 
 Provide the subscription key and send the request again.
 
