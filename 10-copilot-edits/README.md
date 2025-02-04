@@ -10,9 +10,6 @@ Select the link below to watch the full demo and check out Copilot Edits and API
 
 🌐 [![Watch the video](https://img.youtube.com/vi/lpTso8pAPwc/0.jpg)](https://www.youtube.com/watch?v=lpTso8pAPwc)
 
-
-💡 **Pro Tip:** To get the most out of this demo, ensure the latest version of the Azure API Management extension for VS Code is installed. It can be downloaded *An external link was removed to protect your privacy.*.
-
 ## Learning Objectives
 
 By the end of this lesson, you will be able to:
@@ -64,17 +61,12 @@ Consider a scenario where you need to enforce rate limiting on an API to prevent
 
 Explore how to use Copilot Edits in Visual Studio Code to accelerate the journey with Azure API Management policies.
 
+### -1- Getting started
+
+- Create an APIM resource in Azure Portal.
 - Open Visual Studio Code.
 - Install the Azure API Management extension.
-- Open the APIM service within the IDE.
-
-### -1- Understanding Azure API Management Policies
-
-Azure API Management policies allow changes to API behaviour through configuration using policies. These policies are a collection of statements, described in an XML document, that are run sequentially and can apply to API requests and responses.
-
-- Learn about Azure API Management policies.
-- Understand the structure and purpose of policies.
-- Use the APIM VS Code extension to write policies.
+- Open the APIM resource within the IDE.
 
 ### -2- Starting the Demo
 
