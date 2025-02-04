@@ -1,22 +1,31 @@
-Sure! Here is the updated README file with example scenarios added to the Copilot Edits and APIM Policies sections:
+# 📺 Copilot Edits with Azure API Management 👩‍💻
 
+Making code changes is often an iterative process that consists of multiple steps before achieving the desired result. When working on large projects, developers often need to make consistent updates across multiple files. In this lesson we will explore how to use Copilot Edits in Visual Studio Code to more efficiently author Azure API Management policies.
 
-## 📺 Azure API Management & AI: See Copilot Edits in Action! 👩‍💻
+## Introduction
 
-### Introduction
+The focus in this lesson is on Azure API Management policies and Copilot Edits. Copilot Edits is currently in preview and available to all GitHub Copilot users.
 
-Hello everyone! Today, the focus is on Azure API Management policies and Copilot Edits. Copilot Edits is currently in preview and available to all GitHub Copilot users.
-
-Struggling with Azure API Management policies? 🤯
-
-Click the link below to watch the full demo and check out Copilot Edits and APIM policies! 👇
+Select the link below to watch the full demo and check out Copilot Edits and APIM policies! 👇
 
 🌐 [![Watch the video](https://img.youtube.com/vi/lpTso8pAPwc/0.jpg)](https://www.youtube.com/watch?v=lpTso8pAPwc)
 
 
 💡 **Pro Tip:** To get the most out of this demo, ensure the latest version of the Azure API Management extension for VS Code is installed. It can be downloaded *An external link was removed to protect your privacy.*.
 
-### Copilot Edits
+## Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+- Understand the Basics of Azure API Management: Gain a fundamental understanding of what APIM and APIM policies are and its key components.
+- Author Azure API Management Policies: Learn how to create and configure policies to manage API behaviour effectively.
+- Leverage Copilot edits to accelerate the journey authoring Azure API Management policies.
+
+## Prerequisites
+
+TODO
+
+## Copilot Edits
 
 Copilot Edits is a feature in preview that allows developers to start an AI-powered code editing session where they can quickly iterate on code changes using natural language. It proposes code changes across multiple files in the workspace and applies these edits directly in the editor, allowing for quick review and iteration. Copilot Edits combines the conversational flow of Copilot Chat with fast feedback from Inline Chat, making it ideal for iterating on large changes across multiple files.
 
@@ -28,6 +37,15 @@ Copilot Edits is a feature in preview that allows developers to start an AI-powe
 
 **Example Scenario:**
 Imagine working on a large project with multiple files that need consistent updates. With Copilot Edits, you can describe the changes you want to make in natural language, and the AI will propose edits across all relevant files. For instance, if you need to update the API endpoints in several files, Copilot Edits will identify and modify all instances, allowing you to review and apply the changes quickly.
+
+## Azure API Management (APIM)
+Azure API Management (APIM) is a comprehensive solution for managing and securing APIs. It provides a set of tools and services that enable developers to create, publish, secure, and monitor APIs. APIM helps organisations to expose their services to external and internal consumers in a controlled and scalable manner.
+
+### What Problems Does APIM Address?
+
+- Security: APIM provides robust security features such as authentication, authorisation, and IP filtering to protect APIs from unauthorised access and threats.
+- Scalability: It allows APIs to scale efficiently to handle varying loads and ensures high availability and performance.
+- Monitoring and Analytics: APIM offers detailed analytics and monitoring capabilities to track API usage, performance, and health, enabling proactive management and optimisation.
 
 ### APIM Policies
 
