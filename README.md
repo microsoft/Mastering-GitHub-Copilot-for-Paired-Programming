@@ -56,6 +56,8 @@ Here are ways you can contribute to this course:
 Our team produces other courses! Check out:
 
 - [Generative AI for Beginners](https://aka.ms/genai-beginners)
+- [Generative AI for Beginners .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generative AI with JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [AI for Beginners](https://aka.ms/ai-beginners?WT.mc_id=academic-113596-abartolo)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-113596-abartolo)
 - [ML for Beginners](https://aka.ms/ml-beginners?WT.mc_id=academic-113596-abartolo)
