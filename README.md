@@ -28,7 +28,7 @@ Sign up for [Microsoft for Startups Founders Hub](https://foundershub.startups.m
 ##  🙏 Want to help?
 
 Here are ways you can contribute to this course: 
-- Find spelling errors or code errors, [Raise an issue](https://github.com/microsoft/) or [Create a pull request](https://github.com/microsoft/)
+- Find spelling errors or code errors, [Raise an issue](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/issues/new/choose) or [Create a pull request](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/pulls)
 - Send us your ideas, maybe your ideas for new lessons or exercises, and let us know how we can improve.
 
 ## 📂 Each lesson includes:
