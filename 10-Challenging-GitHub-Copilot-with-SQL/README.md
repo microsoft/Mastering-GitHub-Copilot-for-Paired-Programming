@@ -7,8 +7,8 @@
   <a href="#learning-objectives">Learning Objectives</a>
 </p>
 
-- **Who is this for**: Any tecnologist that is looking to advance basic techniques when working with GitHub Copilot. Software Engineers, Data Engineers, Data Scientists, and anyone working with challenging codebases or code projects.
-- **What you'll learn**: You'll use advanced GItHub Copilot techniques that are specifically useful when working with challenging problems. These techniques and patterns can be applied to difficult problems and when GitHub Copilot isn't providing the best answer.
+- **Who is this for**: Any technologist that is looking to advance basic techniques when working with GitHub Copilot. Software Engineers, Data Engineers, Data Scientists, and anyone working with challenging codebases or code projects.
+- **What you'll learn**: You'll use advanced GitHub Copilot techniques that are specifically useful when working with challenging problems. These techniques and patterns can be applied to difficult problems and when GitHub Copilot isn't providing the best answer.
 - **What you'll build**: A database with highly specific data with advanced queries that are unit tested for validation and correctness.
 
 ## Requirements
@@ -25,7 +25,7 @@ In this workshop, you will:
 
   - Use advanced GitHub Copilot interaction techniques to deal with complex problems regarding SQL queries.
   - Iterate, validate, and refine answers to get better and more accurate suggestions
-  - Apply generic concpets that can improve suggestions and select from different strategies that can yield better results.
+  - Apply generic concepts that can improve suggestions and select from different strategies that can yield better results.
   - Get a clear understanding on poor prompting techniques, and how these can
     affect drastically the output from GitHub Copilot.
 
@@ -110,7 +110,7 @@ For Copilot, ensure that your prompts are detailed, but concise. Tools often wor
 > Be specific with your tools, but also check results, as tools might not always fully understand context unless properly guided.
 
 ### 9. Seek Feedback and Collaboration
-When tackling a complex task, especially one that involves code or queries, collaboration and feedback are crucial. Don’t hesitate to ask peers or communities for insights or review.
+When tackling a complex task, especially one that involves code or queries, collaboration and feedback are crucial. Don’t hesitate to ask peers or communities for insights or reviews.
 
 For example, when creating a complex SQL query, someone else might see potential issues or better optimization strategies that you might have missed.
 
@@ -133,7 +133,7 @@ For AI model prompts: When asking for something complex (like generating code, t
 For design or content generation: Define the purpose, break down design elements, and provide examples or inspiration, then refine based on feedback.
 
 Final Thoughts:
-Complex generation problems often involve a balance of clarity, decomposition, iteration, and validation. Whether it's a SQL query or any other task, keeping these concepts in mind will allow you to generate more accurate, efficient, and reliable results.
+Complex generation problems often involve a balance of clarity, decomposition, iteration, and validation. Whether it's an SQL query or any other task, keeping these concepts in mind will allow you to generate more accurate, efficient, and reliable results.
 
 
 
