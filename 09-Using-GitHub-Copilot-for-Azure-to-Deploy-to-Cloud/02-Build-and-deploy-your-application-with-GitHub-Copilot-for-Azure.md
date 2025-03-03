@@ -11,7 +11,7 @@ Completion of [Module 1 - Getting Started to use GitHub Copilot for Azure](https
 ## Create and deploy a website by using GitHub Copilot for Azure Preview
 
 1. Create a new folder on your local computer where you can create a local clone of a GitHub repository.
-    1. In VS Code click **File**, Then ""Open Folder"
+    1. In VS Code click **File**, Then **Open Folder**
     1. in the **Open Folder** dialogue box, click **New Folder**, Give the folder a name, select it, then click **Select Folder**
 
 1. VS Code will ask you **Do you trust the Authors of the files in this folder?**
