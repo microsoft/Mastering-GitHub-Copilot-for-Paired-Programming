@@ -26,7 +26,7 @@ In this workshop, you will:
   - Use advanced GitHub Copilot interaction techniques to deal with complex problems regarding SQL queries.
   - Iterate, validate, and refine answers to get better and more accurate suggestions
   - Apply generic concepts that can improve suggestions and select from different strategies that can yield better results.
-  - Get a clear understanding on poor prompting techniques, and how these can
+  - Get a clear understanding of poor prompting techniques, and how these can
     affect drastically the output from GitHub Copilot.
 
 ## :mega: Prerequisites
@@ -102,7 +102,7 @@ In SQL, this could involve ensuring that empty datasets, null values, or unexpec
 > Thinking through edge cases helps you build more resilient, generalized solutions.
 
 ### 8. Use Tools Effectively
-Whether you’re using GitHub Copilot, a query builder, or another form of automation, leverage the tools at your disposal but make sure you're guiding them with the right context. Tools are great for speeding up the generation, but they still need well-structured inputs and validation from you.
+Whether you’re using GitHub Copilot, a query builder, or another form of automation, leverage the tools at your disposal, but make sure you're guiding them with the right context. Tools are great for speeding up the generation, but they still need well-structured inputs and validation from you.
 
 For Copilot, ensure that your prompts are detailed, but concise. Tools often work best when given structured input that leaves little ambiguity.
 
@@ -146,7 +146,7 @@ Although not required, some of the features this workshop covers are in these Mi
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+This project welcomes contributions and suggestions. Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
 
@@ -155,7 +155,7 @@ a CLA and decorate the PR appropriately (e.g., status check, comment). Simply fo
 provided by the bot. You will only need to do this once across all repos using our CLA.
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Trademarks
@@ -164,4 +164,4 @@ This project may contain trademarks or logos for projects, products, or services
 trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+Any use of third-party trademarks or logos is subject to those third-parties' policies.

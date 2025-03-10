@@ -16,7 +16,7 @@ Using a Python-based HTTP API, you’ll make modifications, fix bugs, create doc
 - **Prerequisites**: GitHub Copilot is available to use for free, sign up for [GitHub Copilot](https://gh.io/copilot).
 - **Timing**: This module can be completed in under an hour.
 
-By the end of this module, you'll aquire the skills to be able to:
+By the end of this module, you'll acquire the skills to be able to:
 
 - Use advanced GitHub Copilot features like inline chat, slash commands, and agents.
 - Interact with GitHub Copilot with deeper context on your project and ask questions about it.
@@ -41,7 +41,7 @@ The current API is not exposing country/{country} which needs to be implemented 
 As with any implementation, this addition should include at least one test function to work with the pytest runner and test framework. 
 
 ### 🛠 Step 1: Add a new route 
-On our first exercise we will create a new route in our API. Go to the main.py file, and by using the inline chat with the following command `ctrl` + `i` (on Windows) or  `cmd` + `i`(on Mac) ask GitHub Copilot to help you create a new API that shows you the cities of a country. 
+In our first exercise we will create a new route in our API. Go to the main.py file, and by using the inline chat with the following command `ctrl` + `i` (on Windows) or  `cmd` + `i`(on Mac) ask GitHub Copilot to help you create a new API that shows you the cities of a country.
 
 Use the following prompt in inline-chat:
 
@@ -95,7 +95,7 @@ Finally, verify the new endpoint is working by trying it out by going to the `/d
 
 Now that you've used GitHub Copilot to generate and explain code, you can also explore some other alternative approaches to perform developer tasks. These extra challenges will help you dive deeper into other GitHub Copilot features in addition to the ones you already know. For these extra challenges, you will use the Chat interface. Click on the GitHub Copilot Chat icon on the left sidebar if you don't have it open yet.
 
-🚀 Congratulations, through the exercise, you have used GitHub Copilot with many different features that will allow you to work better with different projects. You interactively used some features to write tests, documentation, and find more about existing code..
+🚀 Congratulations, through the exercise, you have used GitHub Copilot with many different features that will allow you to work better with different projects. You interactively used some features to write tests, documentation, and find out more about existing code.
 
 ## Legal Notices
 
@@ -104,7 +104,7 @@ in this repository under the [Creative Commons Attribution 4.0 International Pub
 see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
 [LICENSE-CODE](LICENSE-CODE) file.
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
+Microsoft, Windows, Microsoft Azure, and/or other Microsoft products and services referenced in the documentation
 may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
 The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
 Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
@@ -112,4 +112,4 @@ Microsoft's general trademark guidelines can be found at http://go.microsoft.com
 Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
+or trademarks, whether by implication, estoppel, or otherwise.
