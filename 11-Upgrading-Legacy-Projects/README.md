@@ -7,9 +7,9 @@
   <a href="#learning-objectives">Learning Objectives</a>
 </p>
 
-- **Who is this for**: Any tecnologist that is looking to apply AI pair-programming techniques with GitHub Copilot to perform challenging upgrade scenarios for legacy code.
+- **Who is this for**: Any technologist that is looking to apply AI pair-programming techniques with GitHub Copilot to perform challenging upgrade scenarios for legacy code.
 - **What you'll learn**: You'll use advanced GitHub Copilot techniques that are specifically useful when upgrading projects.  These techniques and patterns can be applied to upgrading and revamping projects as well as developing from scratch.
-- **What you'll build**: A full revamped Python project that used Python 2.5 using legacy and deprecated constructs into the latest version of Python 3 available.
+- **What you'll build**: A fully revamped Python project that used Python 2.5 using legacy and deprecated constructs into the latest version of Python 3 available.
 
 ## Requirements
 
@@ -25,7 +25,7 @@ In this workshop, you will:
 
   - Use advanced GitHub Copilot interaction techniques to deal with a legacy project
   - Iterate, validate, and refine answers to upgrade the legacy project and validate its correctness
-  - Apply generic concpets that can improve suggestions and select from different strategies that can yield better results.
+  - Apply generic concepts that can improve suggestions and select from different strategies that can yield better results.
   - Build a thorough testing strategy to help you identify potential issues and
     validate the project in its final state after upgrading.
 
@@ -50,7 +50,7 @@ Identify limitations or exclusions. For example, large language models (LLMs) ca
 
 ### 2. Break Down the Problem into Components
 
-Decompose the problem into smaller, manageable pieces. For exampple, start with the core application components and then test a single API endpoint or library function. This makes it easier to understand and solve the problem step-by-step:
+Decompose the problem into smaller, manageable pieces. For example, start with the core application components and then test a single API endpoint or library function. This makes it easier to understand and solve the problem step-by-step:
 
 - Single Public, exposed functions, or API endpoints
 - Tests, test setup and validation scripts
@@ -87,7 +87,7 @@ For instance, with legacy code, you could explain what the inputs and expected o
 ### 6. Identify Patterns and Reuse Solutions
 Recognize common patterns in your problem and reuse solutions where applicable. An obvious example of this in legacy Python projects is the use of exception handling in Python 2.5 would create a `SyntaxError` in Python 3+.
 
-Sometimes in legacy projects it is common to create functions that handle either case, or even modules that can do imports depending on the Python version. This is a common pattern in legacy projects that can be reused in other projects.
+Sometimes in legacy projects it is common to create functions that handle either case or even modules that can do imports depending on the Python version. This is a common pattern in legacy projects that can be reused in other projects.
 
 > [!TIP]
 > Recognizing patterns is a hallmark of experience. As you encounter similar problems repeatedly, you'll start to see similarities that can speed up your process.
@@ -95,7 +95,7 @@ Sometimes in legacy projects it is common to create functions that handle either
 ### 7. Use Constraints and Edge Cases for Robustness
 Think about edge cases and exceptions. Complex problems often involve handling not just the "ideal" data, but also the "edge" or "outlier" cases that might break a naive solution. Ensure that your prompt or solution accounts for these edge cases.
 
-In legacy code, this might mean considering how the code behaves with unexpected inputs which would guide you to write new tests or modify existing ones.
+In legacy code, this might mean considering how the code behaves with unexpected inputs, which would guide you to write new tests or modify existing ones.
 
 > [!TIP]
 > Thinking through edge cases helps you build more resilient, generalized solutions. Always put an added emphasis in testing and creating a robust test suite to validate your changes.
@@ -125,7 +125,7 @@ For AI model prompts: When asking for something complex (like generating code, t
 For design or content generation: Define the purpose, break down design elements, and provide examples or inspiration, then refine based on feedback.
 
 Final Thoughts:
-Complex generation problems often involve a balance of clarity, decomposition, iteration, and validation. Whether it's a SQL query or any other task, keeping these concepts in mind will allow you to generate more accurate, efficient, and reliable results.
+Complex generation problems often involve a balance of clarity, decomposition, iteration, and validation. Whether it's an SQL query or any other task, keeping these concepts in mind will allow you to generate more accurate, efficient, and reliable results.
 
 
 
@@ -156,4 +156,4 @@ This project may contain trademarks or logos for projects, products, or services
 trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+The use of third-party trademarks or logos is subject to their respective policies.
