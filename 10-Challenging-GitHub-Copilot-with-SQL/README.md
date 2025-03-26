@@ -27,7 +27,7 @@ In this workshop, you will:
   - Iterate, validate, and refine answers to get better and more accurate suggestions
   - Apply generic concepts that can improve suggestions and select from different strategies that can yield better results.
   - Get a clear understanding of poor prompting techniques, and how these can
-    affect drastically the output from GitHub Copilot.
+    drastically affect the output from GitHub Copilot.
 
 ## :mega: Prerequisites
 
@@ -72,7 +72,7 @@ Use the appropriate terminology for the problem domain. Whether you're writing S
 ### 4. Iterate and Refine the Solution
 Start simple, then refine. In complex problems, initial attempts are rarely perfect. Start by generating a basic solution and progressively build on it.
 
-In a SQL query, you might first write a query that selects all data for today, then add filters, exclusions, and aggregation in phases.
+In an SQL query, you might first write a query that selects all data for today, then add filters, exclusions, and aggregation in phases.
 
 > [!TIP]
 > With every iteration, test and verify against expected outcomes to ensure the result is moving in the right direction.
