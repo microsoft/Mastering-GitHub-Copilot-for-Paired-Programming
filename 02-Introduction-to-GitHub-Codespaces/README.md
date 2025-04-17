@@ -22,7 +22,7 @@ Picture a fully configured development setup, ready to use and accessible from a
 By the end of this module, you'll be able to:
 
 1. Describe GitHub Codespaces.
-2. Explain the GitHub Codespace lifecycle and how to perform each step.
+2. Explain the GitHub Codespaces lifecycle and how to perform each step.
 3. Define the different customizations you can personalize with GitHub Codespaces.
 
 
