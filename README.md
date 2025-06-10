@@ -1,9 +1,9 @@
-![Mastering GitHub Copilot for AI Paired Programming](./images/GitHub%20101%20-%20Curriculum%20v2.png)
+![Mastering GitHub Copilot for AI Peer Programming](./images/GitHub%20101%20-%20Curriculum%20v2.png)
 
-# Mastering GitHub Copilot for Paired Programming
-A 12-Lesson course teaching everything you need to know about harnessing GitHub Copilot as an AI Paired Programming resource.
+# Mastering GitHub Copilot for Peer Programming
+A 12-Lesson course teaching everything you need to know about harnessing GitHub Copilot as an AI Peer Programming resource.
 
-Unlock the power of collaborative coding with our comprehensive curriculum on Mastering GitHub Copilot for Paired Programming. This cutting-edge program seamlessly integrates AI-driven coding assistance through GitHub Copilot, empowering students to accelerate their coding skills in tandem with a partner. Over the course of 10 engaging hours, participants will navigate through essential setup procedures, leveraging Visual Studio Code and GitHub Copilot Chat for real-time collaboration. Dive deep into GitHub Copilot's autocompletion, customizable features, and advanced programming techniques, all while embracing AI-driven algorithms. From error handling to unit testing, this curriculum is tailored to instill best practices and enhance code quality. Immerse yourself in a transformative learning experience that fuses the latest AI technology with paired programming strategies, equipping you with the tools needed for success in today's dynamic software development landscape.
+Unlock the power of collaborative coding with our comprehensive curriculum on Mastering GitHub Copilot for Peer Programming. This cutting-edge program seamlessly integrates AI-driven coding assistance through GitHub Copilot, empowering students to accelerate their coding skills in tandem with a partner. Over the course of 10 engaging hours, participants will navigate through essential setup procedures, leveraging Visual Studio Code and GitHub Copilot Chat for real-time collaboration. Dive deep into GitHub Copilot's autocompletion, customizable features, and advanced programming techniques, all while embracing AI-driven algorithms. From error handling to unit testing, this curriculum is tailored to instill best practices and enhance code quality. Immerse yourself in a transformative learning experience that fuses the latest AI technology with Peer programming strategies, equipping you with the tools needed for success in today's dynamic software development landscape.
 
 ## 🌱 Getting Started
 
@@ -19,7 +19,7 @@ Below are links to each lesson—feel free to explore and dive into any topic th
 
 
 ## 🧠 Want to learn more?
-After completing this course, check out our [GitHub Copilot Learn Collection](https://learn.microsoft.com/collections/kkqrhmxoqn54?WT.mc_id=academic-113596-abartolo) to continue leveling up your AI Paired Programming knowledge!
+After completing this course, check out our [GitHub Copilot Learn Collection](https://learn.microsoft.com/collections/kkqrhmxoqn54?WT.mc_id=academic-113596-abartolo) to continue leveling up your AI Peer Programming knowledge!
 
 ##  🚀  Are you a startup or got an idea you want to launch?
 
@@ -28,7 +28,7 @@ Sign up for [Microsoft for Startups Founders Hub](https://foundershub.startups.m
 ##  🙏 Want to help?
 
 Here are ways you can contribute to this course:
-- Find spelling errors or code errors, [Raise an issue](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/issues/new/choose) or [Create a pull request](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/pulls)
+- Find spelling errors or code errors, [Raise an issue](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Peer-Programming/issues/new/choose) or [Create a pull request](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Peer-Programming/pulls)
 - Send us your ideas, maybe your ideas for new lessons or exercises, and let us know how we can improve.
 
 ## 📂 Each lesson includes:
@@ -69,6 +69,6 @@ Our team produces other courses! Check out:
 - [Web Dev for Beginners](https://aka.ms/webdev-beginners)
 - [IoT for Beginners](https://aka.ms/iot-beginners)
 - [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
+- [Mastering GitHub Copilot for AI Peer Programming](https://aka.ms/GitHubCopilotAI)
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
