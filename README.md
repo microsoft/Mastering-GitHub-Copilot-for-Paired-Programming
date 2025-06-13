@@ -1,4 +1,4 @@
-![Mastering GitHub Copilot for AI Peer Programming](./images/GitHub%20101%20-%20Curriculum%20v2.png)
+![Mastering GitHub Copilot for AI Peer Programming](./images/Mastering-GitHub-Copilot.png)
 
 # Mastering GitHub Copilot for Peer Programming
 A 12-Lesson course teaching everything you need to know about harnessing GitHub Copilot as an AI Peer Programming resource.
