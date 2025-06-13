@@ -1,9 +1,9 @@
 ![Mastering GitHub Copilot for AI Peer Programming](./images/Mastering-GitHub-Copilot.png)
 
-# Mastering GitHub Copilot for Peer Programming
-This multi-module course teaching everything you need to know about harnessing GitHub Copilot as an AI Peer Programming resource.
+# Mastering GitHub Copilot
+Unlock the next generation of collaborative coding with our newly updated, in-depth course: Mastering GitHub Copilot. This multi-module, 10-hour program now features GitHub Copilot's revolutionary Agent Mode, transforming Copilot from a passive assistant into a proactive AI coding partner that works with you—and for you.
 
-Unlock the power of collaborative coding with our comprehensive curriculum on Mastering GitHub Copilot for Peer Programming. This cutting-edge program seamlessly integrates AI-driven coding assistance through GitHub Copilot, empowering students to accelerate their coding skills in tandem with a partner. Over the course of 10 engaging hours, participants will navigate through essential setup procedures, leveraging Visual Studio Code and GitHub Copilot Chat for real-time collaboration. Dive deep into GitHub Copilot's autocompletion, customizable features, and advanced programming techniques, all while embracing AI-driven algorithms. From error handling to unit testing, this curriculum is tailored to instill best practices and enhance code quality. Immerse yourself in a transformative learning experience that fuses the latest AI technology with Peer programming strategies, equipping you with the tools needed for success in today's dynamic software development landscape.
+Whether you're just starting out or an experienced developer, this course equips you to fully harness GitHub Copilot’s AI capabilities, including real-time autonomous code execution, intelligent problem-solving, and workflow automation. You'll learn how to collaborate with AI using natural-language prompts that initiate multi-step solutions—from initial planning and architecture suggestions to code generation, testing, and iteration.
 
 ## 🌱 Getting Started
 
