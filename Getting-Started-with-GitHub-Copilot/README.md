@@ -2,14 +2,11 @@
 
 # Getting Started with GitHub Copilot
 
-In this learning module, we’ll explore the benefits of using GitHub Copilot, the first-ever AI developer tool designed to operate at scale. Copilot enhances your coding experience by assisting with tasks like testing, refactoring, explaining, and suggesting code.
+Begin your journey with GitHub Copilot—the groundbreaking AI developer tool that’s transforming how software is built. In this foundational module, you’ll explore the powerful capabilities of Copilot, from code generation and intelligent suggestions to testing, refactoring, and real-time explanation of complex logic.
 
-GitHub Copilot is an AI-powered coding assistant that helps you write code faster and with less effort, freeing up more time and energy for problem-solving and collaboration.
+Now enhanced with Agent Mode, GitHub Copilot is more than a coding assistant—it’s an autonomous collaborator that understands your intent, executes multi-step workflows, and refines its own solutions with minimal oversight. You’ll discover how Copilot leverages natural-language prompts to streamline your development process, reduce cognitive load, and accelerate your path from idea to implementation.
 
-By the module's conclusion, you will not only be able to articulate what GitHub Copilot is and its advantages but also comprehend its availability for individuals and businesses. Gain insights into the future of GitHub Copilot, and dive into hands-on exercises to master its utilization with Visual Studio Code.
-
-By leveraging Copilot, developers have been able to boost productivity and accelerate software development. For more insights, check out the GitHub blog post Research: [Quantifying GitHub Copilot’s Impact on Developer Productivity and Happiness.](https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness)
-
+By the end of this module, you'll confidently articulate the role and impact of GitHub Copilot in modern development environments. You'll also gain practical experience using it within VS Code and understand its place in the evolving landscape of AI-powered software engineering.
 
 Note: Although this module uses [Codespaces](https://github.com/codespaces), you can use GitHub Copilot in a variety of other environments, including locally with Visual Studio Code.
 </header>
