@@ -69,8 +69,6 @@ const siteProps = {
 Now lets use the slash command to explain what a portion of the code does.  Highlight the following code:
 
 ```javascript
-};
-
 const primaryColor = "#4E567E";
 const secondaryColor = "#D2F1E4";
 
