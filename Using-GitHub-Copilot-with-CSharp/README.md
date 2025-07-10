@@ -46,7 +46,13 @@ We will review the steps to update the Weather BackEnd App by adding a new endpo
 
 ### 🗒️ Step 1: Get familiarized with the "GitHub Codespaces ♥️ .NET 8" repository
 
-Once you open the repository in Codespaces, you will find a new browser window with a fully functional Codespace. Everything in this repository is contained within this one Codespace. For example, in the explorer panel, we can see the main code for the BackEnd and the FrontEnd projects.
+Once you open the repository in Codespaces, you will find a new browser window with a fully functional Codespace. Everything in this repository is contained within this one Codespace.
+This is a great opportunity to get started with GitHub Copilot Chat right away! We have opened up a new repository and we want to get familiar with it. Navigate to the top of the GitHub Codespace and select the Copilot Chat icon to the right search bar:
+
+![Open GitHub Copilot Chat](./001-chat.jpg001-chat.jpg)
+
+
+ For example, in the explorer panel, we can see the main code for the BackEnd and the FrontEnd projects.
 
 ![new Codespace with all the repository running](./005OpenRepoInCodeSpaces.png)
 
