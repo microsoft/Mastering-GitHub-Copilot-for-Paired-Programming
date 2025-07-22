@@ -42,13 +42,29 @@ The "**GitHub Codespaces ♥️ .NET 8**" repository builds a Weather API using 
 
 We will review the steps to update the Weather BackEnd App by adding a new endpoint that requests a specific location and returns the weather forecast for that location.
 
-**TEST**
+
 ### 🗒️ Step 1: Get familiarized with the "GitHub Codespaces ♥️ .NET 8" repository
 
 Once you open the repository in Codespaces, you will find a new browser window with a fully functional Codespace. Everything in this repository is contained within this one Codespace.
 This is a great opportunity to get started with GitHub Copilot Chat right away! We have opened up a new repository and we want to get familiar with it. Navigate to the top of the GitHub Codespace and select the Copilot Chat icon to the right search bar:
 
 ![Open GitHub Copilot Chat](./001-chat.jpg001-chat.jpg)
+
+We can use the explorer panel to review the BackEnd and Front projects. Instead, let's use GitHub Copilot to get more familiar with this codebase. GitHub Copilot is designed to use natural language, but it also includes 'slash commands' that allow for a faster way to ask Copilot. In the chat pane, type in a '/' and see the different options available. If you type '/help' you can see the full list of commands available. You can also reference the [slash commands in the GitHub documentation.](https://docs.github.com/en/copilot/reference/github-copilot-chat-cheat-sheet#slash-commands)
+
+Let's first understand our codebase. In the Chat pane type '/explain'. GitHub Copilot will explain how the project is structured, including the Frontend and Backend details.
+
+TODO: Insert gif/video
+
+To go a step further, I ask GitHub Copilot to create a diagram for the workflow of our application so I can better understand how it works together. 
+
+
+Ask GitHub Copilot to run and debug the backend
+
+TODO: add the gif/screenshot
+
+
+
 
 
  For example, in the explorer panel, we can see the main code for the BackEnd and the FrontEnd projects.
