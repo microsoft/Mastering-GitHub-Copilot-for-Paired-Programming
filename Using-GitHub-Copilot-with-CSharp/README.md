@@ -168,84 +168,17 @@ Agent Mode was able to perform C# specific tasks:
 - Setting up dependency injection for better testability
 - Creating an organized project structure
 
-
-### 🗒️ Section 3: MCP and etc
-
-
-}
-```
-
-You can take a look at the prompt working in the next animation:
-
-![open program.cs in the BackEnd project](./014AddNewRecord.gif)
-
-### 🔎 Step 4: Generate a new endpoint to get the weather forecast for a city
-
-Now let's generate a new API endpoint similar to `/weatherforecast` that also includes the city name. The new API endpoint name will be **`/weatherforecastbycity`**.
-
-***Important:** You must place the code after the '.WithOpenApi();' line, this starts on line 36. Also remember to press TAB in each new suggested line until the whole endpoint is defined.*
-
-Next, generate a new endpoint with GitHub Copilot by adding the comment: 
-
-```csharp
-// Create a new endpoint named /WeatherForecastByCity/{city}, that accepts a city name in the urls as a paremeter and generates a random forecast for that city
-```
-In the following example, we added some extra blank lines after the previous endpoint and then GitHub Copilot generated the new endpoint. Once the Endpoint core code was generated, GitHub Copilot also suggested code for the name of the endpoint (line 49) and the OpenAPI specification (line 50). Remember to accept each one of these suggestions by pressing [TAB].
-
-![Copilot ghost suggestion for the new endpoint](./020GeneratedCode.gif)
-
-***Important**: This prompt generates several lines of C# code. It's strongly advised to check and review the generated code to verify that it works in the desired way.*
-
-The generated code should look similar to this one:
-
-```csharp
-// Create a new endpoint named /WeatherForecastByCity/{city}, that accepts a city name in the urls as a paremeter and generates a random forecast for that city
-app.MapGet("/WeatherForecastByCity/{city}", (string city) =>
-{
-    var forecast = new WeatherForecastByCity
-    (
-        city,
-        DateOnly.FromDateTime(DateTime.Now),
-        Random.Shared.Next(-20, 55),
-        summaries[Random.Shared.Next(summaries.Length)]
-    );
-    return forecast;
-})
-.WithName("GetWeatherForecastByCity")
-.WithOpenApi();
-```
-
-
-
-### 🐍 Step 5: Test the new endpoint.
-
-Finally, verify the new endpoint is working by starting the project from the Run and Debug panel. 
-Select Run and Debug, and then select the BackEnd project.
-
-![Open Run and Debug panel and select BackEnd project](./030RunAndDebugTheBackEndProject.png)
-
-Now press Run and the project should build and run. Once the project is running, we can test the original Url using your Codespace url and the original endpoint:
+Finally, verify that the changes and new endpoint is working by starting the BackEnd project from the 'Run and Debug' panel. Once the project is running, test the original URL using your Codespace URL and original endpoint:
 
 ```bash
 https://< your code space url >.app.github.dev/WeatherForecast
 ```
 
-And the new endpoint will also be ready to test. Here are some samples urls with different cities:
-```bash
-https://< your code space url >.app.github.dev/WeatherForecastByCity/Toronto
+🚀Congratulations! Now you understand the power behind Agent Mode and the many tasks that it can help with. Scroll down to the next section that will show you how to add context and customization to Copilot. 
 
-https://< your code space url >.app.github.dev/WeatherForecastByCity/Madrid
+### 🗒️ Section 3: Customization and Context. 
 
-https://< your code space url >.app.github.dev/WeatherForecastByCity/<AnyCityName>
-```
-
-Both tests running should be like these ones:
-
-![Open Run and Debug panel and select BackEnd project](./032TestAndDebugUsingUrls.png)
-
-
-🚀 Congratulations, through the exercise, you haven't only used GitHub Copilot to generate code but also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but also write documentation, test your applications and more.
-
+TODO
 
 ## Legal Notices
 
