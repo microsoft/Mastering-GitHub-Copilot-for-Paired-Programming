@@ -117,62 +117,61 @@ In the above exercises we achieved the following:
 - Observe autonomous coding and PR generation
 - Assign issues to the Copilot coding agent
 
-In this section w
+GitHub Copilot Agent Mode is an autonomous coding assistant that acts as a synchronous collaborator in real-time. It can perform coding tasks that require multiple steps all while using your natural language prompts. When working in Agent Mode, Copilot can problem solve alongside you, understanding your intent, and when the built solution needs some tweaking, it can iterate until it gets it right. In this section we're going to use Agent Mode to make a multitude of changes to our backend service to provide several improvement to our code. 
 
+1. Open GitHub Copilot Chat. Notice in the text box you can 'add context', which allows you to attach files, folders and other items to the context of Copilot so that it can better understand your codebase. Agent mode should be selected by default. This is also the capability to choose your model as well. Also note, the open tab 'program.cs' is being referenced for context. 
 
+2. Give Agent mode a detailed prompt. For this example we are going to ask Copilot to make several improvements to our project.
 
-
-Looking at your Program.cs file for the backend service, there are several potential improvements you could make. Here are some suggestions for changes you could start with:
-
-Add an endpoint for the Customer class that you have in your project
-Configure CORS to allow your frontend to communicate with the backend
-Add dependency injection for any services you might need
-Add error handling middleware
-Add authentication/authorization if needed
-Improve the organization by creating controller classes instead of inline route handlers
-As a first change, I'd recommend adding a basic endpoint for the Customer class since you already have that model in your project. This would be a good starting point before making more complex changes.
-
-Would you like me to show you how to implement a simple endpoint for retrieving and creating customers? Or would you prefer to start with one of the other changes I suggested?
-
-
-
-
-Let's use the `/tests` command to generate tests for the code. Select lines 39-42, press `CTRL + I` to open the inline chat, and type `/tests` (or select the /tests slash command) to generate a new set of tests for this record.
-
-![Use slash command to generate tests for the selected piece of code](./012SlashCmdTests.gif)
-
-At this point, GitHub Copilot will suggest a new class. You need to first press [Create] to create the new file. 
-
-A new class `ProgramTests.cs` was created and added to the project. These tests are using XUnit, however, you can ask to generate tests using another Unit Test library with a command like this one `/tests use MSTests for unit testing`.
-
-***Important:** We are not going to use the test file in this project. You must delete the generated test file to continue.*
-
-Finally, let's use the `/doc` to generate automatic documentation to the code. Select lines 39-42, press `CTRL + I` to open the inline chat, and type `/doc` (or select the command) to generate the documentation for this record.
-
-![Use slash command to generate the documentation for a piece of code](./013SlashCmdDoc.gif)
-
-Inline chat, the Chat Panel, and slash commands are part of the amazing tools that support our development experience with GitHub Copilot. Now we are ready to add new features to this App.
-
-
-### 🗒️ Step 3: Generate a new Record that includes the city name
-
-Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
-
-![open program.cs in the BackEnd project](./011OpenBackEndProject.png)
-
-Navigate to the end of the file and ask Copilot to generate a new record that includes the name of the city.
-
-```csharp
-// create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
 ```
+1. Add an endpoint for the Customer class in the project.
+2. Configure CORS to allow the frontend to communicate with the backend
+3. Add dependency injection for any services needed
+4. Improve the organization by creating controller classes instead of inline route handlers
+5. Write documentation for every change
+6. Write tests using xUnit, verify error handling works correctly. 
+```
+Agent mode performed the following summary of changes
 
-The generated code should be similar to this one:
+**Customer Endpoint Implementation**
+- Created a RESTful API for Customer with proper CRUD operations
+- Added appropriate status codes and validation
+  
+**CORS Configuration**
+- Properly configured CORS to allow the frontend to communicate with the backend
+- Set up to allow any origin, method, and header for development purposes
+  
+**Dependency Injection**
+- Added service interfaces and implementations for the Customer operations
+- Configured DI in Program.cs to make the application more testable and maintainable
+  
+**Code Organization**
+- Created a proper structure with Models, Controllers, and Services folders
+- Moved inline route handlers to dedicated controller classes
+- Applied consistent naming conventions
 
-```csharp
-// create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
-internal record WeatherForecastByCity(string City, DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+**Unit Tests**
+- Added comprehensive tests for controllers and services
+- Implemented tests for both success and error scenarios
+- Verified validation logic works properly
+  
+**Documentation**
+- Created detailed documentation for all APIs, models, and services
+- Included response types and error handling details
+
+Agent Mode confirmed that all tests are passing and that the application follows modern ASP.NET best practices with a focus on separation of concerns and test coverage.
+
+Agent Mode was able to perform C# specific tasks:
+- Moving from inline route handlers to controller-based architecture
+- Adding proper model validation
+- Implementing comprehensive error handling
+- Setting up dependency injection for better testability
+- Creating an organized project structure
+
+
+### 🗒️ Section 3: MCP and etc
+
+
 }
 ```
 
