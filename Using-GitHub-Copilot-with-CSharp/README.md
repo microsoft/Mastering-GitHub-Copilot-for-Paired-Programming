@@ -176,7 +176,7 @@ https://< your code space url >.app.github.dev/WeatherForecast
 
 🚀Congratulations! Now you understand the power behind Agent Mode and the many tasks that it can help with. Scroll down to the next section that will show you how to add context and customization to Copilot. 
 
-### 🗒️ Section 3: Customization and Context. 
+### 🗒️ Section 3: Customization and Context 
 
 TODO
 
