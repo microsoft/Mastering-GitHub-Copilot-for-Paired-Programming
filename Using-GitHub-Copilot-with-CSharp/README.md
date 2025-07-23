@@ -43,87 +43,99 @@ The "**GitHub Codespaces ♥️ .NET 8**" repository builds a Weather API using 
 We will review the steps to update the Weather BackEnd App by adding a new endpoint that requests a specific location and returns the weather forecast for that location.
 
 
-### 🗒️ Step 1: Get familiarized with the "GitHub Codespaces ♥️ .NET 8" repository
+### 🗒️ Section 1: Code Completion 
 
-Once you open the repository in Codespaces, you will find a new browser window with a fully functional Codespace. Everything in this repository is contained within this one Codespace.
-This is a great opportunity to get started with GitHub Copilot Chat right away! We have opened up a new repository and we want to get familiar with it. Navigate to the top of the GitHub Codespace and select the Copilot Chat icon to the right search bar:
+🎯**Learning Goals**
+- Use inline code completion to scaffold new classes and methods
+- Trigger and refine Copilot completions
+- Use inline chat and slash commands
 
+Once your Codespace launches, you'll have a fully functional development environment with the entire repository preloaded. This is the perfect time to explore GitHub Copilot Chat to help you better understand the codebase.
+
+To get started:
+
+1. Click the Copilot Chat icon in the top-right corner of the Codespace window
 ![Open GitHub Copilot Chat](./001-chat.jpg001-chat.jpg)
 
-We can use the explorer panel to review the BackEnd and Front projects. Instead, let's use GitHub Copilot to get more familiar with this codebase. GitHub Copilot is designed to use natural language, but it also includes 'slash commands' that allow for a faster way to ask Copilot. In the chat pane, type in a '/' and see the different options available. If you type '/help' you can see the full list of commands available. You can also reference the [slash commands in the GitHub documentation.](https://docs.github.com/en/copilot/reference/github-copilot-chat-cheat-sheet#slash-commands)
-
-Let's first understand our codebase. In the Chat pane type '/explain'. GitHub Copilot will explain how the project is structured, including the Frontend and Backend details.
-
-TODO: Insert gif/video
-
-To go a step further, I ask GitHub Copilot to create a diagram for the workflow of our application so I can better understand how it works together. 
-
-
-Ask GitHub Copilot to run and debug the backend
-
-TODO: add the gif/screenshot
-
-
-
-
-
- For example, in the explorer panel, we can see the main code for the BackEnd and the FrontEnd projects.
-
-![new Codespace with all the repository running](./005OpenRepoInCodeSpaces.png)
-
-In order to run the BackEnd project, go to the "Run and Debug" panel, and select the "BackEnd" Project.
-
-![open program.cs in the BackEnd project](./006RunBackEndProject.png)
-
-Start Debugging the selected project. The Weather API project, our BackEnd project will now be running in port 8080. We can copy the published url from the *Ports* panel
-
-![Copy app url from the ports panel](./007ProjectRunningOpenInNewTab.png)
-
-The BackEnd application published an endpoint named `weatherforecast` that generates random forecast data. To test the current running application, you can add `/weatherforecast` to the published url. The final url should be similar to this one
-
-```bash
-https://< your url>.app.github.dev/weatherforecast
-```
-The running application in a browser should be like this one.
-
-![test the running application.](./008TestRunningApi.png)
-
-Now let's add a break point into our application, to debug each call to the API. Go to the `Program.cs` file in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
-
-Add a breakpoint in line 24 (press F9) and refresh the browser with the Url to test the endpoint. The browser should not show the weather forecast, and in the Visual Studio Editor we can see how the program execution was paused at line 24.
-
-![debug the running application.](./009DebugBackEndDemo.png)
-
-Pressing F10 we can debug step-by-step until line 32, where we can see the generated values. The application should have generated samples Weather values for the next 5 days. The variable `forecast` has an array containing these values.
-
-![debug the running application.](./010DebugForecastValue.png)
-
-You can stop debugging now.
-
-
-Congratulations! Now you are ready to add more features into the app using GitHub Copilot.
-
-### 🗒️ Step 2: Get familiarized with GitHub Copilot Slash Commands
-
-As we start working in our codebase, we usually need to refactor some code, or get more context or explanations about it. Using GitHub Copilot Chat, we can have AI-driven conversations to perform these tasks. 
-
-Open the file `Program.cs` in the BackEnd project. The file is in the following path `SampleApp\BackEnd\Program.cs`. 
-
-Now let's use a slash command, in GitHub Copilot to understand a piece of code. Select lines 22-35, press `CTRL + I` to open the inline chat, and type `/explain`.
-
-![Use slash command to explain a piece of code](./011SlashCommandExplain.gif)
-
-In the Chat Panel, GitHub Copilot will create a detailed explanation of the selected code. A summarized version will be like this one:
-
-```
-The selected C# code is part of an ASP.NET Core application using the minimal API feature. It defines a GET endpoint at "/weatherforecast" that generates an array of WeatherForecast objects. Each object is created with a date, a random temperature, and a random summary. The endpoint is named "GetWeatherForecast" and has OpenAPI support for standardized API structure documentation.
-```
-
-**Slash commands** are special commands that you can use in chat to perform specific actions on your code. For example, you can use: 
+2. Instead of manually exploring the BackEnd and Front folders, try asking Copilot for an overview. In the chat pane, type '/' to view available slash commands — these offer quick, structured ways to interact with Copilot.
+Type '/help' to see all commands, or check out the {GitHub Copilot Chat cheat sheet for  a list of slash commands](https://docs.github.com/copilot/reference/github-copilot-chat-cheat-sheet#slash-commands) available. 
+For example, you can use: 
 - `/doc` to add a documentation comment 
 - `/explain` to explain the code 
 - `/fix` to propose a fix for the problems in the selected code 
 - `/generate` to generate code to answer your question
+
+3. In lieu of using natural language, type in '/explain' into the chat pane. The output from GitHub Copilot will go into details of how the project is structured, including further information of the Frontend and Backend details.
+
+TODO: Add gif/jpg of output
+
+4. As a visual learner, you can ask GitHub Copilot to create a diagram of the workflow of the application. This could be saved into a README for further documentation.
+
+TODO: Add gif/jpg of flow
+
+5. Ask GitHub Copilot in the chat pane to "run and debug"  the backend project (you can also do this from the 'run and debug' panel in the editor). Copilot will debug the selected project, showing the running port 8080. Copilot will give you the url to the website (selecting the 'ports' tab in the terminal will also output the url). When selecting the published url ensure that the '/weatherforecast' endpoint is named. This should produce a successfully test displaying the running application.
+
+TODO: Add gig/jpg
+
+In this section you learned how to use both natural language or slash commands to quickly understand the codebase without digging through folders. In the next set of exercises we're going to use Copilot to create a new class using code completion
+
+6. In order to generate a new record that includes the name of the city, navigates to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
+
+```csharp
+// create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
+```
+
+TODO: show output
+
+7. We can create a new C# class by creating a new file under the 'BackEnd' folder: '/BackEnd/customer.cs'. Press `CTRL + I` to open the inline chat and type in: 
+   
+```csharp
+// Create a class for a Customer with Id, Name, and Email, and a method to validate email format
+```
+
+8. Accept the suggestion and using the inline prompt window ask: 
+
+```csharp
+/improve IsValidEmail method using Regex
+```
+
+9. You can further highlight the method and ask inline (or select `CTRL + Shift + I`) to open chat and ask Copilot 'Explain what IsValidEmail() does'
+
+10. While Inline suggestions are great at autocompleting a section of code, we often need help with multiple edits. Copilot next edit suggestions will predict the location of the next edit and what that edit should be. In this task we will implement a simple endpoint for retrieving and creating customers.
+
+TODO: Can't get recording of next edits on this file :(
+
+In the above exercises we achieved the following: 
+✅ Generated suggestions from code comments
+✅ Used inline chat and slash to generate new code, query code and accept coding suggestions
+✅ Trigger and refine Copilot suggestions
+
+
+### 📄Section 2: GitHub Copilot Agent Mode
+
+🎯**Learning Goals**
+- Observe autonomous coding and PR generation
+- Assign issues to the Copilot coding agent
+
+In this section w
+
+
+
+
+Looking at your Program.cs file for the backend service, there are several potential improvements you could make. Here are some suggestions for changes you could start with:
+
+Add an endpoint for the Customer class that you have in your project
+Configure CORS to allow your frontend to communicate with the backend
+Add dependency injection for any services you might need
+Add error handling middleware
+Add authentication/authorization if needed
+Improve the organization by creating controller classes instead of inline route handlers
+As a first change, I'd recommend adding a basic endpoint for the Customer class since you already have that model in your project. This would be a good starting point before making more complex changes.
+
+Would you like me to show you how to implement a simple endpoint for retrieving and creating customers? Or would you prefer to start with one of the other changes I suggested?
+
+
+
 
 Let's use the `/tests` command to generate tests for the code. Select lines 39-42, press `CTRL + I` to open the inline chat, and type `/tests` (or select the /tests slash command) to generate a new set of tests for this record.
 
