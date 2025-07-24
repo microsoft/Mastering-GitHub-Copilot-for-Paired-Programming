@@ -43,7 +43,7 @@ The "**GitHub Codespaces ♥️ .NET 8**" repository builds a Weather API using 
 We will review the steps to update the Weather BackEnd App by adding a new endpoint that requests a specific location and returns the weather forecast for that location.
 
 
-### 🗒️ Section 1: Code Completion 
+### 🗒️ Section 1: Exploring Your Project 
 
 🎯**Learning Goals**
 - Use inline code completion to scaffold new classes and methods
@@ -54,32 +54,41 @@ Once your Codespace launches, you'll have a fully functional development environ
 
 To get started:
 
-1. Click the Copilot Chat icon in the top-right corner of the Codespace window
-![Open GitHub Copilot Chat](./001-chat.jpg001-chat.jpg)
+1. Click the Copilot Chat icon in the top-right corner of the Codespace window:
+
+<div align="left">
+<img src="./images/001-chat.jpg" alt="Open GitHub Copilot Chat" width="500" height="300">
+</div>
 
 2. Instead of manually exploring the BackEnd and Front folders, try asking Copilot for an overview. In the chat pane, type '/' to view available slash commands — these offer quick, structured ways to interact with Copilot.
-Type '/help' to see all commands, or check out the {GitHub Copilot Chat cheat sheet for  a list of slash commands](https://docs.github.com/copilot/reference/github-copilot-chat-cheat-sheet#slash-commands) available. 
-For example, you can use: 
-- `/doc` to add a documentation comment 
-- `/explain` to explain the code 
-- `/fix` to propose a fix for the problems in the selected code 
-- `/generate` to generate code to answer your question
 
-3. In lieu of using natural language, type in '/explain' into the chat pane. The output from GitHub Copilot will go into details of how the project is structured, including further information of the Frontend and Backend details.
+   Type `/help` to see all commands, or check out the [GitHub Copilot Chat cheat sheet](https://docs.github.com/copilot/reference/github-copilot-chat-cheat-sheet#slash-commands) for a list of available slash commands.
 
-TODO: Add gif/jpg of output
+   For example, you can use:
+   - `/doc` to add a documentation comment
+   - `/explain` to explain the code
+   - `/fix` to propose a fix for the problems in the selected code
+   - `/generate` to generate code to answer your question
+
+3. In lieu of using natural language, type `/explain` into the chat pane. The output from GitHub Copilot will go into details of how the project is structured, including further information of the Frontend and Backend details.
+
+<div align="left">
+<img src="./images/002explainoutput.gif" alt="Output of /Explain" width="500" height="300">
+</div>
 
 4. As a visual learner, you can ask GitHub Copilot to create a diagram of the workflow of the application. This could be saved into a README for further documentation.
 
 TODO: Add gif/jpg of flow
 
-5. Ask GitHub Copilot in the chat pane to "run and debug"  the backend project (you can also do this from the 'run and debug' panel in the editor). Copilot will debug the selected project, showing the running port 8080. Copilot will give you the url to the website (selecting the 'ports' tab in the terminal will also output the url). When selecting the published url ensure that the '/weatherforecast' endpoint is named. This should produce a successfully test displaying the running application.
+### 🗒️ Section 2: Code Completion
+
+1. Ask GitHub Copilot in the chat pane to "run and debug"  the backend project (you can also do this from the 'run and debug' panel in the editor). Copilot will debug the selected project, showing the running port 8080. Copilot will give you the url to the website (selecting the 'ports' tab in the terminal will also output the url). When selecting the published url ensure that the '/weatherforecast' endpoint is named. This should produce a successfully test displaying the running application.
 
 TODO: Add gig/jpg
 
 In this section you learned how to use both natural language or slash commands to quickly understand the codebase without digging through folders. In the next set of exercises we're going to use Copilot to create a new class using code completion
 
-6. In order to generate a new record that includes the name of the city, navigates to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
+2. In order to generate a new record that includes the name of the city, navigates to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
 
 ```csharp
 // create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
@@ -87,23 +96,23 @@ In this section you learned how to use both natural language or slash commands t
 
 TODO: show output
 
-7. We can create a new C# class by creating a new file under the 'BackEnd' folder: '/BackEnd/customer.cs'. Press `CTRL + I` to open the inline chat and type in: 
+3. We can create a new C# class by creating a new file under the 'BackEnd' folder: '/BackEnd/customer.cs'. Press `CTRL + I` to open the inline chat and type in: 
    
 ```csharp
 // Create a class for a Customer with Id, Name, and Email, and a method to validate email format
 ```
 
-8. Accept the suggestion and using the inline prompt window ask: 
+4. Accept the suggestion and using the inline prompt window ask: 
 
 ```csharp
 /improve IsValidEmail method using Regex
 ```
 
-9. You can further highlight the method and ask inline (or select `CTRL + Shift + I`) to open chat and ask Copilot 'Explain what IsValidEmail() does'
+5. You can further highlight the method and ask inline (or select `CTRL + Shift + I`) to open chat and ask Copilot 'Explain what IsValidEmail() does'
 
-10. While Inline suggestions are great at autocompleting a section of code, we often need help with multiple edits. Copilot next edit suggestions will predict the location of the next edit and what that edit should be. In this task we will implement a simple endpoint for retrieving and creating customers.
+6. While Inline suggestions are great at autocompleting a section of code, we often need help with multiple edits. Copilot next edit suggestions will predict the location of the next edit and what that edit should be. In this task we will implement a simple endpoint for retrieving and creating customers.
 
-TODO: Can't get recording of next edits on this file :(
+TODO: NES
 
 In the above exercises we achieved the following: 
 - ✅ Generated suggestions from code comments
@@ -111,7 +120,7 @@ In the above exercises we achieved the following:
 - ✅ Trigger and refine Copilot suggestions
 
 
-### 📄Section 2: GitHub Copilot Agent Mode
+### 📄Section 3: GitHub Copilot Agent Mode
 
 🎯**Learning Goals**
 - Observe autonomous coding and PR generation
@@ -179,13 +188,14 @@ Agent Mode was able to perform C# specific tasks:
 - ✅ Implementing comprehensive error handling
 - ✅ Setting up dependency injection for better testability
 - ✅ Creating an organized project structure
-- 
-### 🗒️ Section 3: Customization and Context 
+
+### 🗒️ Section 4: Customization and Context 
 
 TODO
 
 ### Useful Links and Further Learning
 - [Use agent mode in VS Code](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode)
+- [GitHub Copilot Chat Cheat Sheet](https://docs.github.com/copilot/reference/github-copilot-chat-cheat-sheet)
 
 ## Legal Notices
 
