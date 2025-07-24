@@ -106,9 +106,9 @@ TODO: show output
 TODO: Can't get recording of next edits on this file :(
 
 In the above exercises we achieved the following: 
-✅ Generated suggestions from code comments
-✅ Used inline chat and slash to generate new code, query code and accept coding suggestions
-✅ Trigger and refine Copilot suggestions
+- ✅ Generated suggestions from code comments
+- ✅ Used inline chat and slash to generate new code, query code and accept coding suggestions
+- ✅ Trigger and refine Copilot suggestions
 
 
 ### 📄Section 2: GitHub Copilot Agent Mode
@@ -117,7 +117,8 @@ In the above exercises we achieved the following:
 - Observe autonomous coding and PR generation
 - Assign issues to the Copilot coding agent
 
-GitHub Copilot Agent Mode is an autonomous coding assistant that acts as a synchronous collaborator in real-time. It can perform coding tasks that require multiple steps all while using your natural language prompts. When working in Agent Mode, Copilot can problem solve alongside you, understanding your intent, and when the built solution needs some tweaking, it can iterate until it gets it right. In this section we're going to use Agent Mode to make a multitude of changes to our backend service to provide several improvement to our code. 
+
+[GitHub Copilot Agent Mode](https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/) is an autonomous AI coding assistant that acts as a synchronous collaborator in real-time. It can perform coding tasks that require multiple steps all while using your natural language prompts. When working in Agent Mode, Copilot can problem solve alongside you, understanding your intent, and when the built solution needs some tweaking, it can iterate until it gets it right. In this section we're going to use Agent Mode to make a multitude of changes to our backend service to provide several improvement to our code. 
 
 1. Open GitHub Copilot Chat. Notice in the text box you can 'add context', which allows you to attach files, folders and other items to the context of Copilot so that it can better understand your codebase. Agent mode should be selected by default. This is also the capability to choose your model as well. Also note, the open tab 'program.cs' is being referenced for context. 
 
@@ -131,8 +132,10 @@ GitHub Copilot Agent Mode is an autonomous coding assistant that acts as a synch
 5. Write documentation for every change
 6. Write tests using xUnit, verify error handling works correctly. 
 ```
-Agent mode performed the following summary of changes
 
+Agent mode performed and outputted the following summary of changes:
+
+```
 **Customer Endpoint Implementation**
 - Created a RESTful API for Customer with proper CRUD operations
 - Added appropriate status codes and validation
@@ -158,17 +161,11 @@ Agent mode performed the following summary of changes
 **Documentation**
 - Created detailed documentation for all APIs, models, and services
 - Included response types and error handling details
+```
 
-Agent Mode confirmed that all tests are passing and that the application follows modern ASP.NET best practices with a focus on separation of concerns and test coverage.
+Agent Mode confirmed that all tests are passing and that the application follows modern ASP.NET best practices with a focus on separation of concerns and test coverage. 
 
-Agent Mode was able to perform C# specific tasks:
-- Moving from inline route handlers to controller-based architecture
-- Adding proper model validation
-- Implementing comprehensive error handling
-- Setting up dependency injection for better testability
-- Creating an organized project structure
-
-Finally, verify that the changes and new endpoint is working by starting the BackEnd project from the 'Run and Debug' panel. Once the project is running, test the original URL using your Codespace URL and original endpoint:
+3. Finally, verify that the changes and new endpoint is working by starting the BackEnd project from the 'Run and Debug' panel. Once the project is running, test the original URL using your Codespace URL and original endpoint:
 
 ```bash
 https://< your code space url >.app.github.dev/WeatherForecast
@@ -176,9 +173,19 @@ https://< your code space url >.app.github.dev/WeatherForecast
 
 🚀Congratulations! Now you understand the power behind Agent Mode and the many tasks that it can help with. Scroll down to the next section that will show you how to add context and customization to Copilot. 
 
+Agent Mode was able to perform C# specific tasks:
+- ✅ Moving from inline route handlers to controller-based architecture
+- ✅ Adding proper model validation
+- ✅ Implementing comprehensive error handling
+- ✅ Setting up dependency injection for better testability
+- ✅ Creating an organized project structure
+- 
 ### 🗒️ Section 3: Customization and Context 
 
 TODO
+
+### Useful Links and Further Learning
+- [Use agent mode in VS Code](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode)
 
 ## Legal Notices
 
