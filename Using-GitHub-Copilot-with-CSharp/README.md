@@ -112,30 +112,43 @@ https://< your url>.app.github.dev/weatherforecast
 <img src="./images/005ports.jpg" alt="port view in the editor" width="500" height="300">
 </div>
 
-3. In this next step we want to refactor some code and generate a new record for our Weather API. The goal is to add a new record that includes the name of the city. From the file pane, navigate to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
+3. In this next step we want to refactor some code and generate a new record for our Weather API. The goal is to add a new record that includes the name of the city. We are going to achieve this by asking Copilot directly from the file using code comments. From the file pane, navigate to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
 
 ```csharp
 // create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
 ```
 
-TODO: show output
+The output should be similar to this: 
 
-4. We can create a new C# class by creating a new file under the 'BackEnd' folder: '/BackEnd/customer.cs'. Press `CTRL + I` to open the inline chat and type in: 
+<div align="left">
+<img src="./images/006internalrecord.jpg" alt="changes to existing record" width="500" height="300">
+</div>
+
+4. Now we want to use the inline feature of Copilot. Using the inline feature we can focus on the code in front of us and make progressive changes as needed in our code base. Next, we will create a new C# class by creating a new file under the `Backend` folder: `SampleApp\BackEnd\Customer.cs`. 
+ 
+<div align="left">
+<img src="./images/007customerfile.png" alt="New file customer.cs" width="500" height="300">
+</div>
+
+From the top of the editor, press `CTRL + I` to open the inline chat and type (or copy) in: 
    
 ```csharp
 // Create a class for a Customer with Id, Name, and Email, and a method to validate email format
 ```
 
-5. Accept the suggestion and using the inline prompt window ask: 
+5. Accept the suggestion and and with the output, using the inline prompt window ask: 
 
 ```csharp
 /improve IsValidEmail method using Regex
 ```
+Review the suggestions from Copilot and verify the output. **Note:** It is important to always verify the output from Copilot.
 
-6. You can further highlight the method and ask inline (or select `CTRL + Shift + I`) to open chat and ask Copilot 'Explain what IsValidEmail() does'
+6. You can further highlight the method and ask inline (or select `CTRL + Shift + I`) to open chat and ask Copilot 'Explain what IsValidEmail() does'. This provides another way to interact with Copilot, verify it's output and to further understand the code that is written.
 
-7. While Inline suggestions are great at autocompleting a section of code, we often need help with multiple edits. Copilot next edit suggestions will predict the location of the next edit and what that edit should be. In this task we will implement a simple endpoint for retrieving and creating customers.
-TODO: More explanation
+7. While Inline suggestions are great at suggesting code similar to an autocomplete mechanism, Next Edit Suggestions (NES) predict the next logical change in your code based on recent edits anywhere in your file. This helps to maintain flow and consistency as a developer.  NES suggests revisions to your code, comments and event tests. It can track recent changes to anticipate future edits, working across multiple lines and symbols. It will highlight suggestions with arrows in the editor gutter. In the above steps you may have already noticed a green arrow in the gutter, providing a suggestion and the ability to accept or decline the suggestion. 
+
+**Note:** In the case that you do not see [Next Edit Suggestions](https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions) appear in your editor, check that they are enabled in your editor. 
+
 <div align="left">
 <img src="./images/NextEdit.gif" alt="Output of /Explain" width="500" height="300">
 </div>
