@@ -143,6 +143,10 @@ From the top of the editor, press `CTRL + I` to open the inline chat and type (o
 ```
 Review the suggestions from Copilot and verify the output. **Note:** It is important to always verify the output from Copilot.
 
+<div align="left">
+<img src="./images/008regexvalid.jpg" alt="Validate Regex" width="500" height="300">
+</div>
+
 6. You can further highlight the method and ask inline (or select `CTRL + Shift + I`) to open chat and ask Copilot 'Explain what IsValidEmail() does'. This provides another way to interact with Copilot, verify it's output and to further understand the code that is written.
 
 7. While Inline suggestions are great at suggesting code similar to an autocomplete mechanism, Next Edit Suggestions (NES) predict the next logical change in your code based on recent edits anywhere in your file. This helps to maintain flow and consistency as a developer.  NES suggests revisions to your code, comments and event tests. It can track recent changes to anticipate future edits, working across multiple lines and symbols. It will highlight suggestions with arrows in the editor gutter. In the above steps you may have already noticed a green arrow in the gutter, providing a suggestion and the ability to accept or decline the suggestion. 
@@ -165,12 +169,15 @@ In the above exercises we achieved the following:
 - Observe autonomous coding and PR generation
 - Assign issues to the Copilot coding agent
 
-
 [GitHub Copilot Agent Mode](https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/) is an autonomous AI coding assistant that acts as a synchronous collaborator in real-time. It can perform coding tasks that require multiple steps all while using your natural language prompts. When working in Agent Mode, Copilot can problem solve alongside you, understanding your intent, and when the built solution needs some tweaking, it can iterate until it gets it right. In this section we're going to use Agent Mode to make a multitude of changes to our backend service to provide several improvement to our code. 
 
-1. Open GitHub Copilot Chat. Notice in the text box you can 'add context', which allows you to attach files, folders and other items to the context of Copilot so that it can better understand your codebase. Agent mode should be selected by default. This is also the capability to choose your model as well. Also note, the open tab 'program.cs' is being referenced for context. 
+1. Open GitHub Copilot Chat. Notice in the text box you can 'add context', which allows you to attach files, folders and other items to the context of Copilot so that it can better understand your codebase. Agent mode should be selected by default. You have the capability to choose your model as well. Also note, the open tab `Program.cs` is being referenced for context. 
 
-2. Give Agent mode a detailed prompt. For this example we are going to ask Copilot to make several improvements to our project.
+<div align="left">
+<img src="./images/009agentview.jpg" alt="Output of /Explain" width="500" height="300">
+</div>
+
+2. Give Agent mode a detailed prompt. For this example we are going to ask Copilot to make several improvements to our project. Copy and paste the prompt below into the Chat window.
 
 ```
 1. Add an endpoint for the Customer class in the project.
@@ -181,7 +188,25 @@ In the above exercises we achieved the following:
 6. Write tests using xUnit, verify error handling works correctly. 
 ```
 
-Agent mode performed and outputted the following summary of changes:
+When executing in Agent mode, Copilot will take a bit longer to work through all of the tasks. It will first parse your intent from the prompt above. It will plan and execute the various tasks. 
+
+<div align="left">
+<img src="./images/010agentbackimplement.jpg" alt="Output Agent Mode Implementation" width="500" height="300">
+</div>
+
+But where Agent mode really shines is that it will iterate on its own output until it resolves errors and reaches a working solution. As agent mode is running, we can see it is running tests to check and verify its own code:
+
+<div align="left">
+<img src="./images/agentmodetests.gif" alt="Output Agent Mode Implementation" width="500" height="300">
+</div>
+
+While Agent Mode is working, we can also view that it has created documentation per our requirements outlined in the tasks that it was given: 
+
+<div align="left">
+<img src="./images/011agentmodedocs.jpg" alt="Output Agent Mode Implementation" width="500" height="300">
+</div>
+
+For this step in the workshop, agent mode should have taken several minutes to complete your tasks. Review the various changes and confirm that they have achieved all of the given output. With Agent mode, it also outputs what changes were made. The following summary of changes that were made are summarized below:
 
 ```
 **Customer Endpoint Implementation**
