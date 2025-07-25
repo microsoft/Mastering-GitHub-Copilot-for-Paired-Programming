@@ -91,13 +91,13 @@ In the above exercises we achieved the following:
 1. Ask GitHub Copilot in the chat pane to "run and debug" the backend project (you can also do this from the 'run and debug' panel in the editor). Start Debugging the selected project.
 
 <div align="left">
-<img src="./images/003RunBackEndProject.jpg" alt="Run and Debug in the Panel">
+<img src="./images/003RunBackEndProject.jpg" alt="Run and Debug in the Panel" width="300" height="300">
 </div>
 
-2. The BackEnd project for our Weather API will now be running in port 8080. If you used Copilot to Run and Debug, it will output the URL for you in the chat pane. Simply click the text and it will open a new tab with the published URL. Ensure that `/weatherforcast` is in the published URL. 
+2. The BackEnd project for our Weather API will now be running in port 8080. If you used Copilot to Run and Debug, it will output the URL for you in the chat pane. Simply click the text and it will open a new tab with the published URL. Ensure that `/weatherforecast` is in the published URL. 
 
 <div align="left">
-<img src="./images/004rundebugURL.jpg" alt="Run and Debug Output"
+<img src="./images/004rundebugURL.jpg" alt="Run and Debug Output" width="300" height="500">
 </div>
 
 If the URL is not loading properly, check the format and use the below format for the final URL:
@@ -112,10 +112,10 @@ https://< your url>.app.github.dev/weatherforecast
 <img src="./images/005ports.jpg" alt="port view in the editor" width="500" height="300">
 </div>
 
-3. In this next step we want to refactor some code and generate a new record for our Weather API. The goal is to add a new record that includes the name of the city. We are going to achieve this by asking Copilot directly from the file using code comments. From the file pane, navigate to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
+1. In this next step we want to refactor some code and generate a new record for our Weather API. The goal is to add a new record that includes the name of the city. We are going to achieve this by asking Copilot directly from the file using code comments. From the file pane, navigate to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
 
 ```csharp
-// create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
+// create a new internal record named WeatherForecastByCity that requests the following parameters: City, Date, TemperatureC, Summary
 ```
 
 The output should be similar to this: 
