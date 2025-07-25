@@ -20,7 +20,7 @@ In this exercise, you will:
 ### How to start this exercise
 
 > [!IMPORTANT]
-> This exercise assumes basic knowledge of [GitHub Copilot](https://github.com/features/copilot). If you are unfamiliar, we recommend the [Getting Started with Copilot](https://github.com/skills/getting-started-with-github-copilot) exercise.
+> This exercise assumes basic knowledge of [GitHub Copilot](https://github.com/features/copilot). If you are unfamiliar, we recommend the [Getting Started with Copilot](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/tree/main/Getting-Started-with-GitHub-Copilot) exercise.
 
 Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
 
