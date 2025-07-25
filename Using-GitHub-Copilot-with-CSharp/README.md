@@ -76,9 +76,15 @@ To get started:
 <img src="./images/002explainoutput.gif" alt="Output of /Explain" width="500" height="300">
 </div>
 
-4. As a visual learner, you can ask GitHub Copilot to create a diagram of the workflow of the application. This could be saved into a README for further documentation.
+4. As a visual learner, you can ask GitHub Copilot to 'create a diagram of the workflow of the application'. This could be saved into a README for further documentation.
 
-TODO: Add gif/jpg of flow
+<div align="left">
+<img src="./images/movingdiagram.gif" alt="Output of application diagram" width="500" height="300">
+</div>
+
+In the above exercises we achieved the following: 
+- ✅ Used slash commands to explain new code
+- ✅ Created a diagram to visualize and understand the application flow 
 
 ### 🗒️ Section 2: Code Completion
 
@@ -106,7 +112,7 @@ https://< your url>.app.github.dev/weatherforecast
 <img src="./images/005ports.jpg" alt="port view in the editor" width="500" height="300">
 </div>
 
-3. In order to generate a new record that includes the name of the city, navigates to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
+3. In this next step we want to refactor some code and generate a new record for our Weather API. The goal is to add a new record that includes the name of the city. From the file pane, navigate to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
 
 ```csharp
 // create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
@@ -136,7 +142,7 @@ TODO: More explanation
 
 In the above exercises we achieved the following: 
 - ✅ Generated suggestions from code comments
-- ✅ Used inline chat and slash to generate new code, query code and accept coding suggestions
+- ✅ Used inline chat to generate new code, query code and accept coding suggestions
 - ✅ Trigger and refine Copilot suggestions
 
 
