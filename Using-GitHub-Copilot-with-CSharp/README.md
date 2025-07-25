@@ -91,13 +91,13 @@ In the above exercises we achieved the following:
 1. Ask GitHub Copilot in the chat pane to "run and debug" the backend project (you can also do this from the 'run and debug' panel in the editor). Start Debugging the selected project.
 
 <div align="left">
-<img src="./images/003RunBackEndProject.png" alt="Run and Debug in the Panel" width="500" height="300">
+<img src="./images/003RunBackEndProject.jpg" alt="Run and Debug in the Panel">
 </div>
 
 2. The BackEnd project for our Weather API will now be running in port 8080. If you used Copilot to Run and Debug, it will output the URL for you in the chat pane. Simply click the text and it will open a new tab with the published URL. Ensure that `/weatherforcast` is in the published URL. 
 
 <div align="left">
-<img src="./images/004rundebugURL.jpg" alt="Run and Debug Output" width="500" height="300">
+<img src="./images/004rundebugURL.jpg" alt="Run and Debug Output"
 </div>
 
 If the URL is not loading properly, check the format and use the below format for the final URL:
