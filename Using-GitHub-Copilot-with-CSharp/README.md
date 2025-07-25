@@ -82,13 +82,31 @@ TODO: Add gif/jpg of flow
 
 ### 🗒️ Section 2: Code Completion
 
-1. Ask GitHub Copilot in the chat pane to "run and debug"  the backend project (you can also do this from the 'run and debug' panel in the editor). Copilot will debug the selected project, showing the running port 8080. Copilot will give you the url to the website (selecting the 'ports' tab in the terminal will also output the url). When selecting the published url ensure that the '/weatherforecast' endpoint is named. This should produce a successfully test displaying the running application.
+1. Ask GitHub Copilot in the chat pane to "run and debug" the backend project (you can also do this from the 'run and debug' panel in the editor). Start Debugging the selected project.
 
-TODO: Add gig/jpg
+<div align="left">
+<img src="./images/003RunBackEndProject.png" alt="Run and Debug in the Panel" width="500" height="300">
+</div>
 
-In this section you learned how to use both natural language or slash commands to quickly understand the codebase without digging through folders. In the next set of exercises we're going to use Copilot to create a new class using code completion
+2. The BackEnd project for our Weather API will now be running in port 8080. If you used Copilot to Run and Debug, it will output the URL for you in the chat pane. Simply click the text and it will open a new tab with the published URL. Ensure that `/weatherforcast` is in the published URL. 
 
-2. In order to generate a new record that includes the name of the city, navigates to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
+<div align="left">
+<img src="./images/004rundebugURL.jpg" alt="Run and Debug Output" width="500" height="300">
+</div>
+
+If the URL is not loading properly, check the format and use the below format for the final URL:
+
+```bash
+https://< your url>.app.github.dev/weatherforecast
+```
+
+**NOTE:** If you chose to run and debug the application from the run and debug panel, you will see the URL for the website in the _Ports_ tab in the editor:
+
+<div align="left">
+<img src="./images/005ports.jpg" alt="port view in the editor" width="500" height="300">
+</div>
+
+3. In order to generate a new record that includes the name of the city, navigates to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
 
 ```csharp
 // create a new internal record named WeatherForecastByCity that request the following parameters: City, Date, TemperatureC, Summary
@@ -96,23 +114,25 @@ In this section you learned how to use both natural language or slash commands t
 
 TODO: show output
 
-3. We can create a new C# class by creating a new file under the 'BackEnd' folder: '/BackEnd/customer.cs'. Press `CTRL + I` to open the inline chat and type in: 
+4. We can create a new C# class by creating a new file under the 'BackEnd' folder: '/BackEnd/customer.cs'. Press `CTRL + I` to open the inline chat and type in: 
    
 ```csharp
 // Create a class for a Customer with Id, Name, and Email, and a method to validate email format
 ```
 
-4. Accept the suggestion and using the inline prompt window ask: 
+5. Accept the suggestion and using the inline prompt window ask: 
 
 ```csharp
 /improve IsValidEmail method using Regex
 ```
 
-5. You can further highlight the method and ask inline (or select `CTRL + Shift + I`) to open chat and ask Copilot 'Explain what IsValidEmail() does'
+6. You can further highlight the method and ask inline (or select `CTRL + Shift + I`) to open chat and ask Copilot 'Explain what IsValidEmail() does'
 
-6. While Inline suggestions are great at autocompleting a section of code, we often need help with multiple edits. Copilot next edit suggestions will predict the location of the next edit and what that edit should be. In this task we will implement a simple endpoint for retrieving and creating customers.
-
-TODO: NES
+7. While Inline suggestions are great at autocompleting a section of code, we often need help with multiple edits. Copilot next edit suggestions will predict the location of the next edit and what that edit should be. In this task we will implement a simple endpoint for retrieving and creating customers.
+TODO: More explanation
+<div align="left">
+<img src="./images/NextEdit.gif" alt="Output of /Explain" width="500" height="300">
+</div>
 
 In the above exercises we achieved the following: 
 - ✅ Generated suggestions from code comments
