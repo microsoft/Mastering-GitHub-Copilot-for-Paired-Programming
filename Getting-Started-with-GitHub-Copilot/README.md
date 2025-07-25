@@ -35,7 +35,12 @@ By the end of this module, you'll be able to:
 - [Accelerate app development by using GitHub Copilot](https://learn.microsoft.com/training/paths/accelerate-app-development-using-github-copilot/)
 - Ask, Edit, and Agent Modes: [learn more here!](https://learn.microsoft.com/shows/visual-studio-code/ask-edit-and-agent-in-depth-overview-of-github-copilot-chat-modes)
 - In-depth Overview of GitHub Copilot Chat Modes: 
- [![Ask, Edit, and Agent - In-depth Overview of GitHub Copilot Chat Modes](https://img.youtube.com/vi/s7Qzq0ejhjg/0.jpg)](https://www.youtube.com/watch?v=s7Qzq0ejhjg)
+
+<div align="left">
+  
+[![Ask, Edit, and Agent - In-depth Overview of GitHub Copilot Chat Modes](https://img.youtube.com/vi/s7Qzq0ejhjg/0.jpg)](https://www.youtube.com/watch?v=s7Qzq0ejhjg)
+
+</div>
 
 ### How to start this course
 
