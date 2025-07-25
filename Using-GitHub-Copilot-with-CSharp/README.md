@@ -271,7 +271,7 @@ Let's create our first global custom instructions file!
 1. Create a `copilot-instructions.md` file in the `.github` directory: 
 
 <div align="left">
-<img src="./images/012instructionsfile.jpg" alt="Instructions File Location" width="500" height="300">
+<img src="./images/012instructionsfile.jpg" alt="Instructions File Location" width="300" height="500" >
 </div>
 
 The example below can be customized in your own project, for this example we've created an instructions file specific to our C# requirements in this project. 
