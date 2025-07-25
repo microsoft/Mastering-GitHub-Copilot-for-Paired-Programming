@@ -255,11 +255,187 @@ Agent Mode was able to perform C# specific tasks:
 
 ### 🗒️ Section 4: Customization and Context 
 
-TODO
+**Part 1: Custom Instructions**
+
+GitHub Copilot instructions files are markdown documents that provide essential context to guide Copilot’s behavior within a specific codebase. These files help tailor AI-generated suggestions to match your team’s coding standards, architectural patterns, naming conventions, testing strategies, and deployment practices. There are two types of instructions files: global instructions, which apply to the entire repository and are stored in `copilot-instructions.md`, and scoped instructions, which apply only to specific files or folders and are placed in `.github/instructions/*instructions.md`.
+
+By supplying Copilot with detailed project context, instructions files significantly improve the relevance and accuracy of its code suggestions. For example, if your project uses Blazor and ASP.NET Core, Copilot can generate components that follow your preferred structure, use modern C# features, and adhere to your naming conventions. This leads to more consistent code and reduces the need for manual corrections or lengthy code reviews.
+Instructions files also enhance Copilot’s ability to generate meaningful tests and documentation. With the right context, Copilot can suggest unit tests using xUnit, integration tests with TestServer, and even add XML comments or OpenAPI annotations to your APIs. When refactoring or adding new features, Copilot respects your dependency injection setup, configuration patterns, and error-handling strategies, making it a smarter and more reliable assistant.
+
+Beyond technical benefits, instructions files improve collaboration across teams. New contributors can rely on Copilot to guide them through unfamiliar codebases, ensuring they follow established practices without needing extensive onboarding. This makes instructions files a powerful tool for maintaining code quality, streamlining development workflows, and fostering team alignment.
+
+For example, if your project uses BEM-style CSS, async APIs, and code-behind Blazor components, Copilot will automatically generate markup with the correct class naming, use async/await for API calls, and structure components according to your preferences—all without needing to be explicitly told each time. This contextual intelligence transforms Copilot from a generic code assistant into a project-aware collaborator.
+
+Let's create our first global custom instructions file!
+
+1. Create a `copilot-instructions.md` file in the `.github` directory: 
+
+<div align="left">
+<img src="./images/012instructionsfile.jpg" alt="Instructions File Location" width="500" height="300">
+</div>
+
+The example below can be customized in your own project, for this example we've created an instructions file specific to our C# requirements in this project. 
+
+```md
+# Project Guidelines
+
+## Project Overview
+
+The GitHub Codespaces ❤️ .NET project demonstrates a modern web application architecture using .NET. It consists of:
+
+1. **BackEnd API** - A weather data API built with ASP.NET Core that provides weather forecast information
+2. **FrontEnd** - A Blazor Server web application that consumes the BackEnd API and displays weather data
+3. **Scalar Integration** - Interactive API documentation using Microsoft's Scalar
+
+The application showcases best practices for building and connecting microservices, API documentation, and creating responsive web UIs with .NET technologies.
+
+## Technology Stack
+
+### Backend
+- **.NET 9.0** - Latest .NET runtime and SDK
+- **ASP.NET Core** - Web framework for building APIs
+- **OpenAPI/Swagger** - API documentation and specification
+- **Scalar** - Interactive API documentation and testing
+
+### Frontend
+- **Blazor Server** - Server-side .NET web framework
+- **Bootstrap** - CSS framework for responsive design
+- **HttpClient** - For API communication
+
+### Development Tools
+- **GitHub Codespaces** - Cloud development environment
+- **Visual Studio Code** - Editor with debugging capabilities
+- **Docker** - Containerization platform
+- **GitHub CLI** - Command-line tool for GitHub
+
+## Code Style Guidelines
+
+### General
+- Use consistent indentation (4 spaces)
+- Follow standard C# naming conventions:
+  - PascalCase for classes, methods, properties
+  - camelCase for local variables and parameters
+  - _camelCase for private fields
+- Keep methods small and focused on a single responsibility
+- Avoid overly complex logic in a single method
+
+### C# Specific
+- Use `var` when the type is obvious from the right side of the assignment
+- Prefer immutable types and properties where possible
+- Use modern C# features (pattern matching, nullable reference types, etc.)
+- Use async/await for asynchronous operations
+- Include XML documentation comments for public APIs
+
+### Blazor Components
+- Use descriptive component names
+- Separate concerns between UI and logic
+- Prefer code-behind patterns for complex component logic
+- Keep components small and reusable
+
+## Key Patterns
+
+### Dependency Injection
+The application uses ASP.NET Core's built-in dependency injection container:
+- Register services in `Program.cs`
+- Avoid service locator pattern
+- Prefer constructor injection
+
+### Configuration
+- Use `appsettings.json` for application configuration
+- Access configuration via `IConfiguration` or strongly-typed settings
+- Use environment-specific settings with `appsettings.{Environment}.json`
+
+### API Communication
+- Use typed HttpClient pattern for service-to-service communication
+- Handle transient failures gracefully
+- Implement proper error handling
+
+### Responsive Design
+- Use Bootstrap grid system for responsive layouts
+- Design mobile-first
+- Ensure accessibility compliance
+
+## Testing
+
+### Unit Testing
+- Write unit tests for business logic and service classes
+- Use xUnit as the testing framework
+- Follow AAA pattern (Arrange, Act, Assert)
+- Mock dependencies using Moq or NSubstitute
+
+### Integration Testing
+- Test API endpoints with HttpClient
+- Use TestServer for in-memory integration tests
+- Validate response status codes and content
+
+### UI Testing
+- Test Blazor components with bUnit
+- Validate component rendering and interactivity
+- Test user workflows end-to-end
+
+### GitHub Actions
+- Ensure CI pipeline validates all PRs
+- Include both build and test steps
+- Maintain code coverage metrics
+
+## Deployment
+
+### Containerization
+- Use Docker for containerized deployments
+- Follow multi-stage build patterns for optimized images
+- Keep container images small and secure
+
+### Cloud Hosting
+- Deploy to Azure App Service or Azure Container Apps
+- Use infrastructure as code for environment setup
+- Implement proper logging and monitoring
+```
+
+2. You can also create specific instruction files that will be automatically applied to only specific files or directories. They must be within a `.github/instructions` directory and end in `.instructions.md`. 
+
+In the `.github` directory, create an `instructions` subdirectory. Within the subdirectory, create a `frontendstyling.instructions.md` file. We are going to use the existing requirements for the front end design of our application:
+
+```md
+---
+applyTo: "SampleApp/FrontEnd/*.cs"
+---
+
+## Coding Conventions
+
+- Use C# 12 features where appropriate
+- Name components with PascalCase (e.g., `WeatherDisplay.razor`)
+- Keep components small and focused on a single responsibility
+- Use code-behind files (.razor.cs) for complex component logic
+- Follow BEM naming convention for CSS classes
+- Use CSS variables for colors, spacing, and typography
+
+## Accessibility
+
+- Ensure proper contrast ratios for text
+- Test with screen readers
+```
+
+3. Attach your newly created instructions file to GitHub Copilot Chat in Agent Mode and reference the change in output from the previous examples.
+
+In the above exercises we achieved the following: 
+- ✅ Created and applied globally scoped instruction files
+- ✅ Understand how Copilot interprets and follows these rules
+- ✅ Use instruction files to enforce team standards and reduce overhead
+- ✅ Confidently prompt Copilot for consistent, high-quality code
+
+
+**Part 2: Model Context Protocol (MCP)**
+
+Model Context Protocol (MCP) is a universal standard that allows AI tools to integrate and interact with external services. An MCP host can connect to one or more MCP servers, which in turn provide tools that an AI tools can utilize. 
+
+GitHub Copilot Agent mode supports MCP, so you can connect to thousands of services. Microsoft provides many MCP servers, including ones for GitHub, Azure AI Foundry, and Playwright. They aren’t just for fetching data, but can perform complex operations with natural language and Copilot. 
+
+You can learn more about MCP and how to configure it using the dedicated [GitHub Skills course Integration MCP with GitHub Copilot](https://github.com/skills/integrate-mcp-with-copilot).
 
 ### Useful Links and Further Learning
 - [Use agent mode in VS Code](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode)
 - [GitHub Copilot Chat Cheat Sheet](https://docs.github.com/copilot/reference/github-copilot-chat-cheat-sheet)
+- [Custom instructions](https://docs.github.com/copilot/how-tos/configure-custom-instructions/add-repository-instructions)
 
 ## Legal Notices
 
