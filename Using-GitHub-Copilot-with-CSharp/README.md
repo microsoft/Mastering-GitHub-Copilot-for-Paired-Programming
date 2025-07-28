@@ -30,7 +30,7 @@ By the end of this module, you'll acquire the skills to be able to:
 
 1. Enable your [GitHub Copilot service](https://github.com/github-copilot/signup)
 
-1. Get familiar with [this repository with Codespaces](https://github.com/github/dotnet-codespaces)
+1. Open [this repository with Codespaces](https://github.com/github/dotnet-codespaces)
 
 ## 💪🏽 Exercise
 
