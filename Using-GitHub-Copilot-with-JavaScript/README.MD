@@ -94,7 +94,7 @@ Press `CTRL + I` (Windows) or `CMD + I` (Mac) to open inline chat. This is a goo
 
 You can also enable Next Edit Suggestions in settings. Once enabled, Copilot analyses your code history, the structure of your codebase, conventions and behaviors, and predicts the logical next step after you make a change. Just like with code completion, you can hit tab to accept the change. 
 
-![A green arrow is showin the gutter of one of the lines.](./images/nes.png)
+![A green arrow is showing in the gutter of one of the lines.](./images/nes.png)
 
 ## 🧑‍💻 Section 3: Agent mode
 
