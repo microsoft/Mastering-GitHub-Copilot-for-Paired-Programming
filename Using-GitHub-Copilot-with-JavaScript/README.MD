@@ -90,7 +90,7 @@ router.get('/recipes', async (req, res) => {
 
 Press `CTRL + I` (Windows) or `CMD + I` (Mac) to open inline chat. This is a good place for small explanations or modification requests. Type “Sort by title” and hit enter. You should see a small change to the SQL query which you can accept or follow up with further requests. 
 
-![A text box above the code block with the prompt "sort by title and a one line chage. There is an accept and cancel button in the box."](./images/inline-edits.png)
+![A text box above the code block with the prompt "sort by title and a one line change. There is an accept and cancel button in the box."](./images/inline-edits.png)
 
 You can also enable Next Edit Suggestions in settings. Once enabled, Copilot analyses your code history, the structure of your codebase, conventions and behaviors, and predicts the logical next step after you make a change. Just like with code completion, you can hit tab to accept the change. 
 
