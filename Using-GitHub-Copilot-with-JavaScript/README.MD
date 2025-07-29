@@ -109,7 +109,7 @@ Agent mode runs within your code editor and will detail the steps it will take t
 ```
 Implement the ability to delete recipes. Implement this using a HTML form and a new POST /recipes/:id/delete route handler. Make sure the buttons exist on both the recipe view and edit pages. Write  tests for your work.
 ```
-![Step 1: select the mode dropdown from the Copilot chat input box. Setep 2: select Agent.](./images/agent-mode.png)
+![Step 1: select the mode dropdown from the Copilot chat input box. Step 2: select Agent.](./images/agent-mode.png)
 
 Copilot will examine your codebase and then make requisite changes over multiple files, creating new ones if required. If Copilot wants to run terminal commands, it will ask. If tests fail, Copilot will recognize this and automatically continue work providing its reasoning. 
 
