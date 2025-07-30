@@ -234,18 +234,19 @@ For this step in the workshop, agent mode should have taken several minutes to c
 ```bash
 https://< your codespace url >.app.github.dev
 ```
+
 <div align="left">
 <img src="./images/011endpoint.jpg" alt="Endpoint URL">
 </div>
 
 🚀Congratulations! Now you understand the power behind Agent Mode and the many tasks that it can help with. Scroll down to the next section that will show you how to add context and customization to Copilot. 
 
-Agent Mode was able to perform C# specific tasks:
-- ✅ Moving from inline route handlers to controller-based architecture
-- ✅ Adding proper model validation
-- ✅ Implementing comprehensive error handling
-- ✅ Setting up dependency injection for better testability
-- ✅ Creating an organized project structure
+Agent Mode was able to perform Python specific tasks:
+- ✅ Resolved code structure issues
+- ✅ Improvements to the API design
+- ✅ Created tests and documentation
+- ✅ Created a deployment ready application
+- ✅ Improved performance and provided security enhancements
 
 ### 🗒️ Section 4: Customization and Context 
 
@@ -257,8 +258,8 @@ Agent Mode was able to perform C# specific tasks:
 
 GitHub Copilot instructions files are markdown documents that provide essential context to guide Copilot’s behavior within a specific codebase. These files help tailor AI-generated suggestions to match your team’s coding standards, architectural patterns, naming conventions, testing strategies, and deployment practices. There are two types of instructions files: global instructions, which apply to the entire repository and are stored in `copilot-instructions.md`, and scoped instructions, which apply only to specific files or folders and are placed in `.github/instructions/*instructions.md`.
 
-By supplying Copilot with detailed project context, instructions files significantly improve the relevance and accuracy of its code suggestions. For example, if your project uses Blazor and ASP.NET Core, Copilot can generate components that follow your preferred structure, use modern C# features, and adhere to your naming conventions. This leads to more consistent code and reduces the need for manual corrections or lengthy code reviews.
-Instructions files also enhance Copilot’s ability to generate meaningful tests and documentation. With the right context, Copilot can suggest unit tests using xUnit, integration tests with TestServer, and even add XML comments or OpenAPI annotations to your APIs. When refactoring or adding new features, Copilot respects your dependency injection setup, configuration patterns, and error-handling strategies, making it a smarter and more reliable assistant.
+By supplying Copilot with detailed project context, instructions files significantly improve the relevance and accuracy of its code suggestions. For example, if your project uses Blazor and ASP.NET Core, Copilot can generate components that follow your preferred structure, use modern Python features, and adhere to your naming conventions. This leads to more consistent code and reduces the need for manual corrections or lengthy code reviews. Instructions files also enhance Copilot’s ability to generate meaningful tests and documentation. With the right context, Copilot can suggest unit tests using unittest or pytest, integration tests with tools like requests or httpx, and even add docstrings or OpenAPI annotations to your FastAPI or Flask endpoints. When refactoring or adding new features, Copilot respects your dependency injection setup, configuration patterns, and error-handling strategies, making it a smarter and more reliable assistant.
+
 
 Beyond technical benefits, instructions files improve collaboration across teams. New contributors can rely on Copilot to guide them through unfamiliar codebases, ensuring they follow established practices without needing extensive onboarding. This makes instructions files a powerful tool for maintaining code quality, streamlining development workflows, and fostering team alignment.
 
@@ -272,7 +273,7 @@ Let's create our first global custom instructions file!
 <img src="./images/012instructionpy.jpg" alt="Instructions File Location" width="300" height="500" >
 </div>
 
-The example below can be customized in your own project, for this example we've created an instructions file specific to our C# requirements in this project. 
+The example below can be customized in your own project, for this example we've created an instructions file specific to our Python requirements in this project. 
 
 ```md
 # Project Guidelines
