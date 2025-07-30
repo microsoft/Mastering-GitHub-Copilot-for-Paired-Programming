@@ -68,22 +68,22 @@ To get started:
 
 3. In lieu of using natural language, type `/explain` into the chat pane. The output from GitHub Copilot will go into details of how the project is structured, including further information of the Frontend and Backend details.
 
-TODO: GIF
 <div align="left">
-<img src="./images/002explainoutput.gif" alt="Output of /Explain" width="500" height="300">
+<img src="./images/002explain.gif" alt="Output of /Explain" width="500" height="300">
 </div>
 
 4. As a visual learner, you can ask GitHub Copilot to 'create a diagram of the workflow of the application'. This could be saved into a README for further documentation.
 
-TODO: GIF
 <div align="left">
-<img src="./images/movingdiagram.gif" alt="Output of application diagram" width="500" height="300">
+<img src="./images/003diagramoutput.gif" alt="Output of application diagram" width="500" height="300">
 </div>
 
 In the above exercises we achieved the following: 
 - ✅ Used slash commands to explain new code
 - ✅ Created a diagram to visualize and understand the application flow 
-- 
+  
+### 🗒️ Section 2: Code Completion
+
 ### 🛠 Step 1: Add a Pydantic model
 
 Go to the `main.py` file, navigate to the bottom of the provided code, select **Ctrl + I (PC)** or **Cmd + I (Mac)** and copy the following into the provided GitHub Copilot Chat box so that it can generate a `Pydantic` model for you: 
