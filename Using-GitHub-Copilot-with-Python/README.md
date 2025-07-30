@@ -195,7 +195,7 @@ For this step in the workshop, agent mode should have taken several minutes to c
 
 ```md
 **Code Structure Issues Fixed**
-- Replaced JavaScript-style comment () with proper Python comments (#)
+- Replaced JavaScript-style single-line comments (//) with proper Python comments (#)
 - Fixed indentation issues in the checksum endpoint
 - Restructured the application into proper modules and packages
 - Followed PEP 8 style guidelines
@@ -258,7 +258,7 @@ Agent Mode was able to perform Python specific tasks:
 
 GitHub Copilot instructions files are markdown documents that provide essential context to guide Copilot’s behavior within a specific codebase. These files help tailor AI-generated suggestions to match your team’s coding standards, architectural patterns, naming conventions, testing strategies, and deployment practices. There are two types of instructions files: global instructions, which apply to the entire repository and are stored in `copilot-instructions.md`, and scoped instructions, which apply only to specific files or folders and are placed in `.github/instructions/*instructions.md`.
 
-By supplying Copilot with detailed project context, instructions files significantly improve the relevance and accuracy of its code suggestions. For example, if your project uses Blazor and ASP.NET Core, Copilot can generate components that follow your preferred structure, use modern Python features, and adhere to your naming conventions. This leads to more consistent code and reduces the need for manual corrections or lengthy code reviews. Instructions files also enhance Copilot’s ability to generate meaningful tests and documentation. With the right context, Copilot can suggest unit tests using unittest or pytest, integration tests with tools like requests or httpx, and even add docstrings or OpenAPI annotations to your FastAPI or Flask endpoints. When refactoring or adding new features, Copilot respects your dependency injection setup, configuration patterns, and error-handling strategies, making it a smarter and more reliable assistant.
+By supplying Copilot with detailed project context, instructions files significantly improve the relevance and accuracy of its code suggestions. For example, if your project uses Django, FastAPI, or Flask, Copilot can generate components that follow your preferred structure, use modern Python features, and adhere to your naming conventions. This leads to more consistent code and reduces the need for manual corrections or lengthy code reviews. Instructions files also enhance Copilot’s ability to generate meaningful tests and documentation. With the right context, Copilot can suggest unit tests using unittest or pytest, integration tests with tools like requests or httpx, and even add docstrings or OpenAPI annotations to your FastAPI or Flask endpoints. When refactoring or adding new features, Copilot respects your dependency injection setup, configuration patterns, and error-handling strategies, making it a smarter and more reliable assistant.
 
 
 Beyond technical benefits, instructions files improve collaboration across teams. New contributors can rely on Copilot to guide them through unfamiliar codebases, ensuring they follow established practices without needing extensive onboarding. This makes instructions files a powerful tool for maintaining code quality, streamlining development workflows, and fostering team alignment.
