@@ -205,13 +205,13 @@ When executing in Agent mode, Copilot will take a bit longer to work through all
 But where Agent mode really shines is that it will iterate on its own output until it resolves errors and reaches a working solution. As agent mode is running, we can see it is running tests to check and verify its own code:
 
 <div align="left">
-<img src="./images/agentmodetests.gif" alt="Output Agent Mode Tests" width="500" height="300">
+<img src="./images/agentmodetests.gif" alt="Output Agent Mode Tests">
 </div>
 
 While Agent Mode is working, we can also view that it has created documentation per our requirements outlined in the tasks that it was given: 
 
 <div align="left">
-<img src="./images/011agentmodedocs.jpg" alt="Output Agent Mode Documentation" width="500" height="300">
+<img src="./images/011agentmodedocs.jpg" alt="Output Agent Mode Documentation">
 </div>
 
 For this step in the workshop, agent mode should have taken several minutes to complete your tasks. Review the various changes and confirm that they have achieved all of the given output. With Agent mode, it also outputs what changes were made. The following summary of changes that were made are summarized below:
