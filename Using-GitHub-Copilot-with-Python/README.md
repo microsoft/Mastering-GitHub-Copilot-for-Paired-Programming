@@ -104,7 +104,7 @@ The output should be similar to this:
 <img src="./images/004pydanticmodel.jpg" alt="Create a Pydantic model" width="500" height="300">
 </div>
 
-2. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes in our code base. Next, we are going to generate a new endpoint at the bottom of the `main.py` file. Place your cursor under the last route that was created and prest `CTRL + I` to open inline chat. Type or copy in the following text: 
+2. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes in our code base. Next, we are going to generate a new endpoint at the bottom of the `main.py` file. Place your cursor under the last route that was created and press `CTRL + I` to open inline chat. Type or copy in the following text: 
 
 ```python
 # Create a FastAPI endpoint that accepts a POST request with a JSON body containing a single field called "text" and returns a checksum of the text 
@@ -126,7 +126,7 @@ The output should be similar to this:
 
 Review the suggestions from Copilot and verify the output. In this instance we combined both the slash command ability and the inline chat feature. **Note:** It is important to always verify the output from Copilot.
 
-5. After generating the `/checksum` endpoint code, you can explore a bit further with Copilot. Here are a few other suggestions that you could try, open inline chat and type (or copy) the following: 
+5. After generating the `/checksum` endpoint code, you can explore a bit further with Copilot. Try the following suggestions: 
 
 ```python
 Enhance the checksum endpoint to accept a 'hash_type' parameter that can be 'md5', 'sha1', or 'sha256'
@@ -140,7 +140,7 @@ Add validation to ensure text is not empty and has a maximum length of 1000 char
 Improve the docstring for the checksum_text function with more details and examples
 ```
 
-7. While Inline suggestions are great at suggesting code similar to an autocomplete mechanism, Next Edit Suggestions (NES) predict the next logical change in your code based on recent edits anywhere in your file. This helps to maintain flow and consistency as a developer.  NES suggests revisions to your code, comments and event tests. It can track recent changes to anticipate future edits, working across multiple lines and symbols. It will highlight suggestions with arrows in the editor gutter. In the above steps you may have already noticed a green arrow in the gutter, providing a suggestion and the ability to accept or decline the suggestion. 
+7. While Inline suggestions are great at suggesting code similar to an autocomplete mechanism, Next Edit Suggestions (NES) predict the next logical change in your code based on recent edits anywhere in your file. This helps to maintain flow and consistency as a developer.  NES suggests revisions to your code, comments and even tests. It can track recent changes to anticipate future edits, working across multiple lines and symbols. It will highlight suggestions with arrows in the editor gutter. In the above steps you may have already noticed a green arrow in the gutter, providing a suggestion and the ability to accept or decline the suggestion. 
 
 **Note:** In the case that you do not see [Next Edit Suggestions](https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions) appear in your editor, check that they are enabled in your editor. 
 
