@@ -126,7 +126,7 @@ The output should be similar to this:
 
 Review the suggestions from Copilot and verify the output. In this instance we combined both the slash command ability and the inline chat feature.**Note:** It is important to always verify the output from Copilot.
 
-5. After generating the `/checksum` endpoint code, you can explore a bit further with Copilot. Here are a few other suggestions that you could try, open inline chat and type (or copy) the following: 
+5. After generating the `/checksum` endpoint code, you can explore a bit further with Copilot. Try the following suggestions: 
 
 ```python
 Enhance the checksum endpoint to accept a 'hash_type' parameter that can be 'md5', 'sha1', or 'sha256'
