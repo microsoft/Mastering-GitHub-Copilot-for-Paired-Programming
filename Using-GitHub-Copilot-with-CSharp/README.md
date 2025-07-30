@@ -132,7 +132,7 @@ The output should be similar to this:
 <img src="./images/006internalrecord.jpg" alt="changes to existing record">
 </div>
 
-1. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes as needed in our code base. Next, we will create a new C# class by creating a new file under the `Backend` folder: `SampleApp\BackEnd\Customer.cs`. 
+4. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes as needed in our code base. Next, we will create a new C# class by creating a new file under the `Backend` folder: `SampleApp\BackEnd\Customer.cs`. 
  
 <div align="left">
 <img src="./images/007customerfile.png" alt="New file customer.cs">
