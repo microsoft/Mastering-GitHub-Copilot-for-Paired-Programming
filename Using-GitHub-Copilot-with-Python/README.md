@@ -75,7 +75,7 @@ To get started:
 4. As a visual learner, you can ask GitHub Copilot to 'create a diagram of the workflow of the application'. This could be saved into a README for further documentation.
 
 <div align="left">
-<img src="./images/003diagramoutput.gif" alt="Output of application diagram" width="500" height="300">
+<img src="./images/003diagramoutput.gif" alt="Output of Mermaid syntax" width="500" height="300">
 </div>
 
 In the above exercises we achieved the following: 
@@ -100,9 +100,8 @@ In the previous section you learned how to use both natural language or slash co
 
 The output should be similar to this: 
 
-TODO
 <div align="left">
-<img src="./images/004.jpg" alt="changes to existing record" width="500" height="300">
+<img src="./images/004pydanticmodel.jpg" alt="Create a Pydantic model" width="500" height="300">
 </div>
 
 2. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes in our code base. Next, we are going to generate a new endpoint at the bottom of the `main.py` file. Place your cursor under the last route that was created and prest `CTRL + I` to open inline chat. Type or copy in the following text: 
@@ -111,9 +110,8 @@ TODO
 # Create a FastAPI endpoint that accepts a POST request with a JSON body containing a single field called "text" and returns a checksum of the text 
 ```
 
-TODO
 <div align="left">
-<img src="./images/007customerfile.png" alt="New file customer.cs" width="500" height="300">
+<img src="./images/005inlinefastapi.gif" alt="Copilt Chat Inline" width="500" height="300">
 </div>
 
 3. Accept the suggestion and highlight the block of text that Copilot has outputted. Open the inline prompt window again (`CRTL + I`) and type in:
@@ -122,10 +120,8 @@ TODO
 /improve 
 ```
 
-TODO
-
 <div align="left">
-<img src="./images/008regexvalid.jpg" alt="Validate Regex" width="500" height="300">
+<img src="./images/006improvechecksum.gif" alt="Improve Checksum" width="500" height="300">
 </div>
 
 Review the suggestions from Copilot and verify the output. In this instance we combined both the slash command ability and the inline chat feature.**Note:** It is important to always verify the output from Copilot.
@@ -148,10 +144,8 @@ Improve the docstring for the checksum_text function with more details and examp
 
 **Note:** In the case that you do not see [Next Edit Suggestions](https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions) appear in your editor, check that they are enabled in your editor. 
 
-TODO
-
 <div align="left">
-<img src="./images/NextEdit.gif" alt="Output of /Explain" width="500" height="300">
+<img src="./images/007nexteditpython.jpg" alt="Next Edits" width="500" height="300">
 </div>
 
 In the above exercises we achieved the following: 
@@ -169,10 +163,8 @@ In the above exercises we achieved the following:
 
 1. Open GitHub Copilot Chat. Notice in the text box you can 'add context', which allows you to attach files, folders and other items to the context of Copilot so that it can better understand your codebase. Agent mode should be selected by default. You have the capability to choose your model as well. Also note, the open tab `main.py` and is being referenced to for context. 
 
-TODO -- Agent View
-
 <div align="left">
-<img src="./images/009agentview.jpg" alt="Output of /Explain" >
+<img src="./images/008agentmodechat.jpg" alt="Agent Mode Chat" >
 </div>
 
 2. Give Agent mode a detailed prompt. For this example we are going to ask Copilot to make several improvements to our project. Copy and paste the prompt below into the Chat window.
@@ -184,27 +176,20 @@ TODO -- Agent View
 4.	Make this application deployment ready 
 5.	Improve the performance and security of this application.
 ```
+
 When executing in Agent mode, Copilot will take a bit longer to work through all of the tasks. It will first parse your intent from the prompt above. It will plan and execute the various tasks. 
 
-TODO; Plan
 <div align="left">
-<img src="./images/010agentbackimplement.jpg" alt="Output Agent Mode Implementation" width="500" height="300">
+<img src="./images/009agentmodeplanpython.jpg" alt="Output Agent Mode Implementation" width="500" height="300">
 </div>
 
 But where Agent mode really shines is that it will iterate on its own output until it resolves errors and reaches a working solution. As agent mode is running, we can see it is running tests to check and verify its own code:
 
-
-TODO: test and verify
 <div align="left">
-<img src="./images/agentmodetests.gif" alt="Output Agent Mode Implementation" width="500" height="300">
+<img src="./images/010agentmodetestspy.gif" alt="Output Agent Mode Tests" width="500" height="300">
 </div>
 
 While Agent Mode is working, we can also view that it has created documentation per our requirements outlined in the tasks that it was given: 
-
-TODO: DOCS
-<div align="left">
-<img src="./images/011agentmodedocs.jpg" alt="Output Agent Mode Implementation" width="500" height="300">
-</div>
 
 For this step in the workshop, agent mode should have taken several minutes to complete your tasks. Review the various changes and confirm that they have achieved all of the given output. With Agent mode, it also outputs what changes were made. The following summary of changes that were made are summarized below:
 
@@ -249,6 +234,9 @@ For this step in the workshop, agent mode should have taken several minutes to c
 ```bash
 https://< your codespace url >.app.github.dev
 ```
+<div align="left">
+<img src="./images/011endpoint.jpg" alt="Endpoint URL">
+</div>
 
 🚀Congratulations! Now you understand the power behind Agent Mode and the many tasks that it can help with. Scroll down to the next section that will show you how to add context and customization to Copilot. 
 
@@ -260,6 +248,10 @@ Agent Mode was able to perform C# specific tasks:
 - ✅ Creating an organized project structure
 
 ### 🗒️ Section 4: Customization and Context 
+
+🎯 Learning Goals
+- Understand the different ways to customize GitHub Copilot and receive better responses from prompts.
+- Understand the role of Model Context Protocol (MCP).
 
 **Part 1: Custom Instructions**
 
@@ -276,9 +268,8 @@ Let's create our first global custom instructions file!
 
 1. Create a `copilot-instructions.md` file in the `.github` directory: 
 
-TODO
 <div align="left">
-<img src="./images/012instructionsfile.jpg" alt="Instructions File Location" width="300" height="500" >
+<img src="./images/012instructionpy.jpg" alt="Instructions File Location" width="300" height="500" >
 </div>
 
 The example below can be customized in your own project, for this example we've created an instructions file specific to our C# requirements in this project. 

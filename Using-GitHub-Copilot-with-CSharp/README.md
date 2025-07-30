@@ -162,7 +162,7 @@ Review the suggestions from Copilot and verify the output. **Note:** It is impor
 **Note:** In the case that you do not see [Next Edit Suggestions](https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions) appear in your editor, check that they are enabled in your editor. 
 
 <div align="left">
-<img src="./images/NextEdit.gif" alt="Output of /Explain" width="500" height="300">
+<img src="./images/NextEdit.gif" alt="Next Edit Feature" width="500" height="300">
 </div>
 
 In the above exercises we achieved the following: 
@@ -205,13 +205,13 @@ When executing in Agent mode, Copilot will take a bit longer to work through all
 But where Agent mode really shines is that it will iterate on its own output until it resolves errors and reaches a working solution. As agent mode is running, we can see it is running tests to check and verify its own code:
 
 <div align="left">
-<img src="./images/agentmodetests.gif" alt="Output Agent Mode Implementation" width="500" height="300">
+<img src="./images/agentmodetests.gif" alt="Output Agent Mode Tests" width="500" height="300">
 </div>
 
 While Agent Mode is working, we can also view that it has created documentation per our requirements outlined in the tasks that it was given: 
 
 <div align="left">
-<img src="./images/011agentmodedocs.jpg" alt="Output Agent Mode Implementation" width="500" height="300">
+<img src="./images/011agentmodedocs.jpg" alt="Output Agent Mode Documentation" width="500" height="300">
 </div>
 
 For this step in the workshop, agent mode should have taken several minutes to complete your tasks. Review the various changes and confirm that they have achieved all of the given output. With Agent mode, it also outputs what changes were made. The following summary of changes that were made are summarized below:
@@ -262,6 +262,10 @@ Agent Mode was able to perform C# specific tasks:
 - ✅ Creating an organized project structure
 
 ### 🗒️ Section 4: Customization and Context 
+
+🎯 Learning Goals
+- Understand the different ways to customize GitHub Copilot and receive better responses from prompts.
+- Understand the role of Model Context Protocol (MCP).
 
 **Part 1: Custom Instructions**
 
