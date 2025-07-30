@@ -84,80 +84,289 @@ In the above exercises we achieved the following:
   
 ### 🗒️ Section 2: Code Completion
 
-### 🛠 Step 1: Add a Pydantic model
+**🎯 Learning Goals**
 
-Go to the `main.py` file, navigate to the bottom of the provided code, select **Ctrl + I (PC)** or **Cmd + I (Mac)** and copy the following into the provided GitHub Copilot Chat box so that it can generate a `Pydantic` model for you: 
+- Use inline code completion to write code from comments.
+- Trigger and refine Copilot completions.
+- Use inline chat and slash commands.
 
-```
-Create a Pydantic model so that I can use it in a new route that will accept JSON with text as a key which accepts a string.
-```
+In the previous section you learned how to use both natural language or slash commands to quickly understand the codebase without digging through folders. In the next set of exercises we're going to use Copilot to add a `Pydantic` model and generate a new endpoint. 
 
-The generated model should look like this:
+1. Open the file pane and navigate to `webapp/main.py`. Open the `main.py` file, navigate to the end of the files and type in (or copy):
 
 ```python
-    class TextData(BaseModel):
-        text: str
+# Create a Pydantic model so that I can use it in a new route that will accept JSON with text as a key which accepts a string
 ```
 
-> [!NOTE]
-> You might see some linter warnings in the editor (identifiable with red dotted underlines) which can be ignored. These include long lines or even new lines that aren't needed. Feel free to address them, although these shouldn't affect your application from running correctly.
+The output should be similar to this: 
 
-### 🔎 Step 2: Generate a new endpoint
+TODO
+<div align="left">
+<img src="./images/004.jpg" alt="changes to existing record" width="500" height="300">
+</div>
 
-Next, generate a new endpoint with GitHub Copilot by adding the comment at the very bottom of the `main.py` file under the last route.
+2. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes in our code base. Next, we are going to generate a new endpoint at the bottom of the `main.py` file. Place your cursor under the last route that was created and prest `CTRL + I` to open inline chat. Type or copy in the following text: 
 
 ```python
 # Create a FastAPI endpoint that accepts a POST request with a JSON body containing a single field called "text" and returns a checksum of the text 
 ```
 
-You might get a suggestion that uses a module or library that wasn't imported. If you do, you can ask GitHub Copilot to help you import the right module by selecting the generated code and using Command+I (Apple) or Control+I (Windows) and add a prompt to add the missing imports. This small pop-out is called inline chat and is another way to interact with GitHub Copilot.
+TODO
+<div align="left">
+<img src="./images/007customerfile.png" alt="New file customer.cs" width="500" height="300">
+</div>
 
-### 🐍 Step 3: Explain code
+3. Accept the suggestion and highlight the block of text that Copilot has outputted. Open the inline prompt window again (`CRTL + I`) and type in:
 
-The `generate()` route creates a pseudo-random token ID using a single line that might be difficult to fully understand. Select the whole function, and then right click on the selection, then select the Copilot menu item, and then the _"Explain This"_ option. The GitHub Copilot chat interface will open to the left and provide you a useful explanation which you can use to interactively ask more questions.
-
-Finally, verify the new endpoint is working by trying it out by going to the `/docs` endpoint and confirming that the endpoint shows up.
-
-🚀 Congratulations, through the exercise, you haven't only used Copilot to generate code but also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
-
-### 💡 Step 4: Using Slash Commands
-
-Now that you've used GitHub Copilot to generate and explain code, you can also explore some other alternative approaches to perform developer tasks. These extra challenges will help you dive deeper into other GitHub Copilot features in addition to the ones you already know. For these extra challenges, you will use the Chat interface. Click on the GitHub Copilot Chat icon on the left sidebar if you don't have it open yet.
-
-**Generate documentation**
- 
-With `main.py` open, use the chat interface with the following text:
-
-```
-/doc I need to document the routes for these API Routes. Help me produce documentation I can put in the README.md file of this project
+```python
+/improve 
 ```
 
-The `/doc` part of the prompt is called a _"slash command"_ and it is a specific feature of GitHub Copilot that allows you to write documentation. If the results look good, add them to a new section of your README.md file.
+TODO
 
+<div align="left">
+<img src="./images/008regexvalid.jpg" alt="Validate Regex" width="500" height="300">
+</div>
 
-**Generate tests**
- 
-The current code doesn't have any tests. For this challenge, you will use the `/tests` slash command. With `main.py` open, use the chat interace with the following prompt:
+Review the suggestions from Copilot and verify the output. In this instance we combined both the slash command ability and the inline chat feature.**Note:** It is important to always verify the output from Copilot.
 
-```
-/tests help me write a test for the generate() route using the FastAPI test client and the Pytest framework. Help me understand where I should put the test file, how to add the Pytest dependency to my project, and how to run the tests
-```
+5. After generating the `/checksum` endpoint code, you can explore a bit further with Copilot. Here are a few other suggestions that you could try, open inline chat and type (or copy) the following: 
 
-The `/tests` slash command will guide you through on writing a new test for your route and give you everything you need so that you can verify your work.
-
-**Workspace challenge**
- 
-Finally, you will get a chance to use an _agent_. Agents are a special feature of GitHub Copilot in Visual Studio Code that allow specific context to be shared with GitHub Copilot. For this final challenge, you will use the `@workspace` agent which includes files from the current worspace to provide more context. You will solve a problem which is related to how to run the whole application. In this case, you will enhance the README.md for more specifics that span multiple files. Using `@workspace` helps provide more context without having to open many files.
-
-For this final challenge, you aren't required to have any open files. Use the following prompt in the GitHub Copilot Chat window:
-
-```
-@workspace I want to provide instructions on how to run this application using the uvicorn webserver, I also need to provide instructions on how to install the dependencies properly and what are some characteristics of the FastAPI framework. I will use this to improve the README.md file
+```python
+Enhance the checksum endpoint to accept a 'hash_type' parameter that can be 'md5', 'sha1', or 'sha256'
 ```
 
-The result should be a very good explanation on FastAPI, how to run the application, and how to get dependencies installed. A report at the very top of the response may include all the references used to determine what files it needed to use to provide the right context for GitHub Copilot.
+```python
+Add validation to ensure text is not empty and has a maximum length of 1000 characters
+```
+
+```python
+Improve the docstring for the checksum_text function with more details and examples
+```
+
+7. While Inline suggestions are great at suggesting code similar to an autocomplete mechanism, Next Edit Suggestions (NES) predict the next logical change in your code based on recent edits anywhere in your file. This helps to maintain flow and consistency as a developer.  NES suggests revisions to your code, comments and event tests. It can track recent changes to anticipate future edits, working across multiple lines and symbols. It will highlight suggestions with arrows in the editor gutter. In the above steps you may have already noticed a green arrow in the gutter, providing a suggestion and the ability to accept or decline the suggestion. 
+
+**Note:** In the case that you do not see [Next Edit Suggestions](https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions) appear in your editor, check that they are enabled in your editor. 
+
+TODO
+
+<div align="left">
+<img src="./images/NextEdit.gif" alt="Output of /Explain" width="500" height="300">
+</div>
+
+In the above exercises we achieved the following: 
+- ✅ Generated suggestions from code comments
+- ✅ Used inline chat to generate new code, query code and accept coding suggestions
+- ✅ Trigger and refine Copilot suggestions
+
+### 📄Section 3: GitHub Copilot Agent Mode
+
+🎯**Learning Goals**
+- Observe autonomous coding and PR generation
+- Assign issues to the Copilot coding agent
+
+[GitHub Copilot Agent Mode](https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/) is an autonomous AI coding assistant that acts as a synchronous collaborator in real-time. It can perform coding tasks that require multiple steps all while using your natural language prompts. When working in Agent Mode, Copilot can problem solve alongside you, understanding your intent, and when the built solution needs some tweaking, it can iterate until it gets it right. In this section we're going to use Agent Mode to make a multitude of changes to our backend service to provide several improvement to our code. 
+
+1. Open GitHub Copilot Chat. Notice in the text box you can 'add context', which allows you to attach files, folders and other items to the context of Copilot so that it can better understand your codebase. Agent mode should be selected by default. You have the capability to choose your model as well. Also note, the open tab `main.py` and is being referenced to for context. 
+
+TODO -- Agent View
+
+<div align="left">
+<img src="./images/009agentview.jpg" alt="Output of /Explain" >
+</div>
+
+2. Give Agent mode a detailed prompt. For this example we are going to ask Copilot to make several improvements to our project. Copy and paste the prompt below into the Chat window.
+
+```
+1.	Fix and resolve all code structure issues, including using proper Python comments and syntax
+2.	Improve the API design to include consistent error handling, input validation and API versioning.
+3.	Include unit and integration tests and ensure everything in this project is well documented. 
+4.	Make this application deployment ready 
+5.	Improve the performance and security of this application.
+```
+When executing in Agent mode, Copilot will take a bit longer to work through all of the tasks. It will first parse your intent from the prompt above. It will plan and execute the various tasks. 
+
+TODO; Plan
+<div align="left">
+<img src="./images/010agentbackimplement.jpg" alt="Output Agent Mode Implementation" width="500" height="300">
+</div>
+
+But where Agent mode really shines is that it will iterate on its own output until it resolves errors and reaches a working solution. As agent mode is running, we can see it is running tests to check and verify its own code:
 
 
+TODO: test and verify
+<div align="left">
+<img src="./images/agentmodetests.gif" alt="Output Agent Mode Implementation" width="500" height="300">
+</div>
+
+While Agent Mode is working, we can also view that it has created documentation per our requirements outlined in the tasks that it was given: 
+
+TODO: DOCS
+<div align="left">
+<img src="./images/011agentmodedocs.jpg" alt="Output Agent Mode Implementation" width="500" height="300">
+</div>
+
+For this step in the workshop, agent mode should have taken several minutes to complete your tasks. Review the various changes and confirm that they have achieved all of the given output. With Agent mode, it also outputs what changes were made. The following summary of changes that were made are summarized below:
+
+```md
+**Code Structure Issues Fixed**
+- Replaced JavaScript-style comment () with proper Python comments (#)
+- Fixed indentation issues in the checksum endpoint
+- Restructured the application into proper modules and packages
+- Followed PEP 8 style guidelines
+
+**API Design Improvements**
+- Added API versioning with a /api/v1 prefix
+- Implemented consistent error handling with try/except blocks
+- Enhanced input validation using Pydantic's Field and validator capabilities
+- Added response models for type checking and documentation
+- Added health check endpoint for monitoring
+
+**Tests and Documentation**
+- Created comprehensive unit tests for utility functions
+- Added integration tests for API endpoints
+- Improved docstrings in all functions and classes
+- Created a detailed README with examples and instructions
+
+**Deployment Ready**
+- Added a Dockerfile for containerization
+- Created a gunicorn configuration for production deployment
+- Added a run script for local development
+- Enhanced the requirements.txt file with specific versions
+
+**Performance and Security Enhancements**
+- Added GZIP compression middleware for better performance
+- Implemented rate limiting headers
+- Added CORS middleware with configurable origins
+- Improved error handling to prevent information leakage
+- Added logging for better monitoring and debugging
+- Implemented more flexible hashing algorithms with proper validation
+- The application now follows best practices for Python web applications, with a clear structure, proper error handling, comprehensive testing, and deployment configuration.
+```
+
+3. Finally, verify that the changes and the new endpoint are working. Copilot will either output the endpoint for you, or you can navigate to the 'ports' panel in the terminal window to get the URL. The URL should have the following format: 
+
+```bash
+https://< your codespace url >.app.github.dev
+```
+
+🚀Congratulations! Now you understand the power behind Agent Mode and the many tasks that it can help with. Scroll down to the next section that will show you how to add context and customization to Copilot. 
+
+Agent Mode was able to perform C# specific tasks:
+- ✅ Moving from inline route handlers to controller-based architecture
+- ✅ Adding proper model validation
+- ✅ Implementing comprehensive error handling
+- ✅ Setting up dependency injection for better testability
+- ✅ Creating an organized project structure
+
+### 🗒️ Section 4: Customization and Context 
+
+**Part 1: Custom Instructions**
+
+GitHub Copilot instructions files are markdown documents that provide essential context to guide Copilot’s behavior within a specific codebase. These files help tailor AI-generated suggestions to match your team’s coding standards, architectural patterns, naming conventions, testing strategies, and deployment practices. There are two types of instructions files: global instructions, which apply to the entire repository and are stored in `copilot-instructions.md`, and scoped instructions, which apply only to specific files or folders and are placed in `.github/instructions/*instructions.md`.
+
+By supplying Copilot with detailed project context, instructions files significantly improve the relevance and accuracy of its code suggestions. For example, if your project uses Blazor and ASP.NET Core, Copilot can generate components that follow your preferred structure, use modern C# features, and adhere to your naming conventions. This leads to more consistent code and reduces the need for manual corrections or lengthy code reviews.
+Instructions files also enhance Copilot’s ability to generate meaningful tests and documentation. With the right context, Copilot can suggest unit tests using xUnit, integration tests with TestServer, and even add XML comments or OpenAPI annotations to your APIs. When refactoring or adding new features, Copilot respects your dependency injection setup, configuration patterns, and error-handling strategies, making it a smarter and more reliable assistant.
+
+Beyond technical benefits, instructions files improve collaboration across teams. New contributors can rely on Copilot to guide them through unfamiliar codebases, ensuring they follow established practices without needing extensive onboarding. This makes instructions files a powerful tool for maintaining code quality, streamlining development workflows, and fostering team alignment.
+
+For example, in your project you can define the coding style (like PEP 8, type hints, and docstring formats), testing strategies (frameworks, mocking, and naming conventions), and tooling preferences (such as linters, formatters, and package managers). They also help align Copilot with your project’s architecture, design patterns, and framework-specific practices (e.g., Django, FastAPI), while guiding documentation standards like inline comments and docstrings.
+
+Let's create our first global custom instructions file!
+
+1. Create a `copilot-instructions.md` file in the `.github` directory: 
+
+TODO
+<div align="left">
+<img src="./images/012instructionsfile.jpg" alt="Instructions File Location" width="300" height="500" >
+</div>
+
+The example below can be customized in your own project, for this example we've created an instructions file specific to our C# requirements in this project. 
+
+```md
+# Project Guidelines
+
+## Project Overview
+
+This repository contains a FastAPI application that provides various endpoints for token generation, text echo, and checksum calculation. 
+
+## Technology Stack
+-  **Token Generation** - An endpoint that generates secure random tokens with configurable length.
+- **Text Echo** - A simple endpoint that echoes back any text sent to it.
+- **Checksum Calculation** - An endpoint that calculates cryptographic hashes (SHA-256, SHA-512, or MD5) for provided text.
+- **Health Checking** - A monitoring endpoint that returns the API status and version.
+
+### ✨ Coding Style
+- Follow **PEP 8** standards for formatting and naming.
+- Use **type hints** consistently across all functions.
+- Prefer **f-strings** for string interpolation.
+- Include **Google-style docstrings** for all public functions and classes.
+
+### 🧪 Testing Guidance
+- Use **pytest** for writing unit tests.
+- Mock external dependencies using `pytest-mock`.
+- Name tests descriptively, e.g., `test_generate_token_valid_input`.
+
+### 🏗️ Architecture Preferences
+- Use **FastAPI** conventions for routing and dependency injection.
+- Define **Pydantic models** for request and response schemas.
+- Keep logic modular—separate API routes, models, and utility functions.
+
+### 📚 Documentation & Comments
+- Generate concise inline comments for non-obvious logic.
+- Include endpoint descriptions in FastAPI route docstrings.
+- Avoid redundant comments that restate code behavior.
+```
+
+2. You can also create specific instruction files that will be automatically applied to only specific files or directories. They must be within a `.github/instructions` directory and end in `.instructions.md`. 
+
+In the `.github` directory, create an `instructions` subdirectory. Within the subdirectory, create a `APIroutes.instructions.md` file. We are going to use the existing requirements for the API endpoints in our project:
+
+```md
+---
+applyTo: "webapp/api/*.py"
+---
+
+## Coding Conventions
+
+- Follow PEP 8 for variables and functions
+- PascalCase for class names
+- Use typehints for clarity and tooling support 
+- Add detailed docstrings to endpoint functions
+- Include examples in Pydantic model Config
+- Use descriptive parameter names and Field descriptions
+- Consider async handlers for I/O bound operations
+- Configure CORS with specific origins in production
+- Use middleware for rate limiting
+
+
+## Accessibility
+
+- Ensure proper contrast ratios for text
+- Provide human-readable error messages with actionable information
+```
+
+3. Attach your newly created instructions file to GitHub Copilot Chat in Agent Mode and reference the change in output from the previous examples.
+
+In the above exercises we achieved the following: 
+- ✅ Created and applied globally scoped instruction files
+- ✅ Understand how Copilot interprets and follows these rules
+- ✅ Use instruction files to enforce team standards and reduce overhead
+- ✅ Confidently prompt Copilot for consistent, high-quality code
+
+
+**Part 2: Model Context Protocol (MCP)**
+
+Model Context Protocol (MCP) is a universal standard that allows AI tools to integrate and interact with external services. An MCP host can connect to one or more MCP servers, which in turn provide tools that an AI tools can utilize. 
+
+GitHub Copilot Agent mode supports MCP, so you can connect to thousands of services. Microsoft provides many MCP servers, including ones for GitHub, Azure AI Foundry, and Playwright. They aren’t just for fetching data, but can perform complex operations with natural language and Copilot. 
+
+You can learn more about MCP and how to configure it using the dedicated [GitHub Skills course Integration MCP with GitHub Copilot](https://github.com/skills/integrate-mcp-with-copilot).
+
+### Useful Links and Further Learning
+- [Use agent mode in VS Code](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode)
+- [GitHub Copilot Chat Cheat Sheet](https://docs.github.com/copilot/reference/github-copilot-chat-cheat-sheet)
+- [Custom instructions](https://docs.github.com/copilot/how-tos/configure-custom-instructions/add-repository-instructions)
 
 ## Legal Notices
 

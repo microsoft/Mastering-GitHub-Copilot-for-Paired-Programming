@@ -88,6 +88,14 @@ In the above exercises we achieved the following:
 
 ### 🗒️ Section 2: Code Completion
 
+**🎯 Learning Goals**
+
+- Use inline code completion to write code from comments.
+- Trigger and refine Copilot completions.
+- Use inline chat and slash commands.
+
+In the previous section you learned how to use both natural language or slash commands to quickly understand the codebase without digging through folders. In the next set of exercises we're going to use Copilot to make some changes to the API using code completion.
+
 1. Ask GitHub Copilot in the chat pane to "run and debug" the backend project (you can also do this from the 'run and debug' panel in the editor). Start Debugging the selected project.
 
 <div align="left">
@@ -112,7 +120,7 @@ https://< your url>.app.github.dev/weatherforecast
 <img src="./images/005ports.jpg" alt="port view in the editor" width="500" height="300">
 </div>
 
-1. In this next step we want to refactor some code and generate a new record for our Weather API. The goal is to add a new record that includes the name of the city. We are going to achieve this by asking Copilot directly from the file using code comments. From the file pane, navigate to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
+3. In this next step we want to refactor some code and generate a new record for our Weather API. The goal is to add a new record that includes the name of the city. We are going to achieve this by asking Copilot directly from the file using code comments. From the file pane, navigate to the following path `SampleApp\BackEnd\Program.cs` and open `Program.cs`. Navigate to the end of the file and type in (or copy):
 
 ```csharp
 // create a new internal record named WeatherForecastByCity that requests the following parameters: City, Date, TemperatureC, Summary
@@ -124,19 +132,19 @@ The output should be similar to this:
 <img src="./images/006internalrecord.jpg" alt="changes to existing record" width="500" height="300">
 </div>
 
-4. Now we want to use the inline feature of Copilot. Using the inline feature we can focus on the code in front of us and make progressive changes as needed in our code base. Next, we will create a new C# class by creating a new file under the `Backend` folder: `SampleApp\BackEnd\Customer.cs`. 
+1. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes as needed in our code base. Next, we will create a new C# class by creating a new file under the `Backend` folder: `SampleApp\BackEnd\Customer.cs`. 
  
 <div align="left">
 <img src="./images/007customerfile.png" alt="New file customer.cs" width="500" height="300">
 </div>
 
-From the top of the editor, press `CTRL + I` to open the inline chat and type (or copy) in: 
+From the top of the editor, press `CTRL + I` to open inline chat and type (or copy) in: 
    
 ```csharp
 // Create a class for a Customer with Id, Name, and Email, and a method to validate email format
 ```
 
-5. Accept the suggestion and and with the output, using the inline prompt window ask: 
+5. Accept the suggestion and with the output, using the inline prompt window ask: 
 
 ```csharp
 /improve IsValidEmail method using Regex
@@ -171,10 +179,10 @@ In the above exercises we achieved the following:
 
 [GitHub Copilot Agent Mode](https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/) is an autonomous AI coding assistant that acts as a synchronous collaborator in real-time. It can perform coding tasks that require multiple steps all while using your natural language prompts. When working in Agent Mode, Copilot can problem solve alongside you, understanding your intent, and when the built solution needs some tweaking, it can iterate until it gets it right. In this section we're going to use Agent Mode to make a multitude of changes to our backend service to provide several improvement to our code. 
 
-1. Open GitHub Copilot Chat. Notice in the text box you can 'add context', which allows you to attach files, folders and other items to the context of Copilot so that it can better understand your codebase. Agent mode should be selected by default. You have the capability to choose your model as well. Also note, the open tab `Program.cs` is being referenced for context. 
+1. Open GitHub Copilot Chat. Notice in the text box you can 'add context', which allows you to attach files, folders and other items to the context of Copilot so that it can better understand your codebase. Agent mode should be selected by default. You have the capability to choose your model as well. Also note, the open tab `Program.cs` is being referenced to for context. 
 
 <div align="left">
-<img src="./images/009agentview.jpg" alt="Output of /Explain" width="500" height="300">
+<img src="./images/009agentview.jpg" alt="Output of /Explain">
 </div>
 
 2. Give Agent mode a detailed prompt. For this example we are going to ask Copilot to make several improvements to our project. Copy and paste the prompt below into the Chat window.
@@ -208,7 +216,7 @@ While Agent Mode is working, we can also view that it has created documentation 
 
 For this step in the workshop, agent mode should have taken several minutes to complete your tasks. Review the various changes and confirm that they have achieved all of the given output. With Agent mode, it also outputs what changes were made. The following summary of changes that were made are summarized below:
 
-```
+```md
 **Customer Endpoint Implementation**
 - Created a RESTful API for Customer with proper CRUD operations
 - Added appropriate status codes and validation
@@ -238,10 +246,10 @@ For this step in the workshop, agent mode should have taken several minutes to c
 
 Agent Mode confirmed that all tests are passing and that the application follows modern ASP.NET best practices with a focus on separation of concerns and test coverage. 
 
-3. Finally, verify that the changes and new endpoint is working by starting the BackEnd project from the 'Run and Debug' panel. Once the project is running, test the original URL using your Codespace URL and original endpoint:
+3. Finally, verify that the changes and new endpoint are working by starting the BackEnd project from the 'Run and Debug' panel. Once the project is running, test the original URL using your Codespace URL and original endpoint:
 
 ```bash
-https://< your code space url >.app.github.dev/WeatherForecast
+https://< your codespace url >.app.github.dev/WeatherForecast
 ```
 
 🚀Congratulations! Now you understand the power behind Agent Mode and the many tasks that it can help with. Scroll down to the next section that will show you how to add context and customization to Copilot. 
