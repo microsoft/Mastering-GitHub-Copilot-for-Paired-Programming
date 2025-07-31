@@ -53,7 +53,7 @@ To get started:
 1. Click the Copilot Chat icon in the top-right corner of the Codespace window:
 
 <div align="left">
-<img src="./images/001Chat.jpg" alt="Open GitHub Copilot Chat" width="500" height="300">
+<img src="./images/001Chat.jpg" alt="Open GitHub Copilot Chat">
 </div>
 
 2. Instead of manually exploring the project and various folders, try asking Copilot for an overview. In the chat pane, type '/' to view available slash commands — these offer quick, structured ways to interact with Copilot.
@@ -69,13 +69,13 @@ To get started:
 3. In lieu of using natural language, type `/explain` into the chat pane. The output from GitHub Copilot will go into details of how the project is structured, including further information of the Frontend and Backend details.
 
 <div align="left">
-<img src="./images/002explain.gif" alt="Output of /Explain" width="500" height="300">
+<img src="./images/002explain.gif" alt="Output of /Explain">
 </div>
 
 4. As a visual learner, you can ask GitHub Copilot to 'create a diagram of the workflow of the application'. This could be saved into a README for further documentation.
 
 <div align="left">
-<img src="./images/003diagramoutput.gif" alt="Output of Mermaid syntax" width="500" height="300">
+<img src="./images/003diagramoutput.gif" alt="Output of Mermaid syntax">
 </div>
 
 In the above exercises we achieved the following: 
@@ -101,7 +101,7 @@ In the previous section you learned how to use both natural language or slash co
 The output should be similar to this: 
 
 <div align="left">
-<img src="./images/004pydanticmodel.jpg" alt="Create a Pydantic model" width="500" height="300">
+<img src="./images/004pydanticmodel.jpg" alt="Create a Pydantic model">
 </div>
 
 2. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes in our code base. Next, we are going to generate a new endpoint at the bottom of the `main.py` file. Place your cursor under the last route that was created and press `CTRL + I` to open inline chat. Type or copy in the following text: 
@@ -111,7 +111,7 @@ The output should be similar to this:
 ```
 
 <div align="left">
-<img src="./images/005inlinefastapi.gif" alt="Copilt Chat Inline" width="500" height="300">
+<img src="./images/005inlinefastapi.gif" alt="Copilt Chat Inline">
 </div>
 
 3. Accept the suggestion and highlight the block of text that Copilot has outputted. Open the inline prompt window again (`CRTL + I`) and type in:
@@ -121,7 +121,7 @@ The output should be similar to this:
 ```
 
 <div align="left">
-<img src="./images/006improvechecksum.gif" alt="Improve Checksum" width="500" height="300">
+<img src="./images/006improvechecksum.gif" alt="Improve Checksum">
 </div>
 
 Review the suggestions from Copilot and verify the output. In this instance we combined both the slash command ability and the inline chat feature. **Note:** It is important to always verify the output from Copilot.
@@ -145,7 +145,7 @@ Improve the docstring for the checksum_text function with more details and examp
 **Note:** In the case that you do not see [Next Edit Suggestions](https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions) appear in your editor, check that they are enabled in your editor. 
 
 <div align="left">
-<img src="./images/007nexteditpython.jpg" alt="Next Edits" width="500" height="300">
+<img src="./images/007nexteditpython.jpg" alt="Next Edits">
 </div>
 
 In the above exercises we achieved the following: 
@@ -180,13 +180,13 @@ In the above exercises we achieved the following:
 When executing in Agent mode, Copilot will take a bit longer to work through all of the tasks. It will first parse your intent from the prompt above. It will plan and execute the various tasks. 
 
 <div align="left">
-<img src="./images/009agentmodeplanpython.jpg" alt="Output Agent Mode Implementation" width="500" height="300">
+<img src="./images/009agentmodeplanpython.jpg" alt="Output Agent Mode Implementation">
 </div>
 
 But where Agent mode really shines is that it will iterate on its own output until it resolves errors and reaches a working solution. As agent mode is running, we can see it is running tests to check and verify its own code:
 
 <div align="left">
-<img src="./images/010agentmodetestspy.gif" alt="Output Agent Mode Tests" width="500" height="300">
+<img src="./images/010agentmodetestspy.gif" alt="Output Agent Mode Tests">
 </div>
 
 While Agent Mode is working, we can also view that it has created documentation per our requirements outlined in the tasks that it was given: 
@@ -270,7 +270,7 @@ Let's create our first global custom instructions file!
 1. Create a `copilot-instructions.md` file in the `.github` directory: 
 
 <div align="left">
-<img src="./images/012instructionpy.jpg" alt="Instructions File Location" width="300" height="500" >
+<img src="./images/012instructionpy.jpg" alt="Instructions File Location" width="500" height="700" >
 </div>
 
 The example below can be customized in your own project, for this example we've created an instructions file specific to our Python requirements in this project. 
