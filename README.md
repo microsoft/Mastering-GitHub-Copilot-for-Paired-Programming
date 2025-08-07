@@ -79,6 +79,6 @@ Our team produces other courses! Check out:
 - [Web Dev for Beginners](https://aka.ms/webdev-beginners)
 - [IoT for Beginners](https://aka.ms/iot-beginners)
 - [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot for AI Peer Programming](https://aka.ms/GitHubCopilotAI)
+- [Mastering GitHub Copilot for Agentic use](https://aka.ms/GitHubCopilotAI)
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
