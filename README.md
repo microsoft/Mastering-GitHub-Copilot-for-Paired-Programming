@@ -61,6 +61,7 @@ Here are ways you can contribute to this course:
 | [Challenging GitHub Copilot with complex SQL](./Challenging-GitHub-Copilot-with-SQL) | Apply advanced GitHub Copilot features to work with a challenging application working with a complex SQL query | Gain a clear understanding of how to work with extremely challenging SQL and yield better results when simple prompts don't work well |
 | [Upgrading Legacy project](./Upgrading-Legacy-Projects) | Leverage GitHub Copilot to upgrade a legacy Python project to the latest version of Python. | Apply techniques to overcome the challenges involved in working with legacy projects |
 | [Migrating to a new language](./Migrating-Languages) | Rewrite an existing application using a different language with the guidance of GitHub Copilot | Use advanced workflows with GitHub Copilot applicable when translating projects to different programming languages |
+| [GitHub Copilot for Data Science](./GitHub-Copilot-for-Data-Scientists/) | Work with Jupyter notebooks and a dataset for data exploration and analysis | Use advanced workflows with GitHub Copilot for Data Science projects |
 
 
 ## 🎒  Other Courses
