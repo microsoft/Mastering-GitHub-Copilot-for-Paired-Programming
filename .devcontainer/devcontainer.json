@@ -5,18 +5,30 @@
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers/features/powershell:1": {}
+    "ghcr.io/devcontainers/features/powershell:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/python:3": {},
+    "ghcr.io/devcontainers/features/node:1": {}
   },
   "hostRequirements": {
-      "cpus": 2
+    "cpus": 2,
+    "memory": "4gb",
+    "storage": "16gb"
   },
-  "postCreateCommand": "sudo cp --force ./.devcontainer/welcome.txt",
+  "postCreateCommand": "sudo cp --force ./.devcontainer/welcome /etc/motd || true",
   "customizations": {
-      "vscode": {
+    "vscode": {
       "extensions": [
         "github.copilot",
         "ms-vscode.azure-account",
-        "ms-azuretools.vscode-azure-github-copilot"
-      ]}
+        "ms-azuretools.vscode-azure-github-copilot",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
   }
 }
