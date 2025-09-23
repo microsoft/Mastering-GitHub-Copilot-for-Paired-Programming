@@ -1,21 +1,20 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
 {
-  "name": "GitHub Copilot for Azure",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "name": "Mastering GitHub Copilot",
   "image": "mcr.microsoft.com/vscode/devcontainers/python:dev-3.13-bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/powershell:1": {},
-    "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/python:3": {},
-    "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/python:3": { "version": "3.13" },
+    "ghcr.io/devcontainers/features/common-utils:2": {}
   },
   "hostRequirements": {
     "cpus": 2,
     "memory": "4gb",
     "storage": "16gb"
   },
+  "forwardPorts": [5000, 8000],
   "postCreateCommand": "sudo cp --force ./.devcontainer/welcome /etc/motd || true",
+  "remoteUser": "vscode",
   "customizations": {
     "vscode": {
       "extensions": [
