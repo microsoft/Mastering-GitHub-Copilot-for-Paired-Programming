@@ -30,7 +30,7 @@ By the end of this workshop, you will:
 
 **Right-click the following Codespaces button to open your Codespace in a new tab:**
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Azure-Samples/msdocs-python-flask-webapp-quickstart)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)
 
 This hands-on workshop guides you through setting up and using GitHub Copilot Agent Mode in Visual Studio Code, integrated with the Azure MCP server, to streamline cloud resource management and deployment workflows. Participants will start with a prebuilt database API demo and learn how to interact with the Copilot Coding Agent directly from their IDE—assigning cloud-related tasks, provisioning infrastructure, retrieving secrets, diagnosing issues, and deploying applications—all without switching to the Azure Portal or CLI.
 
