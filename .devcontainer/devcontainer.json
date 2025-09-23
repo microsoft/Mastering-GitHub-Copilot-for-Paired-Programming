@@ -4,7 +4,6 @@
   "name": "Mastering GitHub Copilot",
   "image": "mcr.microsoft.com/vscode/devcontainers/python:dev-3.13-bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/python:3": { "version": "3.13" },
     "ghcr.io/devcontainers/features/common-utils:2": {}
   },
   "hostRequirements": {
