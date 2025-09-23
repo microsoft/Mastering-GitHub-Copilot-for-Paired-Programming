@@ -3,11 +3,11 @@
 {
   "name": "GitHub Copilot for Azure",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.13-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/powershell:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/python:2": {},
+    "ghcr.io/devcontainers/features/python:3": {},
     "ghcr.io/devcontainers/features/node:1": {}
   },
   "hostRequirements": {
