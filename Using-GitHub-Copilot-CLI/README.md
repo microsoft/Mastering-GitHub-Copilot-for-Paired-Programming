@@ -415,19 +415,24 @@ The standalone Copilot CLI ships with the GitHub MCP server built in and authent
 
 #### Model Selection
 
-7. The default model is **Claude Sonnet 4.5**. To see all available models and switch, use the `/model` slash command:
+7. The default model is **Claude Sonnet 4.6**. To see all available models and switch, use the `/model` slash command:
 
    ```
    /model
    ```
 
-   A selection list appears. Available models include:
+   A selection list appears. Available models include (as of February 2026):
 
-   | Model | Request multiplier |
-   |---|---|
-   | Claude Sonnet 4.5 (default) | 1× |
-   | Claude Sonnet 4 | 1× |
-   | GPT-5 | varies |
+   | Model | Request multiplier | Notes |
+   |---|---|---|
+   | Claude Sonnet 4.6 (default) | 1× (tentative) | GA Feb 17 2026; excels at agentic coding & search |
+   | Claude Sonnet 4.5 | 1× | |
+   | Claude Sonnet 4 | 1× | |
+   | Claude Opus 4.6 | varies | GA Feb 5 2026; best for hard planning & tool-calling tasks |
+   | Claude Opus 4.6 Fast | 30× | Preview, Pro+/Enterprise only; up to 2.5× faster output |
+   | GPT-5.3-Codex | varies | GA Feb 9 2026; 25% faster than GPT-5.2-Codex on agentic tasks |
+
+   > **Note**: Model availability depends on your Copilot plan (Pro, Pro+, Business, Enterprise). Enterprise/Business admins must enable each model in org Copilot settings. Check [supported models](https://docs.github.com/copilot/reference/ai-models/supported-models) for the latest multipliers.
 
    Each prompt reduces your monthly premium request quota by the multiplier shown.
 
