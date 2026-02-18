@@ -4,13 +4,13 @@
 
 Welcome to a hands-on, multi-module course that takes GitHub Copilot beyond the editor and directly into your terminal as a fully autonomous coding agent. The GitHub Copilot CLI is a standalone AI-powered tool — separate from the `gh` extension — that opens an interactive chat session in your terminal, understands your local codebase, and can plan and execute complex multi-step coding tasks on your behalf.
 
-Prepare for a practical, end-to-end experience! You will install the new `copilot` CLI, master its interactive and programmatic interfaces (including plan mode and autopilot mode), control tool permissions, manage conversation context, integrate with GitHub.com, select models, configure custom agents, and combine everything into a real-world development workflow.
+Prepare for a practical, end-to-end experience! You will install the new `copilot` CLI, master its interactive and programmatic interfaces (including plan mode and auto model selection), control tool permissions, manage conversation context, integrate with GitHub.com, select models, configure custom agents, and combine everything into a real-world development workflow.
 
 </header>
 
 
 - **Who this is for**: Developers, DevOps Engineers, Platform Engineers, Software Development Managers, Testers.
-- **What you'll learn**: How to install and use the standalone GitHub Copilot CLI, leverage its interactive/plan/autopilot modes, control tool approval, manage context, interact with GitHub.com, select AI models, configure custom agents, and use `gh agent-task` for remote agent tasks.
+- **What you'll learn**: How to install and use the standalone GitHub Copilot CLI, leverage its interactive and plan modes, use Auto model selection, control tool approval, manage context, interact with GitHub.com, select AI models, configure custom agents, and use `gh agent-task` for remote agent tasks.
 - **What you'll build**: A real-world CLI-driven workflow covering project analysis, debugging, refactoring, test generation, and agent-assisted automation using MCP integrations.
 - **Prerequisites**: GitHub Copilot is available to use for free, sign up for [GitHub Copilot](https://gh.io/copilot). Basic familiarity with a terminal and Git is recommended.
 - **Timing**: This module can be completed in under 90 minutes.
@@ -18,7 +18,7 @@ Prepare for a practical, end-to-end experience! You will install the new `copilo
 By the end of this module, you'll acquire the skills to be able to:
 
 - Install, authenticate, and launch the standalone GitHub Copilot CLI.
-- Use interactive mode, plan mode, and autopilot mode.
+- Use interactive mode and plan mode; let Auto model selection choose the optimal model.
 - Control tool approval with `--allow-tool`, `--deny-tool`, and `--allow-all-tools`.
 - Manage conversation context with `/compact`, `/context`, and auto-compaction.
 - Interact with GitHub.com natively — list PRs, work on issues, and create pull requests from the terminal.
@@ -56,11 +56,32 @@ This workshop uses a sample project that contains a backend API and a frontend w
 - Authenticate and launch your first session
 - Understand the difference between the new `copilot` CLI and the deprecated `gh copilot` extension
 
-The **GitHub Copilot CLI** (`copilot`) is a standalone terminal application — distinct from the old `gh copilot` extension — that opens a full interactive AI chat session in your terminal. It ships with the GitHub MCP server built in, supports plan and autopilot modes, and can autonomously read files, run commands, and interact with GitHub.com on your behalf.
+The **GitHub Copilot CLI** (`copilot`) is a standalone terminal application — distinct from the old `gh copilot` extension — that opens a full interactive AI chat session in your terminal. It ships with the GitHub MCP server built in, supports plan mode and auto model selection, and can autonomously read files, run commands, and interact with GitHub.com on your behalf.
 
 > **Note**: The `gh extension install github/gh-copilot` extension was deprecated in September 2025 and archived at v1.2.0. This workshop uses the new standalone `copilot` CLI.
 
-#### Installing the CLI
+#### Prerequisites
+
+This workshop uses two separate CLI tools:
+
+- **`copilot`** — the standalone GitHub Copilot CLI (installed below)
+- **`gh`** — the GitHub CLI, required for `gh agent-task` commands in Sections 4 and 6
+
+Install `gh` first if you don't already have it:
+
+**Windows:**
+```powershell
+winget install GitHub.CLI
+```
+**macOS / Linux:**
+```bash
+brew install gh
+```
+Then authenticate: `gh auth login`
+
+---
+
+#### Installing the Copilot CLI
 
 1. Choose the installation method for your platform:
 
@@ -133,7 +154,7 @@ In the above exercises we achieved the following:
 🎯 **Learning Goals**
 - Use the default ask/execute mode for general coding tasks
 - Switch to plan mode to build a structured implementation plan before writing code
-- Enable experimental autopilot mode for fully autonomous task completion
+- Enable Auto model selection to reduce rate limiting and simplify model management
 - Navigate the interactive interface using slash commands
 
 The GitHub Copilot CLI interactive session (launched with `copilot`) offers three modes. You cycle between them with `Shift+Tab`.
@@ -194,42 +215,40 @@ Plan mode is ideal for larger or less well-defined tasks. Instead of immediately
 
    Once you are satisfied, confirm the plan and Copilot will execute each step sequentially, requesting tool approval as needed.
 
-#### Autopilot Mode (Experimental)
+#### Auto Model Selection
 
-Autopilot mode encourages Copilot to continue working until the task is fully complete, with minimal interruption. It is available after enabling experimental mode.
+Instead of manually picking a model every session, you can let Copilot automatically choose the best available model on your behalf. This reduces rate limiting and removes the mental overhead of model selection. Auto model selection is available on all Copilot plans.
 
-7. Enable experimental mode. You can do this at any time from within an active session:
-
-   ```
-   /experimental
-   ```
-
-   This setting is persisted in your config, so you only need to do this once. Alternatively, launch with the flag:
-
-   ```bash
-   copilot --experimental
-   ```
-
-8. Press `Shift+Tab` to cycle to **Autopilot** mode.
-
-9. Give Copilot a self-contained task and let it run to completion:
+7. Open the model picker and choose **Auto**:
 
    ```
-   Add pagination (page and pageSize query parameters) to the /weatherforecast endpoint, update the OpenAPI spec, and add xUnit tests covering edge cases.
+   /model
    ```
 
-   Copilot will work through the task, running tests and self-correcting until all tests pass — similar to Agent Mode in VS Code.
+   Select **Auto** from the list. With Auto enabled, Copilot picks from a pool of 1× multiplier models — currently GPT-4.1, GPT-5 mini, GPT-5.2-Codex, GPT-5.3-Codex, Claude Haiku 4.5, and Claude Sonnet 4.5 — subject to your organisation's policies and your subscription. The pool changes over time as new models become available.
+
+   > **Note**: Auto will never select models excluded by administrator policy, models with a premium multiplier greater than 1×, or models unavailable on your plan.
 
 <div align="left">
-<img src="./images/005-autopilot-mode.jpg" alt="Copilot CLI autopilot mode running autonomously and self-correcting test failures">
+<img src="./images/005-auto-model.jpg" alt="/model picker with Auto selected in the Copilot CLI">
 </div>
 
-   > **Caution**: Each prompt in Autopilot mode reduces your monthly premium request quota. Use well-scoped prompts to avoid excessive consumption.
+8. To see which model handled a response, check the CLI output — the model used is reported alongside each reply.
+
+9. Override Auto at any time by picking a specific model from `/model`, or set one at launch:
+
+   ```bash
+   copilot --model claude-sonnet-4.6
+   ```
+
+   > **Paid plan tip**: When using Auto on a paid plan (Pro, Pro+, Business, Enterprise), qualifying models receive a **10% multiplier discount** compared to selecting the same model manually.
+
+   > **Coding agent note**: Auto model selection for `gh agent-task` (Copilot coding agent) is generally available for **Pro and Pro+ plans only** and currently selects from Claude Sonnet 4.5.
 
 In the above exercises we achieved the following:
 - ✅ Used default mode for interactive ask/execute tasks
 - ✅ Used plan mode to design a multi-step implementation before writing code
-- ✅ Enabled and used autopilot mode for autonomous task completion
+- ✅ Enabled Auto model selection to reduce rate limiting and simplify model management
 
 ---
 
@@ -750,7 +769,7 @@ The complete workflow you just executed maps to a repeatable pattern for any fea
 |---|---|---|
 | Explore | Copilot CLI (default mode) | Map affected files with natural language |
 | Design | Copilot CLI (plan mode) | Build and review a structured implementation plan |
-| Build & test | Copilot CLI (default/autopilot mode) | Implement, run tests, self-correct |
+| Build & test | Copilot CLI (default/plan mode) | Implement, run tests, self-correct |
 | Context | `/context` + `/compact` | Monitor and manage token usage |
 | Ship | GitHub.com integration | Commit and open PR from the terminal |
 | Polish | `gh agent-task` | Async documentation via remote agent |
@@ -774,7 +793,6 @@ In the above exercises we achieved the following:
 - [Using GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli)
 - [Responsible use of GitHub Copilot CLI](https://docs.github.com/en/copilot/responsible-use/copilot-cli)
 - [GitHub Copilot CLI changelog](https://github.com/github/copilot-cli/blob/main/changelog.md)
-- [GitHub Copilot Coding Agent](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent-to-work-on-tasks/about-assigning-tasks-to-copilot)
 - [gh agent-task command reference](https://cli.github.com/manual/gh_agent-task)
 - [Model Context Protocol (MCP) overview](https://modelcontextprotocol.io/introduction)
 - [GitHub MCP Server](https://github.com/github/github-mcp-server)
