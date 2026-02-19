@@ -294,7 +294,7 @@ Custom instructions are Markdown files you store in your repository that tell Co
 
    Follow these guidelines:
    - Structure READMEs with: Overview, Installation, Usage, API Reference, Contributing
-   - Use clear, concise language targetted at developers unfamiliar with the project
+   - Use clear, concise language targeted at developers unfamiliar with the project
    - Add code examples for every API endpoint documented
    - Use relative links for internal files
    - Add alt text to all images
