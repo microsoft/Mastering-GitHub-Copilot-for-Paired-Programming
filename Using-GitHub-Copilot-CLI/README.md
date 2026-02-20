@@ -1,18 +1,18 @@
 <header>
 
-# Using the GitHub Copilot CLI
+# Using the GitHub Copilot CLI with Python
 
 Welcome to a hands-on, multi-module course that takes GitHub Copilot beyond the editor and directly into your terminal as a fully autonomous coding agent. The GitHub Copilot CLI is a standalone AI-powered tool — separate from the `gh` extension — that opens an interactive chat session in your terminal, understands your local codebase, and can plan and execute complex multi-step coding tasks on your behalf.
 
-Prepare for a practical, end-to-end experience! You will install the new `copilot` CLI, master its interactive and programmatic interfaces (including plan mode and auto model selection), control tool permissions, manage conversation context, integrate with GitHub.com, select models, configure custom agents, and combine everything into a real-world development workflow.
+Prepare for a practical, end-to-end experience! You will install the `copilot` CLI, master its interactive and programmatic interfaces (including plan mode and auto model selection), control tool permissions, manage conversation context, integrate with GitHub.com, select models, configure custom agents, and combine everything into a real-world Python development workflow.
 
 </header>
 
 
-- **Who this is for**: Developers, DevOps Engineers, Platform Engineers, Software Development Managers, Testers.
+- **Who this is for**: Python Developers, DevOps Engineers, Platform Engineers, Software Development Managers, Testers.
 - **What you'll learn**: How to install and use the standalone GitHub Copilot CLI, leverage its interactive and plan modes, use Auto model selection, control tool approval, manage context, interact with GitHub.com, select AI models, configure custom agents, and use `gh agent-task` for remote agent tasks.
-- **What you'll build**: A real-world CLI-driven workflow covering project analysis, debugging, refactoring, test generation, and agent-assisted automation using MCP integrations.
-- **Prerequisites**: GitHub Copilot is available to use for free, sign up for [GitHub Copilot](https://gh.io/copilot). Basic familiarity with a terminal and Git is recommended.
+- **What you'll build**: A real-world CLI-driven workflow for Python projects covering project analysis, debugging, refactoring, test generation, and agent-assisted automation using MCP integrations.
+- **Prerequisites**: GitHub Copilot is available to use for free, sign up for [GitHub Copilot](https://gh.io/copilot). Basic familiarity with a terminal, Git, and Python is recommended.
 - **Timing**: This module can be completed in under 90 minutes.
 
 By the end of this module, you'll acquire the skills to be able to:
@@ -24,10 +24,11 @@ By the end of this module, you'll acquire the skills to be able to:
 - Interact with GitHub.com natively — list PRs, work on issues, and create pull requests from the terminal.
 - Select and switch AI models using `/model`.
 - Configure custom agents and use `gh agent-task` to kick off and monitor remote agent tasks.
-- Leverage MCP servers to extend CLI capabilities.
+- Leverage MCP servers to extend CLI capabilities for Python projects.
 
 ## Prerequisite reading:
 - [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot/?WT.mc_id=academic-113596-abartolo)
+- [Using GitHub Copilot with Python](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-python/?WT.mc_id=academic-113596-abartolo)
 - [About GitHub Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli)
 - [Installing GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli)
 
@@ -37,15 +38,14 @@ By the end of this module, you'll acquire the skills to be able to:
 
 2. Install the standalone **GitHub Copilot CLI** (see Section 1 — the old `gh copilot` extension has been replaced by this new tool)
 
-3. Open [this repository with Codespaces](https://codespaces.new/github/dotnet-codespaces) or use a local clone with your preferred language project
+3. Clone [this repository with locally](https://github.com/MicrosoftDocs/mslearn-copilot-codespaces-python)
 
 ## 💪🏽 Exercise
 
 **Right click the following Codespaces button to open your Codespace in a new tab**
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/dotnet-codespaces)
 
-This workshop uses a sample project that contains a backend API and a frontend web application. Throughout the exercises you will use the GitHub Copilot CLI and Coding Agent to understand, improve, and extend this project — entirely from the terminal and through agent-driven automation.
+This workshop uses a Python FastAPI sample project. Throughout the exercises you will use the GitHub Copilot CLI and Coding Agent to understand, improve, and extend this project — entirely from the terminal and through agent-driven automation.
 
 ---
 
@@ -95,19 +95,15 @@ Then authenticate: `gh auth login`
    brew install copilot-cli
    ```
 
-   **Any platform** (npm):
+   **Any platform** (pip):
    ```bash
-   npm install -g @github/copilot
+   pip install github-copilot-cli
    ```
 
    **macOS / Linux** (install script):
    ```bash
    curl -fsSL https://gh.io/copilot-install | bash
    ```
-
-<div align="left">
-<img src="./images/001-install.jpg" alt="Copilot CLI installation completing in a terminal">
-</div>
 
 2. Verify the installation:
 
@@ -130,16 +126,12 @@ Then authenticate: `gh auth login`
    copilot
    ```
 
-<div align="left">
-<img src="./images/002-welcome.jpg" alt="Copilot CLI interactive welcome screen">
-</div>
-
 4. Keep the CLI up to date using the same package manager you used to install it. For example:
 
    ```bash
-   brew upgrade copilot-cli      # macOS/Linux via Homebrew
+   brew upgrade copilot-cli       # macOS/Linux via Homebrew
    winget upgrade GitHub.Copilot  # Windows via WinGet
-   npm update -g @github/copilot  # npm
+   pip install --upgrade github-copilot-cli  # pip
    ```
 
 In the above exercises we achieved the following:
@@ -172,7 +164,7 @@ In default mode Copilot responds to each prompt, asks clarifying questions when 
 2. Ask Copilot a question about the project to confirm it has context:
 
    ```
-   Explain the overall structure of this project and what each top-level folder contains.
+   Explain the overall structure of this Python project and what each file contains.
    ```
 
    Copilot reads the files in the current directory and responds with a summary.
@@ -184,10 +176,10 @@ In default mode Copilot responds to each prompt, asks clarifying questions when 
 3. Ask it to make a small change — for example, add a `/ping` endpoint. Copilot will propose the change and ask for your approval before writing to disk:
 
    ```
-   Add a GET /ping endpoint to the BackEnd API that returns {"status": "ok"} with HTTP 200.
+   Add a GET /ping endpoint to the FastAPI app that returns {"status": "ok"} with HTTP 200.
    ```
 
-   When Copilot requests permission to edit `Program.cs`, choose **Yes** to allow the change for this action only, or **Yes, and approve for the rest of this session** to skip future prompts for this file tool.
+   When Copilot requests permission to edit `main.py`, choose **Yes** to allow the change for this action only, or **Yes, and approve for the rest of this session** to skip future prompts for this file tool.
 
 #### Plan Mode
 
@@ -198,7 +190,7 @@ Plan mode is ideal for larger or less well-defined tasks. Instead of immediately
 5. Give Copilot a multi-step task:
 
    ```
-   Refactor the WeatherForecast endpoint to use a service class with dependency injection, add CRUD operations for a Customer entity, and write xUnit tests for both.
+   Refactor the token generation endpoint to use a service class with dependency injection, add CRUD operations for a User entity with Pydantic models, and write pytest tests for both.
    ```
 
    Copilot will ask clarifying questions — for example, which test framework to use, whether to use in-memory or mocked repositories — before producing a numbered plan.
@@ -210,7 +202,7 @@ Plan mode is ideal for larger or less well-defined tasks. Instead of immediately
 6. Review the plan. You can ask Copilot to revise a specific step before it begins:
 
    ```
-   Change step 3 to use NSubstitute instead of Moq for mocking.
+   Change step 3 to use pytest-mock instead of unittest.mock for mocking.
    ```
 
    Once you are satisfied, confirm the plan and Copilot will execute each step sequentially, requesting tool approval as needed.
@@ -248,7 +240,7 @@ Instead of manually picking a model every session, you can let Copilot automatic
 In the above exercises we achieved the following:
 - ✅ Used default mode for interactive ask/execute tasks
 - ✅ Used plan mode to design a multi-step implementation before writing code
-- ✅ Enabled Auto model selection to reduce rate limiting and simplify model management
+- ✅ Enabled Auto model selection for automatic model choice
 
 ---
 
@@ -274,15 +266,15 @@ Every time Copilot wants to modify a file or execute a shell command it asks for
    Run all the tests in the project and show me a summary of the results.
    ```
 
-   When Copilot asks permission to run `dotnet test`, notice the three options presented:
+   When Copilot asks permission to run `pytest`, notice the three options presented:
 
    ```
    1. Yes
-   2. Yes, and approve dotnet for the rest of this session
+   2. Yes, and approve pytest for the rest of this session
    3. No, and tell Copilot what to do differently (Esc)
    ```
 
-   Choose **2** to approve `dotnet` for the rest of the session.
+   Choose **2** to approve `pytest` for the rest of the session.
 
 <div align="left">
 <img src="./images/006-tool-approval.jpg" alt="Copilot CLI tool approval prompt with three options">
@@ -291,7 +283,7 @@ Every time Copilot wants to modify a file or execute a shell command it asks for
 2. Use the `--allow-tool` flag to pre-approve specific commands at launch. This is useful for CI scripts or trusted tasks:
 
    ```bash
-   copilot --allow-tool 'shell(dotnet)' --allow-tool 'write'
+   copilot --allow-tool 'shell(pytest)' --allow-tool 'write'
    ```
 
    - `shell(COMMAND)` — approves a specific shell command. Omit the command name to allow all shell commands.
@@ -323,7 +315,7 @@ For headless use in scripts and CI pipelines, pass a prompt directly with `-p` i
    Copilot completes the task and exits. You can also pipe options from a script:
 
    ```bash
-   echo "Run dotnet test and report any failures" | copilot --allow-tool 'shell(dotnet)'
+   echo "Run pytest and report any failures" | copilot --allow-tool 'shell(pytest)'
    ```
 
 <div align="left">
@@ -409,7 +401,7 @@ The standalone Copilot CLI ships with the GitHub MCP server built in and authent
 4. Create a pull request directly from the CLI:
 
    ```
-   In the root of this repo, add a Node script called health-check.js that pings the /health endpoint and prints the result. Create a pull request to add this file to the repo on GitHub.
+   In the root of this repo, add a Python script called health_check.py that pings the /health endpoint and prints the result. Create a pull request to add this file to the repo on GitHub.
    ```
 
    You are marked as the PR author even though Copilot did the work.
@@ -455,10 +447,6 @@ The standalone Copilot CLI ships with the GitHub MCP server built in and authent
 
    Each prompt reduces your monthly premium request quota by the multiplier shown.
 
-<div align="left">
-<img src="./images/012-model-select.jpg" alt="/model command showing model list with multipliers">
-</div>
-
 8. You can also set the model at launch time:
 
    ```bash
@@ -476,10 +464,6 @@ The `gh agent-task` command set lets you kick off a Copilot coding agent task on
    ```
 
    The agent task is queued on GitHub. The Copilot coding agent will pick it up, implement the change, and open a pull request.
-
-<div align="left">
-<img src="./images/013-agent-task-create.jpg" alt="gh agent-task create output showing task ID and status">
-</div>
 
 10. List all agent tasks for a repository:
 
@@ -499,10 +483,6 @@ The `gh agent-task` command set lets you kick off a Copilot coding agent task on
     gh pr view <pr-number> --web
     ```
 
-<div align="left">
-<img src="./images/014-agent-task-view.jpg" alt="gh agent-task view showing completed status and PR URL">
-</div>
-
 In the above exercises we achieved the following:
 - ✅ Listed issues and PRs from GitHub.com natively in the CLI
 - ✅ Asked Copilot to work on a GitHub Issue and create a PR
@@ -511,53 +491,118 @@ In the above exercises we achieved the following:
 
 ---
 
-### 🗒️ Section 5: Custom Agents, Skills, and MCP Integrations
+### 🗒️ Section 5: Custom Agents, Custom Instructions, and MCP Integrations
 
 🎯 **Learning Goals**
 - Understand custom agents and how to configure them for specialised tasks
+- Create custom instructions files for Python projects
 - Use Copilot Memory for persistent context across sessions
 - Add additional MCP servers to extend CLI capabilities beyond GitHub
-- Use hooks to add validation and automation to agent execution
 
-#### Custom Agents
+#### Custom Instructions for Python
 
-Custom agents are specialised versions of Copilot configured for specific tasks or roles — for example, a frontend agent that follows your team's CSS conventions, or a security agent that checks for common vulnerabilities.
+GitHub Copilot instructions files are markdown documents that provide essential context to guide Copilot's behavior within a specific codebase. These files help tailor AI-generated suggestions to match your team's coding standards, architectural patterns, naming conventions, testing strategies, and deployment practices.
 
-1. Create a custom agent configuration file at `.github/agents/frontend.md` in the sample project:
+1. Create a `copilot-instructions.md` file in the `.github` directory of your project:
+
+   ```markdown
+   # Project Guidelines
+
+   ## Project Overview
+
+   This repository contains a FastAPI application that provides various endpoints for token generation, text echo, and checksum calculation.
+
+   ## Technology Stack
+   - **Framework**: FastAPI
+   - **Testing**: pytest with pytest-mock
+   - **Validation**: Pydantic models
+
+   ### ✨ Coding Style
+   - Follow **PEP 8** standards for formatting and naming.
+   - Use **type hints** consistently across all functions.
+   - Prefer **f-strings** for string interpolation.
+   - Include **Google-style docstrings** for all public functions and classes.
+
+   ### 🧪 Testing Guidance
+   - Use **pytest** for writing unit tests.
+   - Mock external dependencies using `pytest-mock`.
+   - Name tests descriptively, e.g., `test_generate_token_valid_input`.
+
+   ### 🏗️ Architecture Preferences
+   - Use **FastAPI** conventions for routing and dependency injection.
+   - Define **Pydantic models** for request and response schemas.
+   - Keep logic modular—separate API routes, models, and utility functions.
+
+   ### 📚 Documentation & Comments
+   - Generate concise inline comments for non-obvious logic.
+   - Include endpoint descriptions in FastAPI route docstrings.
+   - Avoid redundant comments that restate code behavior.
+   ```
+
+2. Create scoped instructions for specific directories. In `.github/instructions/`, create `api.instructions.md`:
 
    ```markdown
    ---
-   name: frontend
-   description: A frontend specialist that follows the project's BEM CSS conventions and Blazor code-behind patterns.
+   applyTo: "webapp/**/*.py"
+   ---
+
+   ## API Coding Conventions
+
+   - Follow PEP 8 for variables and functions
+   - PascalCase for class names
+   - Use type hints for clarity and tooling support
+   - Add detailed docstrings to endpoint functions
+   - Include examples in Pydantic model Config
+   - Use descriptive parameter names and Field descriptions
+   - Consider async handlers for I/O bound operations
+   - Configure CORS with specific origins in production
+   - Use middleware for rate limiting
+
+   ## Error Handling
+
+   - Return appropriate HTTP status codes
+   - Provide human-readable error messages with actionable information
+   - Use FastAPI's HTTPException for error responses
+   ```
+
+#### Custom Agents
+
+Custom agents are specialised versions of Copilot configured for specific tasks or roles — for example, a data science agent that follows your team's pandas conventions, or a security agent that checks for common vulnerabilities.
+
+3. Create a custom agent configuration file at `.github/agents/fastapi-expert.md` in the sample project:
+
+   ```markdown
+   ---
+   name: fastapi-expert
+   description: A FastAPI specialist that follows best practices for async Python web development.
    ---
 
    ## Role
-   You are a frontend engineer specialising in Blazor Server and Bootstrap.
+   You are a Python backend engineer specialising in FastAPI and async Python.
 
    ## Conventions
-   - Use BEM naming for all CSS classes (e.g., `block__element--modifier`)
-   - Always use code-behind files (.razor.cs) for component logic
-   - Use CSS variables for colours, spacing, and typography
-   - Ensure WCAG 2.1 AA contrast ratios for all text
+   - Use async/await for all I/O operations
+   - Define Pydantic models for all request/response bodies
+   - Use dependency injection for shared resources (database, config)
+   - Follow RESTful naming conventions for endpoints
+   - Include OpenAPI documentation via docstrings
+   - Use proper HTTP status codes (201 for creation, 204 for delete, etc.)
+   - Implement proper error handling with HTTPException
    ```
 
-<div align="left">
-<img src="./images/015-custom-agent.jpg" alt="Custom agent markdown file open in the editor">
-</div>
-
-2. Invoke the custom agent in a session by mentioning it in your prompt:
+4. Invoke the custom agent in a session by mentioning it in your prompt:
 
    ```
-   @frontend Redesign the WeatherDisplay component to use BEM classes and improve accessibility.
+   @fastapi-expert Add rate limiting middleware to the API and implement proper error handling for all endpoints.
    ```
 
-   The `@frontend` agent uses your conventions file as additional system context, producing output that matches your team's standards without you having to explain them each time.
+   The `@fastapi-expert` agent uses your conventions file as additional system context, producing output that matches your team's standards without you having to explain them each time.
 
 #### Copilot Memory
 
 Copilot Memory allows the CLI to build a persistent understanding of your repository across sessions. It stores "memories" — coding conventions, patterns, and preferences deduced from your work — so you don't need to re-explain context in every new session.
 
-3. After completing a significant task in a session, ask Copilot to summarise what it learned:
+5. After completing a significant task in a session, ask Copilot to summarise what it learned:
 
    ```
    /memory
@@ -565,17 +610,13 @@ Copilot Memory allows the CLI to build a persistent understanding of your reposi
 
    Review the stored memories. You can add, edit, or delete entries to correct any misunderstandings.
 
-4. Start a new session and observe that Copilot already knows project-specific context — for example, which test framework you prefer or which folder structure you use — without you having to repeat it.
-
-<div align="left">
-<img src="./images/016-memory.jpg" alt="/memory command showing stored project conventions and preferences">
-</div>
+6. Start a new session and observe that Copilot already knows project-specific context — for example, that you prefer pytest over unittest or that you use Pydantic v2 syntax — without you having to repeat it.
 
 #### Adding MCP Servers
 
 The CLI ships with the GitHub MCP server pre-configured and authenticated. You can add additional MCP servers (for databases, monitoring tools, cloud providers, etc.) via a config file.
 
-5. Open or create `~/.copilot/mcp-config.json` (user-level, applies to all projects) or `.github/mcp.json` (repository-level):
+7. Open or create `~/.copilot/mcp-config.json` (user-level, applies to all projects) or `.github/mcp.json` (repository-level):
 
    ```json
    {
@@ -595,7 +636,7 @@ The CLI ships with the GitHub MCP server pre-configured and authenticated. You c
    }
    ```
 
-6. List configured MCP servers from within an active session:
+8. List configured MCP servers from within an active session:
 
    ```
    /mcp
@@ -604,14 +645,10 @@ The CLI ships with the GitHub MCP server pre-configured and authenticated. You c
    Select a server from the list to see which tools it exposes. You can then use those tools in natural language:
 
    ```
-   Use the postgres MCP server to show me the schema of the customers table.
+   Use the postgres MCP server to show me the schema of the users table.
    ```
 
-<div align="left">
-<img src="./images/017-mcp-server.jpg" alt="/mcp command listing configured MCP servers and their tools">
-</div>
-
-7. When pre-approving MCP server tools at launch, use the server name as the `--allow-tool` argument:
+9. When pre-approving MCP server tools at launch, use the server name as the `--allow-tool` argument:
 
    ```bash
    copilot --allow-tool 'postgres'
@@ -627,29 +664,31 @@ The CLI ships with the GitHub MCP server pre-configured and authenticated. You c
 
 Hooks let you execute custom shell commands at key points during agent execution — for example, running a linter after every file write, or logging actions for an audit trail.
 
-8. Create a hook file at `.github/hooks/post-write.sh`:
+10. Create a hook file at `.github/hooks/post-write.sh`:
 
-   ```bash
-   #!/bin/bash
-   # Run the linter on any C# file that was just written
-   if [[ "$COPILOT_HOOK_FILE" == *.cs ]]; then
-     dotnet csharpier "$COPILOT_HOOK_FILE"
-   fi
-   ```
+    ```bash
+    #!/bin/bash
+    # Run the linter and formatter on any Python file that was just written
+    if [[ "$COPILOT_HOOK_FILE" == *.py ]]; then
+      ruff check --fix "$COPILOT_HOOK_FILE"
+      ruff format "$COPILOT_HOOK_FILE"
+    fi
+    ```
 
-   Register the hook in `.github/hooks/config.json`:
+    Register the hook in `.github/hooks/config.json`:
 
-   ```json
-   {
-     "hooks": [
-       { "event": "post-write", "command": ".github/hooks/post-write.sh" }
-     ]
-   }
-   ```
+    ```json
+    {
+      "hooks": [
+        { "event": "post-write", "command": ".github/hooks/post-write.sh" }
+      ]
+    }
+    ```
 
-   Now every time Copilot writes a `.cs` file, it will be automatically formatted before the next step runs.
+    Now every time Copilot writes a `.py` file, it will be automatically linted and formatted before the next step runs.
 
 In the above exercises we achieved the following:
+- ✅ Created custom instructions for Python projects
 - ✅ Created a custom agent with project-specific conventions
 - ✅ Used Copilot Memory for persistent cross-session context
 - ✅ Added and queried additional MCP servers
@@ -657,11 +696,11 @@ In the above exercises we achieved the following:
 
 ---
 
-### 🗒️ Section 6: A Real-World End-to-End Workflow
+### 🗒️ Section 6: A Real-World End-to-End Python Workflow
 
 🎯 **Learning Goals**
 - Combine interactive mode, plan mode, tool approval, context management, and GitHub.com integration into a single repeatable workflow
-- Apply the full toolkit to a realistic feature-development scenario
+- Apply the full toolkit to a realistic Python feature-development scenario
 - Use `gh agent-task` for async work that does not block your local session
 - Understand when to use default mode, plan mode, autopilot, or remote agent tasks
 
@@ -669,26 +708,26 @@ In this section you will bring everything together. You will use the GitHub Copi
 
 #### Scenario
 
-You have been asked to add **pagination support** to the `/weatherforecast` endpoint. The endpoint currently returns all records at once; it needs to accept `page` and `pageSize` query parameters, validate them, and return a paginated response with metadata.
+You have been asked to add **pagination support** to the `/token` endpoint. The endpoint currently returns all generated tokens at once; it needs to accept `page` and `page_size` query parameters, validate them, and return a paginated response with metadata.
 
 #### Step 1 — Understand the current state
 
-1. Launch a session in the project root and ask Copilot for an overview of the weatherforecast feature:
+1. Launch a session in the project root and ask Copilot for an overview of the token feature:
 
    ```bash
    copilot
    ```
 
    ```
-   Show me all files that are involved in the /weatherforecast endpoint, including models, handlers, and tests.
+   Show me all files that are involved in the /token endpoint, including models, handlers, and tests.
    ```
 
    Copilot reads the codebase and produces a file map — no shell scripting required.
 
-2. Ask Copilot to explain the current minimal-API registration pattern before modifying it:
+2. Ask Copilot to explain the current FastAPI route structure before modifying it:
 
    ```
-   Explain how the MapGet weatherforecast route is registered and what the WeatherForecast record contains.
+   Explain how the token generation route is registered and what Pydantic models it uses.
    ```
 
 #### Step 2 — Plan the change using Plan Mode
@@ -696,7 +735,7 @@ You have been asked to add **pagination support** to the `/weatherforecast` endp
 3. Press `Shift+Tab` to switch to **Plan** mode, then describe the full feature:
 
    ```
-   Add pagination to the /weatherforecast endpoint. It should accept page and pageSize query parameters with validation, return a PaginatedResult<WeatherForecast> with metadata, update the OpenAPI spec, and include xUnit tests for happy-path and edge cases.
+   Add pagination to the /token endpoint. It should accept page and page_size query parameters with validation using Pydantic, return a PaginatedResponse model with items and metadata (total, page, page_size, total_pages), update the OpenAPI spec, and include pytest tests for happy-path and edge cases.
    ```
 
    Review Copilot's structured plan. Confirm or revise individual steps before execution begins.
@@ -709,10 +748,10 @@ You have been asked to add **pagination support** to the `/weatherforecast` endp
 
 #### Step 3 — Build and test
 
-5. Copilot creates `Models/PaginatedResult.cs`, updates the route handler, and scaffolds tests. When it requests permission to run `dotnet test`, approve it:
+5. Copilot creates `models/pagination.py`, updates the route handler in `main.py`, and scaffolds tests in `tests/`. When it requests permission to run `pytest`, approve it:
 
    ```
-   1. Yes, and approve dotnet for the rest of this session
+   1. Yes, and approve pytest for the rest of this session
    ```
 
    Copilot runs the tests, observes any failures, and self-corrects until all tests pass.
@@ -743,11 +782,11 @@ You have been asked to add **pagination support** to the `/weatherforecast` endp
 <img src="./images/020-create-pr.jpg" alt="Copilot CLI creating a pull request via GitHub.com integration">
 </div>
 
-8. Kick off a remote agent task to add XML documentation to the new code, so it runs asynchronously in the cloud while you move on to other work:
+8. Kick off a remote agent task to add docstrings to the new code, so it runs asynchronously in the cloud while you move on to other work:
 
    ```bash
    gh agent-task create --repo <owner>/<repo> --issue <number> \
-     --body "Add XML documentation comments to PaginatedResult<T> and the updated MapGet handler."
+     --body "Add Google-style docstrings to PaginatedResponse and the updated token route handler."
    ```
 
 9. Monitor and merge:
@@ -757,25 +796,21 @@ You have been asked to add **pagination support** to the `/weatherforecast` endp
    gh pr view <pr-number> --web
    ```
 
-<div align="left">
-<img src="./images/021-agent-task-final.jpg" alt="gh agent-task showing completed documentation PR ready to merge">
-</div>
-
 #### Workflow Summary
 
-The complete workflow you just executed maps to a repeatable pattern for any feature:
+The complete workflow you just executed maps to a repeatable pattern for any Python feature:
 
 | Stage | Tool | Action |
 |---|---|---|
 | Explore | Copilot CLI (default mode) | Map affected files with natural language |
 | Design | Copilot CLI (plan mode) | Build and review a structured implementation plan |
-| Build & test | Copilot CLI (default/plan mode) | Implement, run tests, self-correct |
+| Build & test | Copilot CLI (default/plan mode) | Implement, run pytest, self-correct |
 | Context | `/context` + `/compact` | Monitor and manage token usage |
 | Ship | GitHub.com integration | Commit and open PR from the terminal |
 | Polish | `gh agent-task` | Async documentation via remote agent |
 | Review | `gh pr view` | Inspect and merge |
 
-🚀 Congratulations! You have completed the full GitHub Copilot CLI workshop. You now have a practical, end-to-end workflow that covers every stage of feature development — from interactive planning to autonomous agent-driven pull requests.
+🚀 Congratulations! You have completed the full GitHub Copilot CLI workshop. You now have a practical, end-to-end workflow that covers every stage of Python feature development — from interactive planning to autonomous agent-driven pull requests.
 
 In the above exercises we achieved the following:
 - ✅ Used plan mode to design a feature before writing a single line of code
@@ -788,18 +823,14 @@ In the above exercises we achieved the following:
 
 ### Useful Links and Further Learning
 
-- [About GitHub Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli)
-- [Installing GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli)
+- [About GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/about-copilot-cli)
+- [Installing GitHub Copilot CLI](https://docs.github.com/copilot/how-tos/set-up/install-copilot-cli)
 - [Using GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli)
-- [Responsible use of GitHub Copilot CLI](https://docs.github.com/en/copilot/responsible-use/copilot-cli)
+- [Responsible use of GitHub Copilot CLI](https://docs.github.com/copilot/responsible-use/copilot-cli)
 - [GitHub Copilot CLI changelog](https://github.com/github/copilot-cli/blob/main/changelog.md)
-- [gh agent-task command reference](https://cli.github.com/manual/gh_agent-task)
-- [Model Context Protocol (MCP) overview](https://modelcontextprotocol.io/introduction)
-- [GitHub MCP Server](https://github.com/github/github-mcp-server)
-- [About agent skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)
-- [About agentic memory for GitHub Copilot](https://docs.github.com/en/copilot/concepts/agents/copilot-memory)
-- [Copilot CLI ACP server](https://docs.github.com/en/copilot/reference/acp-server)
+- [Copilot CLI ACP server](https://docs.github.com/copilot/reference/acp-server)
 - [Integrate MCP with GitHub Copilot — GitHub Skills](https://github.com/skills/integrate-mcp-with-copilot)
+
 
 ## Legal Notices
 
