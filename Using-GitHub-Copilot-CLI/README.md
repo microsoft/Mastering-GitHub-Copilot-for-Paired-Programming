@@ -38,12 +38,9 @@ By the end of this module, you'll acquire the skills to be able to:
 
 2. Install the standalone **GitHub Copilot CLI** (see Section 1 — the old `gh copilot` extension has been replaced by this new tool)
 
-3. Clone [this repository with locally](https://github.com/MicrosoftDocs/mslearn-copilot-codespaces-python)
+3. Fork and then clone [this repository locally](https://github.com/MicrosoftDocs/mslearn-copilot-codespaces-python) for the following exercises. 
 
 ## 💪🏽 Exercise
-
-**Right click the following Codespaces button to open your Codespace in a new tab**
-
 
 This workshop uses a Python FastAPI sample project. Throughout the exercises you will use the GitHub Copilot CLI and Coding Agent to understand, improve, and extend this project — entirely from the terminal and through agent-driven automation.
 
@@ -52,9 +49,7 @@ This workshop uses a Python FastAPI sample project. Throughout the exercises you
 ### 🗒️ Section 1: Install and Verify the GitHub Copilot CLI
 
 🎯 **Learning Goals**
-- Install the standalone GitHub Copilot CLI
-- Authenticate and launch your first session
-- Understand the difference between the new `copilot` CLI and the deprecated `gh copilot` extension
+- Install the GitHub Copilot CLI
 
 The **GitHub Copilot CLI** (`copilot`) is a standalone terminal application — distinct from the old `gh copilot` extension — that opens a full interactive AI chat session in your terminal. It ships with the GitHub MCP server built in, supports plan mode and auto model selection, and can autonomously read files, run commands, and interact with GitHub.com on your behalf.
 
@@ -66,6 +61,8 @@ This workshop uses two separate CLI tools:
 
 - **`copilot`** — the standalone GitHub Copilot CLI (installed below)
 - **`gh`** — the GitHub CLI, required for `gh agent-task` commands in Sections 4 and 6
+
+**NOTE:** To complete 4 and 6, the Copilot Free tier will need to be upgraded to allow for Agent Mode
 
 Install `gh` first if you don't already have it:
 
@@ -169,10 +166,6 @@ In default mode Copilot responds to each prompt, asks clarifying questions when 
 
    Copilot reads the files in the current directory and responds with a summary.
 
-<div align="left">
-<img src="./images/003-default-mode.jpg" alt="Copilot interactive session responding to a project overview prompt">
-</div>
-
 3. Ask it to make a small change — for example, add a `/ping` endpoint. Copilot will propose the change and ask for your approval before writing to disk:
 
    ```
@@ -195,10 +188,6 @@ Plan mode is ideal for larger or less well-defined tasks. Instead of immediately
 
    Copilot will ask clarifying questions — for example, which test framework to use, whether to use in-memory or mocked repositories — before producing a numbered plan.
 
-<div align="left">
-<img src="./images/004-plan-mode.jpg" alt="Copilot CLI plan mode showing a structured implementation plan with numbered steps">
-</div>
-
 6. Review the plan. You can ask Copilot to revise a specific step before it begins:
 
    ```
@@ -217,13 +206,13 @@ Instead of manually picking a model every session, you can let Copilot automatic
    /model
    ```
 
-   Select **Auto** from the list. With Auto enabled, Copilot picks from a pool of 1× multiplier models — currently GPT-4.1, GPT-5 mini, GPT-5.2-Codex, GPT-5.3-Codex, Claude Haiku 4.5, and Claude Sonnet 4.5 — subject to your organisation's policies and your subscription. The pool changes over time as new models become available.
+   Select **Auto** from the list. With Auto enabled, Copilot picks from a pool of 1× multiplier models — currently GPT-4.1, GPT-5 mini, GPT-5.2-Codex, GPT-5.3-Codex, Claude Haiku 4.5, and Claude Sonnet 4.5 — subject to your organization's policies and your subscription. The pool changes over time as new models become available.
 
    > **Note**: Auto will never select models excluded by administrator policy, models with a premium multiplier greater than 1×, or models unavailable on your plan.
 
-<div align="left">
-<img src="./images/005-auto-model.jpg" alt="/model picker with Auto selected in the Copilot CLI">
-</div>
+   > **Paid plan tip**: When using Auto on a paid plan (Pro, Pro+, Business, Enterprise), qualifying models receive a **10% multiplier discount** compared to selecting the same model manually.
+
+   > **Coding agent note**: Auto model selection for `gh agent-task` (Copilot coding agent) is generally available for **Pro and Pro+ plans only**.
 
 8. To see which model handled a response, check the CLI output — the model used is reported alongside each reply.
 
@@ -232,10 +221,6 @@ Instead of manually picking a model every session, you can let Copilot automatic
    ```bash
    copilot --model claude-sonnet-4.6
    ```
-
-   > **Paid plan tip**: When using Auto on a paid plan (Pro, Pro+, Business, Enterprise), qualifying models receive a **10% multiplier discount** compared to selecting the same model manually.
-
-   > **Coding agent note**: Auto model selection for `gh agent-task` (Copilot coding agent) is generally available for **Pro and Pro+ plans only** and currently selects from Claude Sonnet 4.5.
 
 In the above exercises we achieved the following:
 - ✅ Used default mode for interactive ask/execute tasks
@@ -276,10 +261,6 @@ Every time Copilot wants to modify a file or execute a shell command it asks for
 
    Choose **2** to approve `pytest` for the rest of the session.
 
-<div align="left">
-<img src="./images/006-tool-approval.jpg" alt="Copilot CLI tool approval prompt with three options">
-</div>
-
 2. Use the `--allow-tool` flag to pre-approve specific commands at launch. This is useful for CI scripts or trusted tasks:
 
    ```bash
@@ -288,8 +269,7 @@ Every time Copilot wants to modify a file or execute a shell command it asks for
 
    - `shell(COMMAND)` — approves a specific shell command. Omit the command name to allow all shell commands.
    - `write` — approves all file modifications without individual prompts.
-   - `MCP_SERVER_NAME` — approves all tools from a named MCP server.
-
+ 
 3. Use `--deny-tool` to block specific commands even when `--allow-all-tools` is set. For example, to allow everything except `rm` and `git push`:
 
    ```bash
@@ -297,10 +277,6 @@ Every time Copilot wants to modify a file or execute a shell command it asks for
    ```
 
    `--deny-tool` always takes precedence over `--allow-tool` and `--allow-all-tools`.
-
-<div align="left">
-<img src="./images/007-deny-tool.jpg" alt="Copilot CLI launched with allow-all-tools and specific deny-tool overrides">
-</div>
 
 #### Programmatic Mode
 
@@ -317,10 +293,6 @@ For headless use in scripts and CI pipelines, pass a prompt directly with `-p` i
    ```bash
    echo "Run pytest and report any failures" | copilot --allow-tool 'shell(pytest)'
    ```
-
-<div align="left">
-<img src="./images/008-programmatic.jpg" alt="Copilot CLI programmatic mode completing a task and exiting">
-</div>
 
 #### Context Management
 
@@ -341,10 +313,6 @@ For long sessions working on large codebases, the conversation history can appro
    ```
 
    Copilot compresses the conversation history while retaining key facts about the tasks completed so far. Press `Escape` to cancel if you change your mind.
-
-<div align="left">
-<img src="./images/009-compact.jpg" alt="/compact command output showing context compressed from 80% to 12% usage">
-</div>
 
 7. Auto-compaction kicks in automatically when the session approaches **95%** of the token limit, compressing history in the background without interrupting your workflow. This enables virtually unlimited session length — you can work on a feature from start to finish without restarting.
 
@@ -386,10 +354,6 @@ The standalone Copilot CLI ships with the GitHub MCP server built in and authent
    List all open issues assigned to me in <owner>/<repo>
    ```
 
-<div align="left">
-<img src="./images/010-list-prs.jpg" alt="Copilot CLI listing open pull requests from GitHub.com">
-</div>
-
 3. Ask Copilot to start working on an issue. Replace the URL with one from your fork of the sample repo:
 
    ```
@@ -405,10 +369,6 @@ The standalone Copilot CLI ships with the GitHub MCP server built in and authent
    ```
 
    You are marked as the PR author even though Copilot did the work.
-
-<div align="left">
-<img src="./images/011-create-pr.jpg" alt="Copilot CLI creating a pull request on GitHub.com">
-</div>
 
 5. Ask Copilot to review a PR for problems:
 
@@ -426,7 +386,7 @@ The standalone Copilot CLI ships with the GitHub MCP server built in and authent
 
 #### Model Selection
 
-7. The default model is **Claude Sonnet 4.6**. To see all available models and switch, use the `/model` slash command:
+7. To see all available models and switch, use the `/model` slash command:
 
    ```
    /model
@@ -491,7 +451,122 @@ In the above exercises we achieved the following:
 
 ---
 
-### 🗒️ Section 5: Custom Agents, Custom Instructions, and MCP Integrations
+### 🗒️ Section 5: A Real-World End-to-End Python Workflow
+
+🎯 **Learning Goals**
+- Combine interactive mode, plan mode, tool approval, context management, and GitHub.com integration into a single repeatable workflow
+- Apply the full toolkit to a realistic Python feature-development scenario
+- Use `gh agent-task` for async work that does not block your local session
+- Understand when to use default mode, plan mode, autopilot, or remote agent tasks
+
+In this section you will bring everything together. You will use the GitHub Copilot CLI — including plan mode, tool approval, context management, GitHub.com integration, and `gh agent-task` — to take a feature from raw idea to merged pull request, touching every stage of a real development cycle.
+
+#### Scenario
+
+You have been asked to add **pagination support** to the `/token` endpoint. The endpoint currently returns all generated tokens at once; it needs to accept `page` and `page_size` query parameters, validate them, and return a paginated response with metadata.
+
+#### Step 1 — Understand the current state
+
+1. Launch a session in the project root and ask Copilot for an overview of the token feature:
+
+   ```bash
+   copilot
+   ```
+
+   ```
+   Show me all files that are involved in the /token endpoint, including models, handlers, and tests.
+   ```
+
+   Copilot reads the codebase and produces a file map — no shell scripting required.
+
+2. Ask Copilot to explain the current FastAPI route structure before modifying it:
+
+   ```
+   Explain how the token generation route is registered and what Pydantic models it uses.
+   ```
+
+#### Step 2 — Plan the change using Plan Mode
+
+3. Press `Shift+Tab` to switch to **Plan** mode, then describe the full feature:
+
+   ```
+   Add pagination to the /token endpoint. It should accept page and page_size query parameters with validation using Pydantic, return a PaginatedResponse model with items and metadata (total, page, page_size, total_pages), update the OpenAPI spec, and include pytest tests for happy-path and edge cases.
+   ```
+
+   Review Copilot's structured plan. Confirm or revise individual steps before execution begins.
+
+4. Once you approve the plan, press `Shift+Tab` to switch back to default mode (or keep plan mode — Copilot will execute each step and check in after each one).
+
+#### Step 3 — Build and test
+
+5. Copilot creates `models/pagination.py`, updates the route handler in `main.py`, and scaffolds tests in `tests/`. When it requests permission to run `pytest`, approve it:
+
+   ```
+   1. Yes, and approve pytest for the rest of this session
+   ```
+
+   Copilot runs the tests, observes any failures, and self-corrects until all tests pass.
+
+6. Check context usage mid-session if the conversation has been running for a while:
+
+   ```
+   /context
+   ```
+
+   If usage is above 70%, run `/compact` to free up space before the final steps.
+
+#### Step 4 — Commit and create a PR via GitHub.com integration
+
+7. In this next task we will work asynchronously with Copilot using the local CLI. Ask Copilot to commit the changes and open a pull request:
+
+   ```
+   Commit these changes with a conventional commit message and create a pull request against main with a description that summarises the pagination feature.
+   ```
+
+   Copilot uses the built-in GitHub MCP server to create the PR on GitHub.com, with you listed as the author.
+
+8. Every coding agent task runs on a fresh branch and opens a new pull request based on the current default branch. The agent does not reuse your local branch or modify existing pull requests. Instead, it starts from the latest state of the repository’s default branch (for example, main), creates its own isolated branch in the cloud, applies the requested changes, and then opens a new PR for you to review and merge
+
+While the agent is working locally and in the background, we are going to kick off a remote agent task to ask the remote agent to add docstrings to the new code, so it runs asynchronously in the cloud while you move on to other work:
+
+   ```bash
+   gh agent-task create --repo <owner>/<repo> --issue <number> \
+     --body "Add Google-style docstrings to PaginatedResponse and the updated token route handler."
+   ```
+
+9.  Monitor Copilot's progress and after review merge:
+
+   ```bash
+   gh agent-task list --repo <owner>/<repo>
+   gh pr view <pr-number> --web
+   ```
+
+#### Workflow Summary
+
+The complete workflow you just executed maps to a repeatable pattern for any Python feature:
+
+| Stage | Tool | Action |
+|---|---|---|
+| Explore | Copilot CLI (default mode) | Map affected files with natural language |
+| Design | Copilot CLI (plan mode) | Build and review a structured implementation plan |
+| Build & test | Copilot CLI (default/plan mode) | Implement, run pytest, self-correct |
+| Context | `/context` + `/compact` | Monitor and manage token usage |
+| Ship | GitHub.com integration | Commit and open PR from the terminal |
+| Polish | `gh agent-task` | Async documentation via remote agent |
+| Review | `gh pr view` | Inspect and merge |
+
+🚀 Congratulations! You have completed the full GitHub Copilot CLI workshop. You now have a practical, end-to-end workflow that covers every stage of Python feature development — from interactive planning to autonomous agent-driven pull requests.
+
+In the above exercises we achieved the following:
+- ✅ Used plan mode to design a feature before writing a single line of code
+- ✅ Built, tested, and self-corrected with the Copilot CLI
+- ✅ Managed conversation context with `/context` and `/compact`
+- ✅ Created a pull request via GitHub.com integration from the terminal
+- ✅ Kicked off an async documentation task using `gh agent-task`
+
+---
+
+### 🗒️ Section 6: Context Optimzation with Copilot: Custom Agents, Custom Instructions, and MCP Integrations
 
 🎯 **Learning Goals**
 - Understand custom agents and how to configure them for specialised tasks
@@ -567,7 +642,7 @@ GitHub Copilot instructions files are markdown documents that provide essential 
 
 #### Custom Agents
 
-Custom agents are specialised versions of Copilot configured for specific tasks or roles — for example, a data science agent that follows your team's pandas conventions, or a security agent that checks for common vulnerabilities.
+Custom agents are specialized versions of Copilot configured for specific tasks or roles — for example, a data science agent that follows your team's pandas conventions, or a security agent that checks for common vulnerabilities.
 
 3. Create a custom agent configuration file at `.github/agents/fastapi-expert.md` in the sample project:
 
@@ -693,131 +768,6 @@ In the above exercises we achieved the following:
 - ✅ Used Copilot Memory for persistent cross-session context
 - ✅ Added and queried additional MCP servers
 - ✅ Configured hooks to automate linting after file writes
-
----
-
-### 🗒️ Section 6: A Real-World End-to-End Python Workflow
-
-🎯 **Learning Goals**
-- Combine interactive mode, plan mode, tool approval, context management, and GitHub.com integration into a single repeatable workflow
-- Apply the full toolkit to a realistic Python feature-development scenario
-- Use `gh agent-task` for async work that does not block your local session
-- Understand when to use default mode, plan mode, autopilot, or remote agent tasks
-
-In this section you will bring everything together. You will use the GitHub Copilot CLI — including plan mode, tool approval, context management, GitHub.com integration, and `gh agent-task` — to take a feature from raw idea to merged pull request, touching every stage of a real development cycle.
-
-#### Scenario
-
-You have been asked to add **pagination support** to the `/token` endpoint. The endpoint currently returns all generated tokens at once; it needs to accept `page` and `page_size` query parameters, validate them, and return a paginated response with metadata.
-
-#### Step 1 — Understand the current state
-
-1. Launch a session in the project root and ask Copilot for an overview of the token feature:
-
-   ```bash
-   copilot
-   ```
-
-   ```
-   Show me all files that are involved in the /token endpoint, including models, handlers, and tests.
-   ```
-
-   Copilot reads the codebase and produces a file map — no shell scripting required.
-
-2. Ask Copilot to explain the current FastAPI route structure before modifying it:
-
-   ```
-   Explain how the token generation route is registered and what Pydantic models it uses.
-   ```
-
-#### Step 2 — Plan the change using Plan Mode
-
-3. Press `Shift+Tab` to switch to **Plan** mode, then describe the full feature:
-
-   ```
-   Add pagination to the /token endpoint. It should accept page and page_size query parameters with validation using Pydantic, return a PaginatedResponse model with items and metadata (total, page, page_size, total_pages), update the OpenAPI spec, and include pytest tests for happy-path and edge cases.
-   ```
-
-   Review Copilot's structured plan. Confirm or revise individual steps before execution begins.
-
-<div align="left">
-<img src="./images/018-plan-pagination.jpg" alt="Plan mode showing numbered steps for the pagination feature">
-</div>
-
-4. Once you approve the plan, press `Shift+Tab` to switch back to default mode (or keep plan mode — Copilot will execute each step and check in after each one).
-
-#### Step 3 — Build and test
-
-5. Copilot creates `models/pagination.py`, updates the route handler in `main.py`, and scaffolds tests in `tests/`. When it requests permission to run `pytest`, approve it:
-
-   ```
-   1. Yes, and approve pytest for the rest of this session
-   ```
-
-   Copilot runs the tests, observes any failures, and self-corrects until all tests pass.
-
-<div align="left">
-<img src="./images/019-self-correct.jpg" alt="Copilot CLI running tests, observing a failure, and self-correcting">
-</div>
-
-6. Check context usage mid-session if the conversation has been running for a while:
-
-   ```
-   /context
-   ```
-
-   If usage is above 70%, run `/compact` to free up space before the final steps.
-
-#### Step 4 — Commit and create a PR via GitHub.com integration
-
-7. Ask Copilot to commit the changes and open a pull request:
-
-   ```
-   Commit these changes with a conventional commit message and create a pull request against main with a description that summarises the pagination feature.
-   ```
-
-   Copilot uses the built-in GitHub MCP server to create the PR on GitHub.com, with you listed as the author.
-
-<div align="left">
-<img src="./images/020-create-pr.jpg" alt="Copilot CLI creating a pull request via GitHub.com integration">
-</div>
-
-8. Kick off a remote agent task to add docstrings to the new code, so it runs asynchronously in the cloud while you move on to other work:
-
-   ```bash
-   gh agent-task create --repo <owner>/<repo> --issue <number> \
-     --body "Add Google-style docstrings to PaginatedResponse and the updated token route handler."
-   ```
-
-9. Monitor and merge:
-
-   ```bash
-   gh agent-task list --repo <owner>/<repo>
-   gh pr view <pr-number> --web
-   ```
-
-#### Workflow Summary
-
-The complete workflow you just executed maps to a repeatable pattern for any Python feature:
-
-| Stage | Tool | Action |
-|---|---|---|
-| Explore | Copilot CLI (default mode) | Map affected files with natural language |
-| Design | Copilot CLI (plan mode) | Build and review a structured implementation plan |
-| Build & test | Copilot CLI (default/plan mode) | Implement, run pytest, self-correct |
-| Context | `/context` + `/compact` | Monitor and manage token usage |
-| Ship | GitHub.com integration | Commit and open PR from the terminal |
-| Polish | `gh agent-task` | Async documentation via remote agent |
-| Review | `gh pr view` | Inspect and merge |
-
-🚀 Congratulations! You have completed the full GitHub Copilot CLI workshop. You now have a practical, end-to-end workflow that covers every stage of Python feature development — from interactive planning to autonomous agent-driven pull requests.
-
-In the above exercises we achieved the following:
-- ✅ Used plan mode to design a feature before writing a single line of code
-- ✅ Built, tested, and self-corrected with the Copilot CLI
-- ✅ Managed conversation context with `/context` and `/compact`
-- ✅ Created a pull request via GitHub.com integration from the terminal
-- ✅ Kicked off an async documentation task using `gh agent-task`
 
 ---
 
