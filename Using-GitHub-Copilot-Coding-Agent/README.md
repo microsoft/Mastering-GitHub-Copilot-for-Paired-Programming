@@ -23,20 +23,14 @@ By the end of this module, you'll acquire the skills to:
 
 ## 📖 Prerequisite reading
 
-- [About GitHub Copilot coding agent](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent)
+- [About GitHub Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent)
 - [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot/?WT.mc_id=academic-113596-abartolo)
-- [GitHub Copilot coding agent vs. agent mode](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent#copilot-coding-agent-versus-agent-mode)
+- [GitHub Copilot coding agent vs. agent mode](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent#copilot-coding-agent-versus-agent-mode)
 
 ## 📋 Requirements
 
 1. Enable your [GitHub Copilot service](https://github.com/github-copilot/signup) (Pro, Pro+, Business, or Enterprise plan required for coding agent)
-2. Open [this repository with Codespaces](https://codespaces.new/github-samples/node-recipe-app?quickstart=1) — a Node.js recipe app with known missing features that serves as our working example throughout this module.
-
-**Right click the following Codespaces button to open your Codespace in a new tab**
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github-samples/node-recipe-app?quickstart=1)
-
-> **Note:** If you have an existing Codespace with this project, please create a new one for this module.
+2. Fork and then clone [this repository locally](https://github.com/github-samples/node-recipe-app?quickstart=1) for the following exercises. You can also run this lab in a GitHub Codespace from your forked repository.
 
 ---
 
@@ -276,9 +270,9 @@ Custom instructions are Markdown files you store in your repository that tell Co
 
 > **Tip:** You can also define custom instructions at the organization level from your organization's settings.
 
-### Part 2: Custom Agents — Agent Profiles
+### Part 2: Custom Agents
 
-**Custom agents** are specialized versions of Copilot you define once using a Markdown file called an **agent profile**. Each profile encodes a specific persona, set of tools, and behavior.
+**Custom agents** are specialized versions of Copilot you define once using a Markdown file. Each profile encodes a specific persona, set of tools, and behavior. Custom agent profiles can also be defined at the [organization level](https://docs.github.com/copilot/how-tos/administer-copilot/manage-for-organization/prepare-for-custom-agents) in a `.github-private` repository, making them available across all repositories in your organization.
 
 1. Create the file `.github/agents/documentation-agent.md`:
 
@@ -322,11 +316,11 @@ Custom instructions are Markdown files you store in your repository that tell Co
 
 3. Commit both files. When you assign a task from the agents panel or an issue, you can now select a specific custom agent to use.
 
-> **Note:** Custom agent profiles can also be defined at the organization level in a `.github-private` repository, making them available across all repositories in your organization.
-
 ### Part 3: Model Context Protocol (MCP) Servers
 
-**MCP servers** give Copilot coding agent access to external data sources and tools — such as a project management system, internal documentation, or a database — that it wouldn't be able to reach otherwise.
+**MCP servers** give Copilot coding agent access to external data sources and tools — such as a project management system, internal documentation, or a database — that it wouldn't be able to reach otherwise. For organization-level or enterprise-level custom agents, the agent definition is managed centrally (not just in a repo under `.github/agents/`).
+
+In those centrally managed agent profiles, you can define MCP servers directly in the YAML frontmatter of the agent profile. This allows administrators to centrally define which external tools the agent can access, eliminating the need for developers to configure MCP servers locally. This gives the agent access to those tools, allowing them to be policy-controlled and centralizing governance.
 
 1. Create the file `.github/mcp.json` in your repository:
 
@@ -343,9 +337,7 @@ Custom instructions are Markdown files you store in your repository that tell Co
 
 2. The default GitHub MCP server is pre-configured and gives the agent access to your repository's issues, historic pull requests, and code search — grounding its responses in real project context.
 
-3. To add a third-party MCP server (for example, a Jira integration), follow the [MCP integration guide](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/extend-coding-agent-with-mcp) and add the server configuration to `.github/mcp.json`.
-
-> **Note:** Organization and enterprise-level agent profiles can embed MCP server configuration directly within the agent profile YAML frontmatter.
+3. To add a third-party MCP server (for example: a Jira integration, an Azure DevOps integration, or other 3rd party service), follow the [MCP integration guide](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/extend-coding-agent-with-mcp) and add the server configuration to `.github/mcp.json`.
 
 ### Part 4: Hooks — Lifecycle Automation
 
@@ -411,11 +403,11 @@ Every session Copilot runs includes automatic security validation before the pul
 
 Details of all security checks are visible in the session log.
 
-> **Note:** These built-in checks do **not** require a GitHub Advanced Security, Secret Protection, or Code Security license.
+> **Note:** These built-in checks require a GitHub Advanced Security (GHAS license)
 
 ### Exercise 5A: Assign a Security Alert to Copilot via a Security Campaign
 
-**Security campaigns** let you fix groups of security alerts at scale by assigning them to the coding agent.
+[Security campaigns](https://docs.github.com/enterprise-cloud@latest/code-security/how-tos/manage-security-alerts/remediate-alerts-at-scale/creating-managing-security-campaigns) let you fix groups of security alerts at scale by assigning them to the coding agent.
 
 1. Navigate to your repository's **Security** tab → **Code scanning alerts**.
 2. If there are open alerts, click **Campaigns** in the left nav (available for orgs with GitHub Advanced Security).
@@ -448,6 +440,8 @@ In the above exercises we achieved the following:
 - Use Raycast to start and monitor tasks without leaving your desktop.
 - Understand how the coding agent fits into the full SDLC — from backlog to merge.
 
+> **Note:** You can also execute the coding agent into a full SDLC using Copilot Chat in VSCode
+
 ### Exercise 6A: Using the GitHub CLI
 
 > Requires GitHub CLI v2.80.0 or later. Run `gh --version` to check.
@@ -471,7 +465,11 @@ gh agent-task view --repo YOUR-ORG/YOUR-REPO 45 --log --follow
 1. Install [Raycast](https://www.raycast.com/).
 2. Install the [GitHub Copilot extension for Raycast](https://www.raycast.com/github/github-copilot).
 3. Open Raycast and search for **Copilot → View Tasks** to see all your sessions.
-4. Press `Command+L` to view the session log for any task.
+4. To view the session log for any task, open the log using the following command:
+ **Windows:**
+`Ctrl + L`
+**macOS:**
+`Command+L` 
 5. Start a new session directly from Raycast without opening a browser.
 
 ### The Coding Agent in the Full SDLC
@@ -514,58 +512,19 @@ To change the model:
 2. Select your preferred model.
 3. The model selection applies to that session only.
 
-For more details, see [Changing the AI model for GitHub Copilot coding agent](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/changing-the-ai-model).
-
----
-
-## ✅ Module Summary
-
-Across this module, the key capabilities you exercised include:
-
-```
-Assigning Tasks
-  ✅ Issue assignment via the Assignees dropdown
-  ✅ @copilot mentions in PR comments
-  ✅ New tasks from the agents panel
-  ✅ Tasks from VS Code, JetBrains, Eclipse, GitHub CLI, and Raycast
-
-Tracking & Steering
-  ✅ Session logs and internal monologue
-  ✅ Live log streaming with the GitHub CLI
-  ✅ Steering an in-progress session
-  ✅ Stopping a session
-
-Review & Iteration  
-  ✅ Reviewing and commenting on Copilot PR output
-  ✅ Requesting Copilot as a code reviewer on your own PRs
-
-Customization
-  ✅ Custom instructions (.github/copilot-instructions.md)
-  ✅ Custom agent profiles (.github/agents/*.md)
-  ✅ MCP server integration (.github/mcp.json)
-  ✅ Lifecycle hooks (.github/copilot/hooks.yaml)
-  ✅ Copilot Memory (Pro/Pro+)
-
-Security & Compliance
-  ✅ Built-in CodeQL, secret scanning, and dependency checks
-  ✅ Security campaign bulk assignment
-  ✅ Governance model and audit trail
-
-SDLC Integration
-  ✅ Every phase of delivery — planning through merge
-```
+For more details, see [Changing the AI model for GitHub Copilot coding agent](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/changing-the-ai-model).
 
 ---
 
 ## 📖 Further Reading
 
-- [GitHub Copilot coding agent — all how-to articles](https://docs.github.com/en/copilot/how-tos/use-copilot-agents)
-- [About custom agents](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents)
-- [Extending the coding agent with MCP](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/extend-coding-agent-with-mcp)
-- [About hooks](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-hooks)
-- [About agent skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)
-- [Responsible use of GitHub Copilot coding agent](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-copilot-coding-agent-on-githubcom)
-- [Piloting Copilot coding agent in your organization](https://docs.github.com/en/copilot/tutorials/pilot-copilot-coding-agent)
+- [GitHub Copilot coding agent — all how-to articles](https://docs.github.com/copilot/how-tos/use-copilot-agents)
+- [About custom agents](https://docs.github.com/copilot/concepts/agents/coding-agent/about-custom-agents)
+- [Extending the coding agent with MCP](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/extend-coding-agent-with-mcp)
+- [About hooks](https://docs.github.com/copilot/concepts/agents/coding-agent/about-hooks)
+- [About agent skills](https://docs.github.com/copilot/concepts/agents/about-agent-skills)
+- [Responsible use of GitHub Copilot coding agent](https://docs.github.com/copilot/responsible-use-of-github-copilot-features/responsible-use-of-copilot-coding-agent-on-githubcom)
+- [Piloting Copilot coding agent in your organization](https://docs.github.com/copilot/tutorials/pilot-copilot-coding-agent)
 - [GitHub Copilot Trust Center](https://copilot.github.trust.page/)
 - [GitHub Changelog — Copilot](https://github.blog/changelog/?label=copilot)
 - [Skills exercise: Expand your team with Copilot coding agent](https://github.com/skills/expand-your-team-with-copilot/)

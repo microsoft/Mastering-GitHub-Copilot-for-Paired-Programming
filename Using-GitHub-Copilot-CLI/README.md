@@ -38,7 +38,7 @@ By the end of this module, you'll acquire the skills to be able to:
 
 2. Install the standalone **GitHub Copilot CLI** (see Section 1 — the old `gh copilot` extension has been replaced by this new tool)
 
-3. Fork then clone [this repository locally](https://github.com/MicrosoftDocs/mslearn-copilot-codespaces-python) for the following exercises. 
+3. Fork and then clone [this repository locally](https://github.com/MicrosoftDocs/mslearn-copilot-codespaces-python) for the following exercises. 
 
 ## 💪🏽 Exercise
 
