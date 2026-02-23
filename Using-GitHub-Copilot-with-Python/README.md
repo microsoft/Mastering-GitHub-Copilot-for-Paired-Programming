@@ -104,7 +104,7 @@ The output should be similar to this:
 <img src="./images/004pydanticmodel.jpg" alt="Create a Pydantic model">
 </div>
 
-2. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes in our code base. Next, we are going to generate a new endpoint at the bottom of the `main.py` file. Place your cursor under the last route that was created and press `CTRL + I` to open inline chat. Type or copy in the following text: 
+2. Now we want to use the inline feature of Copilot. When using the inline feature we can focus on the code in front of us and make progressive changes in our code base. Next, we are going to generate a new endpoint at the bottom of the `main.py` file. Place your cursor under the last route that was created and press `CTRL + I` (macOS: `Cmd + I`) to open inline chat. Type or copy in the following text: 
 
 ```python
 # Create a FastAPI endpoint that accepts a POST request with a JSON body containing a single field called "text" and returns a checksum of the text 

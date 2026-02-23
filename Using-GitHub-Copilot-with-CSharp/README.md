@@ -138,7 +138,7 @@ The output should be similar to this:
 <img src="./images/007customerfile.png" alt="New file customer.cs">
 </div>
 
-From the top of the editor, press `CTRL + I` to open inline chat and type (or copy) in: 
+From the top of the editor, press `CTRL + I` (macOS: `Cmd + I`) to open inline chat and type (or copy) in: 
    
 ```csharp
 // Create a class for a Customer with Id, Name, and Email, and a method to validate email format
@@ -155,7 +155,7 @@ Review the suggestions from Copilot and verify the output. **Note:** It is impor
 <img src="./images/008regexvalid.jpg" alt="Validate Regex">
 </div>
 
-6. You can further highlight the method and ask inline (or select `CTRL + Shift + I`) to open chat and ask Copilot 'Explain what IsValidEmail() does'. This provides another way to interact with Copilot, verify it's output and to further understand the code that is written.
+6. You can further highlight the method and ask inline (or select `CTRL + Shift + I` (macOS: `Cmd + Shift + I`)) to open chat and ask Copilot 'Explain what IsValidEmail() does'. This provides another way to interact with Copilot, verify it's output and to further understand the code that is written.
 
 7. While Inline suggestions are great at suggesting code similar to an autocomplete mechanism, Next Edit Suggestions (NES) predict the next logical change in your code based on recent edits anywhere in your file. This helps to maintain flow and consistency as a developer.  NES suggests revisions to your code, comments and event tests. It can track recent changes to anticipate future edits, working across multiple lines and symbols. It will highlight suggestions with arrows in the editor gutter. In the above steps you may have already noticed a green arrow in the gutter, providing a suggestion and the ability to accept or decline the suggestion. 
 
