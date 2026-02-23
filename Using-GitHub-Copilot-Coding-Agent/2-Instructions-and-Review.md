@@ -90,6 +90,9 @@ Copilot can also serve as a first-pass reviewer on *your* pull requests before a
 4. Within seconds, Copilot will leave inline comments on the diff, pointing out bugs, inefficiencies, and improvements.
 5. Apply or dismiss each suggestion using the inline comment controls.
 
+<img width="800" alt="Comments left on a PR by Copilot once review was requested on author's PR." src="https://github.com/user-attachments/assets/744f6e2b-c202-4105-89ea-f41d58722ce2" />
+
+
 In the above exercises we achieved the following:
 - ✅ Reviewed and gave iterative feedback on a Copilot-authored PR
 - ✅ Used Copilot as an automated code reviewer on a human-authored PR
