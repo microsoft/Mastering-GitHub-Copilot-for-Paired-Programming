@@ -40,6 +40,7 @@ This is distinct from **agent mode in your IDE**, which edits your local files i
 3. On the issue page, click **Assignees** and select **Copilot** from the assignee list.
 
    > Copilot will begin working immediately. You'll see the issue label update to indicate an agent session is in progress.
+<img width="500" alt="Assigment panel for issue showing Copilot is selected and the name has an AI badge next to it." src="https://github.com/user-attachments/assets/dec2f4af-c606-4350-9911-ee109c64cf36" />
 
 4. Observe that Copilot creates a new branch named `copilot/<issue-number>-<slug>` and begins opening commits.
 
@@ -61,8 +62,10 @@ You can also invoke the coding agent on an *existing pull request* by mentioning
 
 The **agents panel** is available on every page on GitHub.com.
 
-1. Click the agent icon (looks like a hexagon/robot) in the top navigation bar on any GitHub page.
-2. Click **New task**.
+<img width="800" alt="Screenshot of GitHub.com header hovering over the Copilot Icon for the agents panel" src="https://github.com/user-attachments/assets/4040c625-2d6e-4195-bf16-21cc62f37460" />
+
+1. Click the agent icon (looks like a robot) in the top navigation bar on any GitHub page.
+2. Click the **New task** button below the input box (or select it in the bottom right corner of the input box).
 3. Select your repository and describe the work you want done.
 4. Submit the task. Copilot will open a new pull request with the changes.
 
@@ -102,6 +105,9 @@ Session logs show Copilot's internal reasoning and tool usage. You can see:
 
 > **Tip:** Session logs are also accessible from Visual Studio Code via the GitHub Pull Requests extension. Click on a pull request in the Copilot sessions list, then click **View Session**.
 
+<img width="800"  alt="Screenshot of a Copilot session log" src="https://github.com/user-attachments/assets/e6796f87-f326-462b-922f-918896b40f52" />
+
+
 ### Exercise 2A: Steer a Running Session
 
 While Copilot is working, you can give it additional guidance from the agents tab:
@@ -124,8 +130,10 @@ If Copilot is going in a wrong direction or you have changed your mind about a t
 
 1. Open the session log viewer from the agents tab.
 2. Click **Stop session**.
-
+   
 The agent stops immediately. The branch and any commits made so far are preserved, so you can inspect them.
+
+<img width="800" alt="Start of a Copilot log with stop button in blue header bar of the response." src="https://github.com/user-attachments/assets/3f36130c-568b-48fd-980e-baf2e247b483" />
 
 ### Tracking Across Other Surfaces
 
