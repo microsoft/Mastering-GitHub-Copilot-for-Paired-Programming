@@ -7,7 +7,7 @@
   <a href="#learning-objectives">Learning Objectives</a>
 </p>
 
-- **Who is this for**: Any tecnologist that wants to understand advanced GitHub Copilot features as it applies to working with Python and data. Software Engineers, Data Engineers, Data Scientists, and anyone working with Python or data might benefit from this workshop too.
+- **Who is this for**: Any technologist that wants to understand advanced GitHub Copilot features as it applies to working with Python and data. Software Engineers, Data Engineers, Data Scientists, and anyone working with Python or data might benefit from this workshop too.
 - **What you'll learn**: You'll use advanced GitHub Copilot features and apply it to a project using Python, Jupyter Notebooks, and Data. You will learn how to ask questions about the project, use agents to create and extend analyses, and customize your own agents.
 - **What you'll build**:  A new Jupyter notebook that wrangles some CSV data, exports high resolution graphics, and generates an shareable report.
 
