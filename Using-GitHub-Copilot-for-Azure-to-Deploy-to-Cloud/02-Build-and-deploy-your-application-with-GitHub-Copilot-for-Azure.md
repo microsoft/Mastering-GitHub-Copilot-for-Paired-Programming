@@ -1,118 +1,199 @@
 # Build and deploy your application with GitHub Copilot for Azure and Azure MCP
 
-This module is a continuation of module 1 and provides a step-by-step guide on using GitHub Copilot for Azure and Azure MCP to create and deploy a new website in Azure.
+This module is a continuation of Module 1 and provides a step-by-step guide on using GitHub Copilot for Azure and Azure MCP to create and deploy a new website in Azure.
 
 It highlights an approach to seamlessly integrating the extensions and their tools into your development and deployment workflow.
 
+- **Who is this for**: Developers, DevOps Engineers, and Cloud Architects.
+- **What you'll learn**: How to use GitHub Copilot for Azure to scaffold and deploy a Flask application.
+- **What you'll build**: A Python Flask website deployed to Azure using the Azure Developer CLI (`azd`).
+- **Estimated time**: 30-45 minutes (excluding deployment wait time)
+
 ## Prerequisites
 
-Completion of [Module 1 - Getting Started to use GitHub Copilot for Azure](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/09-Using-GitHub-Copilot-for-Azure-to-Deploy-to-Cloud/01-Getting-Started-with-GitHub-Copilot-for-Azure.md)
+- Completion of [Module 1 - Getting Started with GitHub Copilot for Azure](./01-Getting-Started-with-GitHub-Copilot-for-Azure.md)
+- Your Codespace from Module 1 should still be running
+- Azure authentication completed in Module 1
 
-## Create and deploy a website by using GitHub Copilot for Azure and Azure MCP
+## 📚 Prerequisite Reading
 
-1. Create a new folder on your local computer where you can create a local clone of a GitHub repository.
-    1. In VS Code click **File**, then **Open Folder**.
-    1. In the **Open Folder** dialogue box, click **New Folder**, give the folder a name, select it, then click **Select Folder**.
+- [What is the Azure Developer CLI?](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview)
+- [Azure App Service overview](https://learn.microsoft.com/azure/app-service/overview)
 
-1. VS Code will ask you **Do you trust the authors of the files in this folder?**
-    1. click the **Yes, I trust the authors**.
+---
 
-1. In Visual Studio Code, select **View** > **Terminal**. On the terminal pane, go to the new folder.
+## 💪🏽 Exercise: Create and Deploy a Website Using GitHub Copilot for Azure
 
-1. On the status bar, select the **Chat** (GitHub) icon to open the chat pane.
+### 🛠 Step 1: Set Up Your Project Directory
 
-1. Start a new chat session by selecting the plus icon (**+**) on the pane's title bar.
+> **Note:** These instructions assume you're continuing in the same GitHub Codespace from Module 1. If your Codespace has stopped, restart it using the button below.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)
+
+1. In Visual Studio Code (within your Codespace), open the integrated terminal by selecting **View** > **Terminal** or pressing `` Ctrl+` ``.
+
+2. Create a new directory for your Flask project and navigate into it:
+
+    ```bash
+    mkdir -p ~/flask-azure-app && cd ~/flask-azure-app
+    ```
+
+3. Verify you're in the correct directory:
+
+    ```bash
+    pwd
+    ```
+
+    You should see output similar to: `/home/codespace/flask-azure-app`
+
+4. Open this new folder in VS Code using the Explorer:
+    1. In the **Activity Bar** (left side), select the **Explorer** icon (top icon, looks like two files).
+    2. Click **Open Folder**.
+    3. Navigate to `/home/codespace/flask-azure-app` and select it.
+    4. VS Code will ask if you trust the authors of this folder—select **Yes, I trust the authors**.
+
+    > **Tip:** Alternatively, you can use **File** > **Open Folder** from the menu bar.
+
+---
+
+### ✍️ Step 2: Start a Conversation with GitHub Copilot
+
+1. Select the **Chat** icon in the **title bar** (top of the VS Code window, near the search field) to open the GitHub Copilot Chat pane.
+
+2. Start a new chat session by selecting the plus icon (**+**) on the pane's title bar.
 
    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat.png "Start a new chat session")
 
-1. In the chat text box, type the following prompt. Then select **Send** (paper airplane icon) or select Enter on your keyboard.
+3. Ensure you're in **Agent** mode and the model is set to **Claude Sonnet 4** or **GPT-5**.
 
-   ```prompt
-   Help me create a simple Flask website using Python and deploy it to Azure
-   ```
+4. In the chat text box, enter the following prompt and press **Enter**:
 
-    > **IMPORTANT**
-The exact wording of the response is different each time Copilot answers, due to how large language models generate responses.
+    ```prompt
+    Help me create a simple Flask website using Python and deploy it to Azure
+    ```
 
-   After a moment, Copilot may suggest starting with an `azd` template or may start building the application from scratch.
+    > **Important:** The exact wording of responses varies each time due to how large language models generate text. Your conversation may differ slightly from the examples shown.
 
-    Just Remember that the Large Language Model will understand what you tell it. Therefore, just have the conversation with it.
+5. After a moment, Copilot will suggest an approach—typically starting with an `azd` template or building the application from scratch. Both approaches are valid.
 
-1. If the response provides a command that begins with `azd init` in a code fence and Copilot doesn't offer to run the command for you, hover over the code fence to reveal a small pop-up action menu.
+    **Remember:** GitHub Copilot understands natural language. If something isn't clear, just ask follow-up questions conversationally.
 
-    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-4.png "Screenshot that shows a pop-up menu with an option to insert a code-fenced command into the Visual Studio Code terminal.")
+---
 
-    Select **Insert into Terminal** to insert the command into the terminal.
+### 🔍 Step 3: Understand the Azure Developer CLI Commands
 
-    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-5.png "Screenshot that shows the Visual Studio Code terminal after insertion of a code-fenced command.")
+Before running any commands, it's best practice to understand what they do.
 
-1. Before you run the `azd init` command or allow Copilot to run it for you, you might have questions about how it affects your local computer and your Azure subscription.
+1. If Copilot suggests a command starting with `azd init`, ask about it first:
 
-   Use the following prompt:
+    ```prompt
+    Before I execute azd init, what does it do?
+    ```
 
-   ```prompt
-   Before I execute azd init, what does it do?
-   ```
+    ![Screenshot showing explanation of azd init](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-6.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of what the initialization command does.")
 
-   You might see a response that resembles the following screenshot.
+2. Learn about the resources that will be created:
 
-   ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-6.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of what the initialization command does.")
+    ```prompt
+    What resources are created with this template?
+    ```
 
-1. Use the following prompt to learn more about the `azd` template:
+    ![Screenshot showing resources explanation](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-7.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of the resources created by the suggested template.")
 
-   ```prompt
-   What resources are created with this template?
-   ```
+3. Ask any clarifying questions about Azure services:
 
-   You might see a response that resembles the following screenshot.
+    ```prompt
+    What is the purpose of a virtual network?
+    ```
 
-    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-7.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of the resources created by the suggested template.")
+    ![Screenshot showing virtual network explanation](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-8.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of what a virtual network is.")
 
-1. Ask questions about the services that the template uses with a prompt like:
+---
 
-   ```prompt
-   What is the purpose of a virtual network?
-   ```
+### 🚀 Step 4: Initialize and Deploy Your Application
 
-   You might see a response that resembles the following screenshot.
+1. **Run the `azd init` command** when you're ready. If the command appears in a code fence in the chat, hover over it to reveal the action menu and select **Insert into Terminal**, then run it.
 
-    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-8.png "Screenshot that shows a response from GitHub Copilot for Azure with an explanation of what a virtual network is.")
+    ![Screenshot showing insert into terminal option](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-4.png "Screenshot that shows a pop-up menu with an option to insert a code-fenced command into the Visual Studio Code terminal.")
 
-1. When you're satisfied, run the `azd init` command. Answer its prompts. If you're unsure what to answer for a prompt, ask Copilot for help.
+    ![Screenshot showing command in terminal](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-5.png "Screenshot that shows the Visual Studio Code terminal after insertion of a code-fenced command.")
 
-1. Before you can continue, you must authenticate the `azd` tool by running in the terminal, the following command:
+2. **Authenticate with Azure** (if not already authenticated from Module 1):
 
-    ```cmd
+    ```bash
     azd auth login
     ```
 
-    1. This will open a browser that will require you to authenticate to Azure. Select the same credentials as before.
+    - A browser window will open for authentication.
+    - Use the same credentials from Module 1.
+    - Return to VS Code after successful authentication.
 
-1. Once the new project is initialized and you've authenticated to Azure, use the `azd up` command to deploy the application to your subscription. In the terminal, run the command according to the instructions in the original prompt's reply or let Copilot run it for you if prompted.
+3. **Deploy your application** using the `azd up` command:
 
-    ```
+    ```bash
     azd up
     ```
 
-1. The `azd up` command asks for information about your subscription, where to deploy the resources, and more.
+4. The `azd up` command will prompt you for:
+   - **Subscription**: Select your Azure subscription
+   - **Location**: Choose a region (recommended: **Canada Central** or a region close to you)
 
-    If you're uncertain how to answer, you can ask Copilot for help. For example, you might ask:
+    > **Need help choosing?** Ask Copilot:
+    > ```prompt
+    > azd up is asking me what location I want to deploy the website into. How should I respond?
+    > ```
+
+    ![Screenshot showing location guidance](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-9.png "Screenshot that shows a response from GitHub Copilot for Azure with an answer that describes what the Azure locations are and how to choose one.")
+
+---
+
+### ⏳ Step 5: Wait for Deployment (or Continue Learning)
+
+Deployment typically takes **20-40 minutes** depending on the template and selected region.
+
+While waiting, you have two options:
+
+- **Option A**: Continue to [Module 3 - Get Answers to Your Questions about Azure Services and Resources](./03-Get-Answers-to-your-Questions-about-Azure-Services-and-Resources.md)
+- **Option B**: Monitor the deployment progress in your terminal
+
+---
+
+### 🔧 Troubleshooting
+
+If `azd up` encounters an error:
+
+1. Copy the error message from the terminal.
+2. Use the **paperclip icon** at the bottom left of the chat pane to attach the terminal output.
+3. Ask Copilot for help:
 
     ```prompt
-    azd up is asking me what location I want to deploy the website into. How should I respond?
+    I received this error during deployment. How can I resolve it?
     ```
 
-    You might see a response that resembles the following screenshot.
+> **Tip:** GitHub Copilot for Azure doesn't automatically see terminal output. Always attach or paste error messages for accurate troubleshooting assistance.
 
-    ![Screenshot that shows the GitHub Copilot chat pane](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/images/mod2-CopilotChat-9.png "Screenshot that shows a response from GitHub Copilot for Azure with an answer that describes what the Azure locations are and how to choose one.")
+---
 
-5. Continue to answer prompts from `azd up`. Ask Copilot more questions as needed.
+### ✅ Conclusion
 
-    1. When asked the location select **Canada Central**.
+Congratulations! 🎉 You've successfully used GitHub Copilot for Azure to:
 
-    Depending on the `azd` template that you're deploying and the location that you selected, the template might take 20 to 40 minutes (or more) to deploy. But we can Move on to [Module 3](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming/blob/main/09-Using-GitHub-Copilot-for-Azure-to-Deploy-to-Cloud/03-Get-Answers-to-your-Questions-about-Azure-Services-and-Resources.md) while it completes
+- Create a new Flask application project
+- Understand the Azure resources required for deployment  
+- Deploy your application to Azure using the Azure Developer CLI
 
-1. If `azd up` experiences an error, ask Copilot about the error and how you can resolve it.
+Your Flask website is now running in Azure! Once deployment completes, `azd up` will display the URL where your application is accessible.
 
-    > **TIP**
-    > For an easy way to attach the last terminal command results, use the paperclip icon at the bottom left of the chat pane. GitHub Copilot for Azure doesn't know the terminal command results unless they are copy/pasted or attached via the paperclip.
+---
+
+## 📖 Additional Resources
+
+- [Azure Developer CLI documentation](https://learn.microsoft.com/azure/developer/azure-developer-cli/)
+- [Flask documentation](https://flask.palletsprojects.com/)
+- [Azure App Service documentation](https://learn.microsoft.com/azure/app-service/)
+
+---
+
+## ➡️ Next Steps
+
+Continue to [Module 3 - Get Answers to Your Questions about Azure Services and Resources](./03-Get-Answers-to-your-Questions-about-Azure-Services-and-Resources.md)
