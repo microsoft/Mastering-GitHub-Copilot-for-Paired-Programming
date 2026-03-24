@@ -1,9 +1,5 @@
 [← Back to Module Overview](README.md) | [Next: Custom Instructions and Code Review →](2-Instructions-and-Review.md)
 
-- **Prerequisites**: Copilot coding agent is available with the GitHub Copilot Pro, GitHub Copilot Pro+, GitHub Copilot Business and GitHub Copilot Enterprise plans. **NOTE:** Copilot Free does not allow the use of the Coding Agent
-- **Timing**: This course can be completed in under an hour.
-
-
 # Assigning Tasks and Tracking Agent Sessions
 
 ## 🗒️ Part 1: Assigning Tasks to GitHub Copilot Coding Agent
