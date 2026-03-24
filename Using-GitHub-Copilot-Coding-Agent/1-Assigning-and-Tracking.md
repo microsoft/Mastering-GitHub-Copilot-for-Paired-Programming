@@ -1,5 +1,9 @@
 [← Back to Module Overview](README.md) | [Next: Custom Instructions and Code Review →](2-Instructions-and-Review.md)
 
+- **Prerequisites**: Copilot coding agent is available with the GitHub Copilot Pro, GitHub Copilot Pro+, GitHub Copilot Business and GitHub Copilot Enterprise plans. **NOTE:** Copilot Free does not allow the use of the Coding Agent
+- **Timing**: This course can be completed in under an hour.
+
+
 # Assigning Tasks and Tracking Agent Sessions
 
 ## 🗒️ Part 1: Assigning Tasks to GitHub Copilot Coding Agent
@@ -23,7 +27,8 @@ This is distinct from **agent mode in your IDE**, which edits your local files i
 
 ### Exercise 1A: Assign an Issue to Copilot
 
-1. Navigate to your repository's **Issues** tab on GitHub.com.
+1. Navigate to your repository's **Issues** tab on GitHub.com. **_NOTE:** If you do not see Issues in your repo, ensure they are enabled by navigating to the `settings` tab in your repo, then go to `Features` and enable `Issues`_
+
 2. Create a new issue with a clear, well-scoped description. For example:
 
    ```
@@ -42,7 +47,7 @@ This is distinct from **agent mode in your IDE**, which edits your local files i
    > Copilot will begin working immediately. You'll see the issue label update to indicate an agent session is in progress.
 <img width="500" alt="Assigment panel for issue showing Copilot is selected and the name has an AI badge next to it." src="https://github.com/user-attachments/assets/dec2f4af-c606-4350-9911-ee109c64cf36" />
 
-4. Observe that Copilot creates a new branch named `copilot/<issue-number>-<slug>` and begins opening commits.
+1. Observe that Copilot creates a new branch named `copilot/<issue-number>-<slug>` and begins opening commits.
 
 ### Exercise 1B: Trigger Copilot from a Pull Request Comment
 
