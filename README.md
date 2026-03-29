@@ -19,7 +19,7 @@ Below are links to each lesson—feel free to explore and dive into any topic th
 
 
 ## 🧠 Want to learn more?
-After completing this course, check out our [GitHub Copilot Learn Collection](https://learn.microsoft.com/collections/kkqrhmxoqn54?WT.mc_id=academic-113596-abartolo) to continue leveling up your AI Peer Programming knowledge!
+After completing this course, check out our [GitHub Copilot Learn Collection](https://learn.microsoft.com/en-us/training/paths/accelerate-app-development-using-github-copilot/) to continue leveling up your AI Peer Programming knowledge!
 
 ##  🚀  Are you a startup or got an idea you want to launch?
 
