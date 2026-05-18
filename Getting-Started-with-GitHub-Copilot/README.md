@@ -104,7 +104,7 @@ Goal: Make one realistic, bounded improvement.
 - Ask Copilot for two implementation options and choose one.
 - Apply the change and review the diff before accepting.
 
-Replace `[specific page/feature]` with a real target in your repo (for example: `clubs listing page`).
+When using these prompts, replace `[specific page/feature]` with a real target in your repository (for example: `clubs listing page`).
 
 Prompt examples:
 
