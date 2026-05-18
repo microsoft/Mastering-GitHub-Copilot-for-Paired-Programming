@@ -2,70 +2,170 @@
 
 # Getting Started with GitHub Copilot
 
-Begin your journey with GitHub Copilot—the groundbreaking AI developer tool that’s transforming how software is built. In this foundational module, you’ll explore the powerful capabilities of Copilot, from code generation and intelligent suggestions to testing, refactoring, and real-time explanation of complex logic.
+Begin your journey with GitHub Copilot—an AI developer tool that helps you write, understand, test, and improve code faster.
 
-Now enhanced with Agent Mode, GitHub Copilot is more than a coding assistant—it’s an autonomous collaborator that understands your intent, executes multi-step workflows, and refines its own solutions with minimal oversight. You’ll discover how Copilot leverages natural-language prompts to streamline your development process, reduce cognitive load, and accelerate your path from idea to implementation.
+In this foundational module, you will practice using Copilot as a collaborative coding partner through **Ask, Edit, and Agent modes**. You’ll use natural-language prompts to explore a codebase, make scoped updates, and produce a pull request summary and review.
 
-By the end of this module, you'll confidently articulate the role and impact of GitHub Copilot in modern development environments. You'll also gain practical experience using it within VS Code and understand its place in the evolving landscape of AI-powered software engineering.
+By the end of this module, you’ll be able to explain where Copilot adds value in modern software development and confidently use it in VS Code.
 
-Note: Although this module uses [GitHub Codespaces](https://github.com/codespaces), you can use GitHub Copilot in a variety of other environments, including locally with Visual Studio Code.
+Note: This module is designed around [GitHub Codespaces](https://github.com/codespaces), but you can also complete it locally in Visual Studio Code.
 </header>
 
-
-- **Who is this for**: Developers at any experience level looking to accelerate their code workflow.
-- **What you'll learn**: How to setup Copilot, core features, and practical usage of GitHub Copilot—including Copilot Chat, Agentic Mode, and AI-powered debugging.
-- **What you'll build**: You will guide Copilot to update Mergington High School's extracurricular activities website.
+- **Who is this for**: Developers at any experience level looking to accelerate their coding workflow.
+- **What you'll learn**: Setup and practical use of GitHub Copilot, including Copilot Chat and Ask/Edit/Agent workflows.
+- **What you'll build**: Improvements to Mergington High School's extracurricular activities website.
 - **Prerequisites**:
-  - Sign up for a [GitHub account](https://github.com/) (or bring your existing account).  
-  - GitHub Copilot is available to use for free, sign up for [GitHub Copilot](https://gh.io/copilot).
+  - Sign up for a [GitHub account](https://github.com/) (or use an existing account)
+  - Sign up for [GitHub Copilot](https://gh.io/copilot)
   - Skills exercise: [Introduction to GitHub](https://github.com/skills/introduction-to-github)
   - Familiarity with [VS Code](https://code.visualstudio.com/)
   - Basic coding principles
 - **Timing**: This course can be completed in under an hour.
 
+## Learning objectives
 
 By the end of this module, you'll be able to:
 
 1. Use a preconfigured Codespace to run VS Code securely in your browser.
-2. Learn different interaction options to develop with GitHub Copilot.
+2. Use multiple GitHub Copilot interaction modes (Ask, Edit, and Agent) to complete development tasks.
 3. Use Copilot to summarize and review your pull request.
 
+## Prerequisite reading
 
-## Prerequisite reading:
 - [Accelerate app development by using GitHub Copilot](https://learn.microsoft.com/training/paths/accelerate-app-development-using-github-copilot/)
-- Ask, Edit, and Agent Modes: [learn more here!](https://learn.microsoft.com/shows/visual-studio-code/ask-edit-and-agent-in-depth-overview-of-github-copilot-chat-modes)
-- In-depth Overview of GitHub Copilot Chat Modes: 
+- Ask, Edit, and Agent modes: [Learn more](https://learn.microsoft.com/shows/visual-studio-code/ask-edit-and-agent-in-depth-overview-of-github-copilot-chat-modes)
+- Video overview: [Ask, Edit, and Agent - In-depth Overview of GitHub Copilot Chat Modes](https://www.youtube.com/watch?v=s7Qzq0ejhjg)
 
-<div align="left">
-  
-[![Ask, Edit, and Agent - In-depth Overview of GitHub Copilot Chat Modes](https://img.youtube.com/vi/s7Qzq0ejhjg/0.jpg)](https://www.youtube.com/watch?v=s7Qzq0ejhjg)
+---
 
-</div>
+## How to start this course
 
-### How to start this course
+Create your own copy of the exercise repository:
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+- **Copy exercise repository**: https://github.com/new?template_owner=skills&template_name=getting-started-with-github-copilot&owner=%40me&name=skills-getting-started-with-github-copilot&description=Exercise:+Get+started+using+GitHub+Copilot&visibility=public
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=getting-started-with-github-copilot&owner=%40me&name=skills-getting-started-with-github-copilot&description=Exercise:+Get+started+using+GitHub+Copilot&visibility=public)
+Then wait for setup automation to complete and refresh the page.
+
+### Setup readiness checks
+
+Before starting the lab tasks, confirm:
+
+1. The repository copy is created under your account.
+2. GitHub Actions setup has completed successfully (green check on the workflow run).
+3. Your Codespace opens with VS Code and Copilot Chat available.
+4. The lesson instructions and starter files are visible in your copied repository.
+
+If setup is still running, wait and refresh when the workflow finishes.
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>
 
-When copying the exercise, we recommend the following settings:
+When copying the exercise, we recommend:
 
-- For owner, choose your personal account or an organization to host the repository.
+- Choose your personal account or an organization as the owner.
+- Prefer a public repository (private repositories can consume Actions minutes).
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
-   
-If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
+If the exercise is not ready yet:
 
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
-
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
+1. Open the [Actions](../../actions) tab.
+2. Check whether a setup job is still in progress.
+3. If a setup workflow failed, open an issue in this repository and include the failing run details.
 
 </details>
 
 ---
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+## Exercise map (recommended flow)
 
+### Milestone 1: Environment and context
+
+Goal: Verify your environment and understand the project quickly.
+
+- Open the project in Codespaces (or local VS Code).
+- Confirm Copilot Chat is enabled.
+- Use **Ask mode** to understand project structure.
+
+Prompt examples:
+
+- "Summarize this repository structure and explain where I should start as a beginner."
+- "Explain the current behavior of the extracurricular activities site and identify one low-risk improvement."
+
+Checkpoint:
+
+- You can identify where to make your first change and why.
+
+### Milestone 2: Implement a scoped change with Copilot
+
+Goal: Make one realistic, bounded improvement.
+
+- Use **Edit mode** for a targeted update.
+- Ask Copilot for two implementation options and choose one.
+- Apply the change and review the diff before accepting.
+
+Prompt examples:
+
+- "Propose two ways to improve [specific page/feature], with trade-offs and level of effort."
+- "Implement option 1 with minimal changes and preserve existing behavior."
+
+Checkpoint:
+
+- You made one focused change and can explain why it is safe.
+
+### Milestone 3: Use Agent mode for multi-step support
+
+Goal: Practice delegating a multi-step task while keeping human review in control.
+
+- Use **Agent mode** to request a small multi-step update.
+- Review every proposed edit and keep only relevant changes.
+- Ask for a short validation checklist.
+
+Prompt examples:
+
+- "Plan and apply a small UX/content improvement across related files, then summarize all edits and risks."
+- "Generate manual validation steps for the changes you made."
+
+Checkpoint:
+
+- You can describe what Agent mode did, what you accepted, and what you rejected.
+
+### Milestone 4: Pull request summary and self-review
+
+Goal: Produce a quality PR summary and validate confidence before submission.
+
+- Use Copilot to draft a pull request summary.
+- Ask Copilot for a self-review checklist focused on regressions and clarity.
+
+Prompt examples:
+
+- "Draft a pull request summary with: purpose, changed files, risks, and validation steps."
+- "Review this change set and list potential regressions, missing tests, or unclear decisions."
+
+Checkpoint:
+
+- Your PR summary clearly states what changed, why, and how it was validated.
+
+---
+
+## Reflection prompts (confidence building)
+
+After completing the lab, answer:
+
+1. Which mode (Ask, Edit, Agent) was most useful for each milestone, and why?
+2. What Copilot output did you accept, and what did you reject?
+3. What validation steps increased your confidence in the final change?
+4. What would you improve in your prompts next time?
+
+---
+
+## Local VS Code alternative (if not using Codespaces)
+
+If you complete this module locally:
+
+1. Clone your copied exercise repository.
+2. Open it in VS Code.
+3. Sign in to GitHub and confirm Copilot + Copilot Chat are enabled.
+4. Follow the same milestone flow above.
+
+---
+
+&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
