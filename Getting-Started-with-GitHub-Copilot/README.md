@@ -51,7 +51,7 @@ Then wait for setup automation to complete and refresh the page.
 Before starting the lab tasks, confirm:
 
 1. The repository copy is created under your account.
-2. GitHub Actions setup has completed successfully (green check on the workflow run).
+2. GitHub Actions setup has completed successfully (indicated by a checkmark on the workflow run).
 3. Your Codespace opens with VS Code and Copilot Chat available.
 4. The lesson instructions and starter files are visible in your copied repository.
 
@@ -87,6 +87,7 @@ Goal: Verify your environment and understand the project quickly.
 
 Prompt examples:
 
+- Adapt these prompts to the repository you copied for this lab (the Mergington High School extracurricular activities project).
 - "Summarize this repository structure and explain where I should start as a beginner."
 - "Explain the current behavior of the extracurricular activities site and identify one low-risk improvement."
 
@@ -104,6 +105,7 @@ Goal: Make one realistic, bounded improvement.
 
 Prompt examples:
 
+- Replace `[specific page/feature]` with a real target in your repo (for example: `clubs listing page`).
 - "Propose two ways to improve [specific page/feature], with trade-offs and level of effort."
 - "Implement option 1 with minimal changes and preserve existing behavior."
 
