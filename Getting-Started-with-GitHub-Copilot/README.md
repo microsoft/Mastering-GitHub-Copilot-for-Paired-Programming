@@ -85,9 +85,9 @@ Goal: Verify your environment and understand the project quickly.
 - Confirm Copilot Chat is enabled.
 - Use **Ask mode** to understand project structure.
 
-Prompt examples:
+Adapt these prompts to the repository you copied for this lab (the Mergington High School extracurricular activities project).
 
-Adapt these prompts to the repository you copied for this lab (the Mergington High School extracurricular activities project):
+Prompt examples:
 
 - "Summarize this repository structure and explain where I should start as a beginner."
 - "Explain the current behavior of the extracurricular activities site and identify one low-risk improvement."
@@ -104,9 +104,9 @@ Goal: Make one realistic, bounded improvement.
 - Ask Copilot for two implementation options and choose one.
 - Apply the change and review the diff before accepting.
 
-Prompt examples:
+Replace `[specific page/feature]` with a real target in your repo (for example: `clubs listing page`).
 
-Replace `[specific page/feature]` with a real target in your repo (for example: `clubs listing page`):
+Prompt examples:
 
 - "Propose two ways to improve [specific page/feature], with trade-offs and level of effort."
 - "Implement option 1 with minimal changes and preserve existing behavior."
