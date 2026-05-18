@@ -15,8 +15,8 @@ Note: This module is designed around [GitHub Codespaces](https://github.com/code
 - **What you'll learn**: Setup and practical use of GitHub Copilot, including Copilot Chat and Ask/Edit/Agent workflows.
 - **What you'll build**: Improvements to Mergington High School's extracurricular activities website.
 - **Prerequisites**:
-  - Sign up for a [GitHub account](https://github.com/) (or use an existing account)
-  - Sign up for [GitHub Copilot](https://gh.io/copilot)
+  - Sign up for a [GitHub account](https://github.com/) (or use an existing account).
+  - Sign up for [GitHub Copilot](https://gh.io/copilot).
   - Skills exercise: [Introduction to GitHub](https://github.com/skills/introduction-to-github)
   - Familiarity with [VS Code](https://code.visualstudio.com/)
   - Basic coding principles
