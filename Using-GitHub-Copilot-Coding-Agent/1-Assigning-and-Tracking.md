@@ -41,7 +41,7 @@ This is distinct from **agent mode in your IDE**, which edits your local files i
 3. On the issue page, click **Assignees** and select **Copilot** from the assignee list.
 
    > Copilot will begin working immediately. You'll see the issue label update to indicate an agent session is in progress.
-<img width="500" alt="Assigment panel for issue showing Copilot is selected and the name has an AI badge next to it." src="https://github.com/user-attachments/assets/dec2f4af-c606-4350-9911-ee109c64cf36" />
+<img width="500" alt="Assignment panel for issue showing Copilot is selected and the name has an AI badge next to it." src="https://github.com/user-attachments/assets/dec2f4af-c606-4350-9911-ee109c64cf36" />
 
 1. Observe that Copilot creates a new branch named `copilot/<issue-number>-<slug>` and begins opening commits.
 

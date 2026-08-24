@@ -4,7 +4,7 @@
 
 ---
 
-### 🗒️ Section 6: Context Optimzation with Copilot: Custom Agents, Custom Instructions, and MCP Integrations
+### 🗒️ Section 6: Context Optimization with Copilot: Custom Agents, Custom Instructions, and MCP Integrations
 
 🎯 **Learning Goals**
 - Understand custom agents and how to configure them for specialised tasks
